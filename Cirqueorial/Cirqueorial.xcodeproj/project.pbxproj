@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9329D3816B331CE008E33BC /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9329D3716B331CE008E33BC /* applogo.png */; };
+		E949E6C616B594E8006FFBC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E949E6B016B594E8006FFBC7 /* AppDelegate.m */; };
+		E949E6C716B594E8006FFBC7 /* Cirqueorial-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */; };
+		E949E6C816B594E8006FFBC7 /* Default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B316B594E8006FFBC7 /* Default.jpg */; };
+		E949E6C916B594E8006FFBC7 /* Default@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B416B594E8006FFBC7 /* Default@2x.jpg */; };
+		E949E6CA16B594E8006FFBC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B516B594E8006FFBC7 /* InfoPlist.strings */; };
+		E949E6CB16B594E8006FFBC7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */; };
+		E949E6CC16B594E8006FFBC7 /* facebook-icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B916B594E8006FFBC7 /* facebook-icon.gif */; };
+		E949E6CD16B594E8006FFBC7 /* facebook-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E949E6BA16B594E8006FFBC7 /* facebook-logo.png */; };
+		E949E6CE16B594E8006FFBC7 /* Library_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E949E6BB16B594E8006FFBC7 /* Library_Icon.png */; };
+		E949E6CF16B594E8006FFBC7 /* loginBackgroundIPhonePortrait@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E949E6BC16B594E8006FFBC7 /* loginBackgroundIPhonePortrait@2x.jpg */; };
+		E949E6D016B594E8006FFBC7 /* mag_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E949E6BD16B594E8006FFBC7 /* mag_glass.png */; };
+		E949E6D116B594E8006FFBC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E949E6BE16B594E8006FFBC7 /* main.m */; };
+		E949E6D216B594E8006FFBC7 /* Profile_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E949E6BF16B594E8006FFBC7 /* Profile_Icon.png */; };
+		E949E6D316B594E8006FFBC7 /* Search_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E949E6C016B594E8006FFBC7 /* Search_Icon.png */; };
+		E949E6D416B594E8006FFBC7 /* Settings_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E949E6C116B594E8006FFBC7 /* Settings_Icon.png */; };
+		E949E6D516B594E8006FFBC7 /* silver-button-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = E949E6C216B594E8006FFBC7 /* silver-button-normal.png */; };
+		E949E6D616B594E8006FFBC7 /* title.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E949E6C316B594E8006FFBC7 /* title.jpg */; };
+		E949E6D716B594E8006FFBC7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E949E6C516B594E8006FFBC7 /* ViewController.m */; };
+		E965301616B2F092009D4307 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965301516B2F092009D4307 /* UIKit.framework */; };
+		E965301816B2F092009D4307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965301716B2F092009D4307 /* Foundation.framework */; };
+		E965301A16B2F092009D4307 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965301916B2F092009D4307 /* CoreGraphics.framework */; };
+		E965304816B2F4E5009D4307 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304516B2F4E5009D4307 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E965304916B2F4E5009D4307 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304616B2F4E5009D4307 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E965304A16B2F4E5009D4307 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304716B2F4E5009D4307 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E9996ACD16B59D540065C5E0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */; };
+		E9996AD116B59D670065C5E0 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9996ACF16B59D670065C5E0 /* FacebookSDKResources.bundle */; };
+		E9996AD216B59D670065C5E0 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9996AD016B59D670065C5E0 /* FBUserSettingsViewResources.bundle */; };
+		E9D6AD6816B3217E00311E4C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E9329D3716B331CE008E33BC /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
+		E949E6AF16B594E8006FFBC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E949E6B016B594E8006FFBC7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Cirqueorial-Info.plist"; sourceTree = "<group>"; };
+		E949E6B216B594E8006FFBC7 /* Cirqueorial-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cirqueorial-Prefix.pch"; sourceTree = "<group>"; };
+		E949E6B316B594E8006FFBC7 /* Default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Default.jpg; path = Cirqueorial/Default.jpg; sourceTree = "<group>"; };
+		E949E6B416B594E8006FFBC7 /* Default@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Default@2x.jpg"; path = "Cirqueorial/Default@2x.jpg"; sourceTree = "<group>"; };
+		E949E6B616B594E8006FFBC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E949E6B816B594E8006FFBC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E949E6B916B594E8006FFBC7 /* facebook-icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "facebook-icon.gif"; path = "Cirqueorial/facebook-icon.gif"; sourceTree = "<group>"; };
+		E949E6BA16B594E8006FFBC7 /* facebook-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook-logo.png"; path = "Cirqueorial/facebook-logo.png"; sourceTree = "<group>"; };
+		E949E6BB16B594E8006FFBC7 /* Library_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Icon.png; path = Cirqueorial/Library_Icon.png; sourceTree = "<group>"; };
+		E949E6BC16B594E8006FFBC7 /* loginBackgroundIPhonePortrait@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "loginBackgroundIPhonePortrait@2x.jpg"; path = "Cirqueorial/loginBackgroundIPhonePortrait@2x.jpg"; sourceTree = "<group>"; };
+		E949E6BD16B594E8006FFBC7 /* mag_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mag_glass.png; path = Cirqueorial/mag_glass.png; sourceTree = "<group>"; };
+		E949E6BE16B594E8006FFBC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E949E6BF16B594E8006FFBC7 /* Profile_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Profile_Icon.png; path = Cirqueorial/Profile_Icon.png; sourceTree = "<group>"; };
+		E949E6C016B594E8006FFBC7 /* Search_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Search_Icon.png; path = Cirqueorial/Search_Icon.png; sourceTree = "<group>"; };
+		E949E6C116B594E8006FFBC7 /* Settings_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Settings_Icon.png; path = Cirqueorial/Settings_Icon.png; sourceTree = "<group>"; };
+		E949E6C216B594E8006FFBC7 /* silver-button-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "silver-button-normal.png"; path = "Cirqueorial/silver-button-normal.png"; sourceTree = "<group>"; };
+		E949E6C316B594E8006FFBC7 /* title.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = title.jpg; path = Cirqueorial/title.jpg; sourceTree = "<group>"; };
+		E949E6C416B594E8006FFBC7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E949E6C516B594E8006FFBC7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E965301116B2F092009D4307 /* Cirqueorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cirqueorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E965301516B2F092009D4307 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E965301716B2F092009D4307 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E965301916B2F092009D4307 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E965304516B2F4E5009D4307 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E965304616B2F4E5009D4307 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		E965304716B2F4E5009D4307 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		E9996ACF16B59D670065C5E0 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		E9996AD016B59D670065C5E0 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E965300E16B2F092009D4307 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E965304816B2F4E5009D4307 /* Accounts.framework in Frameworks */,
+				E965304916B2F4E5009D4307 /* AdSupport.framework in Frameworks */,
+				E965304A16B2F4E5009D4307 /* Social.framework in Frameworks */,
+				E965301616B2F092009D4307 /* UIKit.framework in Frameworks */,
+				E965301816B2F092009D4307 /* Foundation.framework in Frameworks */,
+				E965301A16B2F092009D4307 /* CoreGraphics.framework in Frameworks */,
+				E9996ACD16B59D540065C5E0 /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E949E6AE16B594E8006FFBC7 /* Cirqueorial */ = {
+			isa = PBXGroup;
+			children = (
+				E949E6AF16B594E8006FFBC7 /* AppDelegate.h */,
+				E949E6B016B594E8006FFBC7 /* AppDelegate.m */,
+				E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */,
+				E949E6B216B594E8006FFBC7 /* Cirqueorial-Prefix.pch */,
+				E949E6B516B594E8006FFBC7 /* InfoPlist.strings */,
+				E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */,
+				E949E6BE16B594E8006FFBC7 /* main.m */,
+				E949E6C416B594E8006FFBC7 /* ViewController.h */,
+				E949E6C516B594E8006FFBC7 /* ViewController.m */,
+				E949E6D916B59518006FFBC7 /* Supporting Files */,
+			);
+			path = Cirqueorial;
+			sourceTree = "<group>";
+		};
+		E949E6D916B59518006FFBC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9329D3716B331CE008E33BC /* applogo.png */,
+				E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */,
+				E949E6B316B594E8006FFBC7 /* Default.jpg */,
+				E949E6B416B594E8006FFBC7 /* Default@2x.jpg */,
+				E949E6B916B594E8006FFBC7 /* facebook-icon.gif */,
+				E949E6BA16B594E8006FFBC7 /* facebook-logo.png */,
+				E949E6BB16B594E8006FFBC7 /* Library_Icon.png */,
+				E949E6BC16B594E8006FFBC7 /* loginBackgroundIPhonePortrait@2x.jpg */,
+				E949E6BD16B594E8006FFBC7 /* mag_glass.png */,
+				E949E6BF16B594E8006FFBC7 /* Profile_Icon.png */,
+				E949E6C016B594E8006FFBC7 /* Search_Icon.png */,
+				E949E6C116B594E8006FFBC7 /* Settings_Icon.png */,
+				E949E6C216B594E8006FFBC7 /* silver-button-normal.png */,
+				E949E6C316B594E8006FFBC7 /* title.jpg */,
+			);
+			name = "Supporting Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E965300616B2F092009D4307 = {
+			isa = PBXGroup;
+			children = (
+				E949E6AE16B594E8006FFBC7 /* Cirqueorial */,
+				E965301416B2F092009D4307 /* Frameworks */,
+				E965301216B2F092009D4307 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E965301216B2F092009D4307 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E965301116B2F092009D4307 /* Cirqueorial.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E965301416B2F092009D4307 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9996ACF16B59D670065C5E0 /* FacebookSDKResources.bundle */,
+				E9996AD016B59D670065C5E0 /* FBUserSettingsViewResources.bundle */,
+				E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */,
+				E965304516B2F4E5009D4307 /* Accounts.framework */,
+				E965304616B2F4E5009D4307 /* AdSupport.framework */,
+				E965304716B2F4E5009D4307 /* Social.framework */,
+				E965301516B2F092009D4307 /* UIKit.framework */,
+				E965301716B2F092009D4307 /* Foundation.framework */,
+				E965301916B2F092009D4307 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E965301016B2F092009D4307 /* Cirqueorial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E965303516B2F092009D4307 /* Build configuration list for PBXNativeTarget "Cirqueorial" */;
+			buildPhases = (
+				E965300D16B2F092009D4307 /* Sources */,
+				E965300E16B2F092009D4307 /* Frameworks */,
+				E965300F16B2F092009D4307 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cirqueorial;
+			productName = Cirqueorial;
+			productReference = E965301116B2F092009D4307 /* Cirqueorial.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E965300816B2F092009D4307 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Aberystwyth University";
+			};
+			buildConfigurationList = E965300B16B2F092009D4307 /* Build configuration list for PBXProject "Cirqueorial" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E965300616B2F092009D4307;
+			productRefGroup = E965301216B2F092009D4307 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E965301016B2F092009D4307 /* Cirqueorial */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E965300F16B2F092009D4307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D6AD6816B3217E00311E4C /* Default-568h@2x.png in Resources */,
+				E9329D3816B331CE008E33BC /* applogo.png in Resources */,
+				E949E6C716B594E8006FFBC7 /* Cirqueorial-Info.plist in Resources */,
+				E949E6C816B594E8006FFBC7 /* Default.jpg in Resources */,
+				E949E6C916B594E8006FFBC7 /* Default@2x.jpg in Resources */,
+				E949E6CA16B594E8006FFBC7 /* InfoPlist.strings in Resources */,
+				E949E6CB16B594E8006FFBC7 /* MainStoryboard.storyboard in Resources */,
+				E949E6CC16B594E8006FFBC7 /* facebook-icon.gif in Resources */,
+				E949E6CD16B594E8006FFBC7 /* facebook-logo.png in Resources */,
+				E949E6CE16B594E8006FFBC7 /* Library_Icon.png in Resources */,
+				E949E6CF16B594E8006FFBC7 /* loginBackgroundIPhonePortrait@2x.jpg in Resources */,
+				E949E6D016B594E8006FFBC7 /* mag_glass.png in Resources */,
+				E949E6D216B594E8006FFBC7 /* Profile_Icon.png in Resources */,
+				E949E6D316B594E8006FFBC7 /* Search_Icon.png in Resources */,
+				E949E6D416B594E8006FFBC7 /* Settings_Icon.png in Resources */,
+				E949E6D516B594E8006FFBC7 /* silver-button-normal.png in Resources */,
+				E949E6D616B594E8006FFBC7 /* title.jpg in Resources */,
+				E9996AD116B59D670065C5E0 /* FacebookSDKResources.bundle in Resources */,
+				E9996AD216B59D670065C5E0 /* FBUserSettingsViewResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E965300D16B2F092009D4307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E949E6C616B594E8006FFBC7 /* AppDelegate.m in Sources */,
+				E949E6D116B594E8006FFBC7 /* main.m in Sources */,
+				E949E6D716B594E8006FFBC7 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E949E6B516B594E8006FFBC7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E949E6B616B594E8006FFBC7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E949E6B816B594E8006FFBC7 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E965303316B2F092009D4307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E965303416B2F092009D4307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E965303616B2F092009D4307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Documents/FacebookSDK\"",
+					"\"$(SRCROOT)/../../../../../Documents/FacebookSDK\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cirqueorial/Cirqueorial-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Cirqueorial/Cirqueorial-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3.0";
+				PRODUCT_NAME = Cirqueorial;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E965303716B2F092009D4307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Documents/FacebookSDK\"",
+					"\"$(SRCROOT)/../../../../../Documents/FacebookSDK\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cirqueorial/Cirqueorial-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Cirqueorial/Cirqueorial-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3.0";
+				PRODUCT_NAME = Cirqueorial;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E965300B16B2F092009D4307 /* Build configuration list for PBXProject "Cirqueorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E965303316B2F092009D4307 /* Debug */,
+				E965303416B2F092009D4307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E965303516B2F092009D4307 /* Build configuration list for PBXNativeTarget "Cirqueorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E965303616B2F092009D4307 /* Debug */,
+				E965303716B2F092009D4307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E965300816B2F092009D4307 /* Project object */;
+}
