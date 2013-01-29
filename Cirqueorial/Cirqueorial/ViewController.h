@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *logoutButton;
+- (IBAction)logoutButton:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *publishButton;
 - (IBAction)publishButtonAction:(id)sender;
 - (IBAction)testButton:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *authButton;
-- (IBAction)authButtonAction:(id)sender;
+
 
 @end

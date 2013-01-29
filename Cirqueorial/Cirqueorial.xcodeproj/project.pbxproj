@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E9329D3816B331CE008E33BC /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9329D3716B331CE008E33BC /* applogo.png */; };
+		E93B86FF16B5A97100EE9084 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B86FE16B5A97100EE9084 /* AnimationViewController.m */; };
+		E93B870716B5AA3800EE9084 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B870616B5AA3800EE9084 /* Database.m */; };
+		E93B870B16B5AAA200EE9084 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */; };
+		E93B870E16B5B21900EE9084 /* VideoList.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B870D16B5B21900EE9084 /* VideoList.m */; };
+		E93B871816B5B7D800EE9084 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B871716B5B7D700EE9084 /* DetailViewController.m */; };
+		E93B871A16B5E07B00EE9084 /* Video_Test_DB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E93B871916B5E07B00EE9084 /* Video_Test_DB.sqlite */; };
 		E949E6C616B594E8006FFBC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E949E6B016B594E8006FFBC7 /* AppDelegate.m */; };
 		E949E6C716B594E8006FFBC7 /* Cirqueorial-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */; };
 		E949E6C816B594E8006FFBC7 /* Default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B316B594E8006FFBC7 /* Default.jpg */; };
@@ -32,6 +38,8 @@
 		E965304816B2F4E5009D4307 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304516B2F4E5009D4307 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E965304916B2F4E5009D4307 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304616B2F4E5009D4307 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E965304A16B2F4E5009D4307 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304716B2F4E5009D4307 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E97067E816B7018500F515EF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E716B7018500F515EF /* ProfileViewController.m */; };
+		E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E316B6FF8C00F515EF /* LibraryViewController.m */; };
 		E9996ACD16B59D540065C5E0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */; };
 		E9996AD116B59D670065C5E0 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9996ACF16B59D670065C5E0 /* FacebookSDKResources.bundle */; };
 		E9996AD216B59D670065C5E0 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9996AD016B59D670065C5E0 /* FBUserSettingsViewResources.bundle */; };
@@ -40,6 +48,16 @@
 
 /* Begin PBXFileReference section */
 		E9329D3716B331CE008E33BC /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
+		E93B86FD16B5A97100EE9084 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		E93B86FE16B5A97100EE9084 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		E93B870516B5AA3800EE9084 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Database.h; path = Cirqueorial/Database.h; sourceTree = "<group>"; };
+		E93B870616B5AA3800EE9084 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Database.m; path = Cirqueorial/Database.m; sourceTree = "<group>"; };
+		E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		E93B870C16B5B21900EE9084 /* VideoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoList.h; path = Cirqueorial/VideoList.h; sourceTree = "<group>"; };
+		E93B870D16B5B21900EE9084 /* VideoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoList.m; path = Cirqueorial/VideoList.m; sourceTree = "<group>"; };
+		E93B871616B5B7D700EE9084 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E93B871716B5B7D700EE9084 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E93B871916B5E07B00EE9084 /* Video_Test_DB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Video_Test_DB.sqlite; path = Database/Video_Test_DB.sqlite; sourceTree = "<group>"; };
 		E949E6AF16B594E8006FFBC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E949E6B016B594E8006FFBC7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Cirqueorial-Info.plist"; sourceTree = "<group>"; };
@@ -68,6 +86,10 @@
 		E965304516B2F4E5009D4307 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		E965304616B2F4E5009D4307 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		E965304716B2F4E5009D4307 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E97067E216B6FF8C00F515EF /* LibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
+		E97067E316B6FF8C00F515EF /* LibraryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
+		E97067E616B7018400F515EF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		E97067E716B7018500F515EF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		E9996ACF16B59D670065C5E0 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		E9996AD016B59D670065C5E0 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
@@ -79,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93B870B16B5AAA200EE9084 /* libsqlite3.0.dylib in Frameworks */,
 				E965304816B2F4E5009D4307 /* Accounts.framework in Frameworks */,
 				E965304916B2F4E5009D4307 /* AdSupport.framework in Frameworks */,
 				E965304A16B2F4E5009D4307 /* Social.framework in Frameworks */,
@@ -92,18 +115,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E93B870F16B5B46000EE9084 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E93B871916B5E07B00EE9084 /* Video_Test_DB.sqlite */,
+				E93B870C16B5B21900EE9084 /* VideoList.h */,
+				E93B870D16B5B21900EE9084 /* VideoList.m */,
+				E93B870516B5AA3800EE9084 /* Database.h */,
+				E93B870616B5AA3800EE9084 /* Database.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E949E6AE16B594E8006FFBC7 /* Cirqueorial */ = {
 			isa = PBXGroup;
 			children = (
+				E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */,
+				E97067E216B6FF8C00F515EF /* LibraryViewController.h */,
+				E97067E316B6FF8C00F515EF /* LibraryViewController.m */,
 				E949E6AF16B594E8006FFBC7 /* AppDelegate.h */,
 				E949E6B016B594E8006FFBC7 /* AppDelegate.m */,
+				E93B871616B5B7D700EE9084 /* DetailViewController.h */,
+				E93B871716B5B7D700EE9084 /* DetailViewController.m */,
+				E93B86FD16B5A97100EE9084 /* AnimationViewController.h */,
+				E93B86FE16B5A97100EE9084 /* AnimationViewController.m */,
+				E949E6C416B594E8006FFBC7 /* ViewController.h */,
+				E949E6C516B594E8006FFBC7 /* ViewController.m */,
+				E97067E616B7018400F515EF /* ProfileViewController.h */,
+				E97067E716B7018500F515EF /* ProfileViewController.m */,
+				E949E6BE16B594E8006FFBC7 /* main.m */,
 				E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */,
 				E949E6B216B594E8006FFBC7 /* Cirqueorial-Prefix.pch */,
 				E949E6B516B594E8006FFBC7 /* InfoPlist.strings */,
-				E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */,
-				E949E6BE16B594E8006FFBC7 /* main.m */,
-				E949E6C416B594E8006FFBC7 /* ViewController.h */,
-				E949E6C516B594E8006FFBC7 /* ViewController.m */,
 				E949E6D916B59518006FFBC7 /* Supporting Files */,
 			);
 			path = Cirqueorial;
@@ -134,6 +177,7 @@
 		E965300616B2F092009D4307 = {
 			isa = PBXGroup;
 			children = (
+				E93B870F16B5B46000EE9084 /* Model */,
 				E949E6AE16B594E8006FFBC7 /* Cirqueorial */,
 				E965301416B2F092009D4307 /* Frameworks */,
 				E965301216B2F092009D4307 /* Products */,
@@ -151,6 +195,7 @@
 		E965301416B2F092009D4307 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */,
 				E9996ACF16B59D670065C5E0 /* FacebookSDKResources.bundle */,
 				E9996AD016B59D670065C5E0 /* FBUserSettingsViewResources.bundle */,
 				E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */,
@@ -234,6 +279,7 @@
 				E949E6D616B594E8006FFBC7 /* title.jpg in Resources */,
 				E9996AD116B59D670065C5E0 /* FacebookSDKResources.bundle in Resources */,
 				E9996AD216B59D670065C5E0 /* FBUserSettingsViewResources.bundle in Resources */,
+				E93B871A16B5E07B00EE9084 /* Video_Test_DB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +293,12 @@
 				E949E6C616B594E8006FFBC7 /* AppDelegate.m in Sources */,
 				E949E6D116B594E8006FFBC7 /* main.m in Sources */,
 				E949E6D716B594E8006FFBC7 /* ViewController.m in Sources */,
+				E93B86FF16B5A97100EE9084 /* AnimationViewController.m in Sources */,
+				E93B870716B5AA3800EE9084 /* Database.m in Sources */,
+				E93B870E16B5B21900EE9084 /* VideoList.m in Sources */,
+				E93B871816B5B7D800EE9084 /* DetailViewController.m in Sources */,
+				E97067E816B7018500F515EF /* ProfileViewController.m in Sources */,
+				E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
