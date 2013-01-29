@@ -10,10 +10,12 @@
 #import "AppDelegate.h"
 
 @interface ViewController ()
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UITextView *userNameBox;
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *userProfileImage;
 @property (strong, nonatomic) IBOutlet UITextView *userInfoTextView;
+
+@property (strong, nonatomic) NSString *userInfo;
+@property (strong, nonatomic) NSString *userNameOnly;
 
 @end
 
@@ -21,19 +23,22 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    NSLog(@"viewDidLoad");
 	// Do any additional setup after loading the view, typically from a nib.
-    /*
-    NSString *htmlString =
-    @"<html><object><param name='movie' height=auto value='http://www.youtube.com/v/b_ILDFp5DGA'></param><embed src='http://www.youtube.com/v/b_ILDFp5DGA' type='application/x-shockwave-flash'></embed></object></html>";
+
+
+
+
+    //Changes the back button to 'Logout'
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                   initWithTitle: @"Logout"
+                                   style: UIBarButtonItemStyleBordered
+                                   target: nil action: nil];
+    
+    [self.navigationItem setBackBarButtonItem: backButton];
     
     
-    [self.webView loadHTMLString:htmlString baseURL:nil];
-     */
-    
-    NSString *embedURL = @"<iframe width=\"280\" height=\"200\" src=\"http://www.youtube.com/embed/b_ILDFp5DGA\" frameborder=\"0\" allowfullscreen></iframe>";
-    
-    [self.webView loadHTMLString:embedURL baseURL:nil];
+
     
     [[NSNotificationCenter defaultCenter]
      addObserver: self
@@ -45,10 +50,24 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate openSessionWithAllowLoginUI:NO];
     
+    if (FBSession.activeSession.isOpen) {
+        
+        [self sessionStateChanged:nil];
+
+    }
+    else{
+        NSLog(@"Bugger");
+    }
+    
+    
+    [super viewDidLoad];
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
+        NSLog(@"didreceive warning");
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     [[NSNotificationCenter defaultCenter]
@@ -58,23 +77,33 @@
 
 - (IBAction)testButton:(id)sender {
     
-    NSLog(@"Blah");
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
-    if (FBSession.activeSession.isOpen) {
-        [appDelegate closeSession];
-    }
-    else{
+
         // User has initiated login, so call the opensession method
         // and show the login UX if necessary.
         [appDelegate openSessionWithAllowLoginUI:YES];
-    }
+}
+
+- (IBAction)logoutButton:(id)sender {
+
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+        [appDelegate closeSession];
+        self.logoutButton.hidden = YES;
+        [self.authButton setTitle:@"Login with Facebook" forState:UIControlStateNormal];
+    
+    
 }
 
 - (void) sessionStateChanged:(NSNotification*) notification{
+    
+        NSLog(@"session state change");
+    
     if (FBSession.activeSession.isOpen) {
-        [self.authButton setTitle:@"Logout" forState:UIControlStateNormal];
-        self.publishButton.hidden = NO;
+        NSLog(@"IF");
+        //[self.authButton setTitle:@"Logout" forState:UIControlStateNormal];
+        //self.publishButton.hidden = NO;
         self.userInfoTextView.hidden = NO;
         self.userNameBox.hidden = NO;
         
@@ -83,25 +112,25 @@
                                            id<FBGraphUser> user,
                                            NSError *error){
              if (!error) {
-                 NSString *userInfo = @"";
-                 NSString *userNameOnly = @"";
+                    _userInfo = @"";
+                    _userNameOnly = @"";
                  
                  //Gets the users name
-                 userNameOnly = [userNameOnly
+                 _userNameOnly = [_userNameOnly
                              stringByAppendingString:[NSString stringWithFormat:@"%@",
                                                       user.name]];
                  
                  //Birthday
-                 userInfo = [userInfo
+                 _userInfo = [_userInfo
                              stringByAppendingString:[NSString stringWithFormat:@"Birthday: %@\n\n",
                                                       user.birthday]];
                  
-                 userInfo = [userInfo
+                 _userInfo = [_userInfo
                              stringByAppendingString:
                              [NSString stringWithFormat:@"Location: %@\n\n",
                               [user.location objectForKey:@"name"]]];
                  
-                 userInfo = [userInfo
+                 _userInfo = [_userInfo
                              stringByAppendingString:
                              [NSString stringWithFormat:@"Locale: %@\n\n",
                               [user objectForKey:@"locale"]]];
@@ -115,7 +144,7 @@
                                                    objectForKey:@"name"]];
                      }
                      
-                     userInfo = [userInfo
+                     _userInfo = [_userInfo
                                  stringByAppendingString:
                                  [NSString stringWithFormat:@"Languages: %@\n\n",
                                   languageNames]];
@@ -124,19 +153,25 @@
                  self.userProfileImage.profileID = user.id;
                  
                  //Display User Info
-                 self.userInfoTextView.text = userInfo;
-                 self.userNameBox.text = userNameOnly;
+                 self.userInfoTextView.text = _userInfo;
+                 self.userNameBox.text = _userNameOnly;
                  
                  
              }
          }
         ];
-        
+        self.logoutButton.hidden = NO;
+        [self.authButton setTitle:@"Enter" forState:UIControlStateNormal];
         
     }
     else{
-        self.publishButton.hidden = YES;
-        [self.authButton setTitle:@"Login" forState:UIControlStateNormal];
+        NSLog(@"ELSE");
+        //self.publishButton.hidden = YES;
+        //[self.authButton setTitle:@"Login" forState:UIControlStateNormal];
+        /*
+        if (FBSession.activeSession.isOpen) {
+            [appDelegate closeSession];
+        }*/
     }
 }
 
@@ -165,6 +200,7 @@
         //
     }
 }
+
 
 
 @end
