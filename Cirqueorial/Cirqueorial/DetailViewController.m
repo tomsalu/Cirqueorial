@@ -40,6 +40,8 @@
     
     [self.videoPlayer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:videoURL]]];
     
+    NSLog(@"test");
+    
     
     //[self.videoPlayer loadHTMLString:videoURL baseURL:nil];
     
