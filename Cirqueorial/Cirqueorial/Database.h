@@ -16,7 +16,9 @@
 }
 
 @property (strong, nonatomic) NSMutableArray *videoArray;
+@property (strong, nonatomic) NSMutableArray *jugglingVideoArray;
 
 - (NSMutableArray *) getVideo;
+- (NSMutableArray *) getJugglingVideo:(NSString *) catSQL;
 
 @end

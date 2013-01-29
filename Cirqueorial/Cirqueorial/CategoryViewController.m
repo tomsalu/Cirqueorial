@@ -15,12 +15,14 @@
 @implementation CategoryViewController
 
 
+
 int catLocationIndex = 1;
 
 CGPoint catLocation1 = {170,250};
 CGPoint catLocation2 = {-100, 150};
 CGPoint catLocation3 = {100,100};
 CGPoint catLocation4 = {500, 250};
+LibraryViewController *lvc;
 
 
 
@@ -39,6 +41,7 @@ CGPoint catLocation4 = {500, 250};
 	// Do any additional setup after loading the view.
     catLocationIndex = 1;
     self.navigationItem.title = @"Categories";
+    lvc = [[LibraryViewController alloc] init];
     
 }
 
@@ -51,7 +54,31 @@ CGPoint catLocation4 = {500, 250};
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     catLocationIndex = 1;
     NSLog(@"Segway Location: %i", catLocationIndex);
+    
+    if (self.catPoi.highlighted) {
+
+        [lvc createTable:@"poi"];
+    }
+
+    if (self.catStaff.highlighted) {
+        [lvc createTable:@"staff"];
+    }
+
+    if (self.catDiabolo.highlighted) {
+        [lvc createTable:@"diabolo"];
+    }
+
+    if (self.catJuggling.highlighted) {
+
+        [lvc createTable:@"juggling"];
+    }
+    
+    
+    
+    
+    
 }
+
 
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)recognizer {
     
@@ -172,6 +199,33 @@ CGPoint catLocation4 = {500, 250};
     
 }
 
+
+
+- (IBAction)poiSelection:(id)sender {
+
+    [lvc createTable:@"poi"];
+}
+
+- (IBAction)staffSelection:(id)sender {
+    
+    [lvc createTable:@"staff"];
+}
+
+- (IBAction)diaboloSelection:(id)sender {
+    
+    [lvc createTable:@"diabolo"];
+}
+
+- (IBAction)jugglingSelection:(id)sender {
+
+    
+    [lvc createTable:@"juggling"];
+    
+}
+
+- (NSString *)getSelection{
+    return self.selection;
+}
 
 
 @end

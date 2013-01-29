@@ -21,6 +21,8 @@
 @synthesize ops;
 @synthesize tableVideos;
 
+NSString *sel = @"";
+
 //ViewController *vc;
 
 
@@ -46,10 +48,11 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    /*
     ops = [[Database alloc] init];
     [ops getVideo];
     tableVideos = [self.ops videoArray];
+     */
 }
 
 - (void)viewDidUnload{
@@ -60,13 +63,43 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    
+    if (sel != nil) {
 
     ops = [[Database alloc]init];
-    [self.ops getVideo];
+
+    CategoryViewController *catVC;
+    //[self.ops getVideo];
+    
+    
+    if ([sel isEqualToString:@"juggling"]) {
+        [self.ops getJugglingVideo:@"juggling"];
+    }
+    else if ([sel isEqualToString:@"poi"]) {
+        [self.ops getJugglingVideo:@"poi"];
+    }
+    else if ([sel isEqualToString:@"staff"]) {
+        [self.ops getJugglingVideo:@"staff"];
+    }
+    else if ([sel isEqualToString:@"diabolo"]) {
+        [self.ops getJugglingVideo:@"diabolo"];
+    }
+    else{
+        NSLog(@"Went Wrong");
+    }
+    
     tableVideos = [ops videoArray];
     [self.videoTable reloadData];
+    sel = nil;
+    }
+    
     [super viewWillAppear:animated];
+    
+}
 
+- (void) createTable:(NSString *) catSelection{
+    sel = catSelection;
+    
     
 }
 

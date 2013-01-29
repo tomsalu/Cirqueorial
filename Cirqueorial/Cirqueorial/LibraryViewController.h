@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "VideoList.h"
 #import "Database.h"
+#import "CategoryViewController.h"
 
 
 @interface LibraryViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
@@ -25,5 +26,7 @@
 */
 @property (strong, nonatomic) IBOutlet UITableView *videoTable;
 @property(nonatomic, strong) Database * ops;
+
+- (void) createTable:(NSString *) selection;
 
 @end
