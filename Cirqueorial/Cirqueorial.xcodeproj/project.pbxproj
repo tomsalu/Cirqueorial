@@ -41,8 +41,9 @@
 		E97067E816B7018500F515EF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E716B7018500F515EF /* ProfileViewController.m */; };
 		E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E316B6FF8C00F515EF /* LibraryViewController.m */; };
 		E9996ACD16B59D540065C5E0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */; };
-		E9996AD116B59D670065C5E0 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9996ACF16B59D670065C5E0 /* FacebookSDKResources.bundle */; };
-		E9996AD216B59D670065C5E0 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9996AD016B59D670065C5E0 /* FBUserSettingsViewResources.bundle */; };
+		E9D32A5C16B82A870076932E /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D32A5B16B82A870076932E /* CategoryViewController.m */; };
+		E9D32A6016B8310B0076932E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */; };
+		E9D32A6116B8310B0076932E /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5F16B8310B0076932E /* FBUserSettingsViewResources.bundle */; };
 		E9D6AD6816B3217E00311E4C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -91,8 +92,10 @@
 		E97067E616B7018400F515EF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		E97067E716B7018500F515EF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		E9996ACF16B59D670065C5E0 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
-		E9996AD016B59D670065C5E0 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		E9D32A5A16B82A870076932E /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		E9D32A5B16B82A870076932E /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		E9D32A5F16B8310B0076932E /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */,
+				E949E6C416B594E8006FFBC7 /* ViewController.h */,
+				E949E6C516B594E8006FFBC7 /* ViewController.m */,
+				E9D32A5A16B82A870076932E /* CategoryViewController.h */,
+				E9D32A5B16B82A870076932E /* CategoryViewController.m */,
 				E97067E216B6FF8C00F515EF /* LibraryViewController.h */,
 				E97067E316B6FF8C00F515EF /* LibraryViewController.m */,
 				E949E6AF16B594E8006FFBC7 /* AppDelegate.h */,
@@ -139,8 +146,6 @@
 				E93B871716B5B7D700EE9084 /* DetailViewController.m */,
 				E93B86FD16B5A97100EE9084 /* AnimationViewController.h */,
 				E93B86FE16B5A97100EE9084 /* AnimationViewController.m */,
-				E949E6C416B594E8006FFBC7 /* ViewController.h */,
-				E949E6C516B594E8006FFBC7 /* ViewController.m */,
 				E97067E616B7018400F515EF /* ProfileViewController.h */,
 				E97067E716B7018500F515EF /* ProfileViewController.m */,
 				E949E6BE16B594E8006FFBC7 /* main.m */,
@@ -196,8 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */,
-				E9996ACF16B59D670065C5E0 /* FacebookSDKResources.bundle */,
-				E9996AD016B59D670065C5E0 /* FBUserSettingsViewResources.bundle */,
+				E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */,
+				E9D32A5F16B8310B0076932E /* FBUserSettingsViewResources.bundle */,
 				E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */,
 				E965304516B2F4E5009D4307 /* Accounts.framework */,
 				E965304616B2F4E5009D4307 /* AdSupport.framework */,
@@ -277,9 +282,9 @@
 				E949E6D416B594E8006FFBC7 /* Settings_Icon.png in Resources */,
 				E949E6D516B594E8006FFBC7 /* silver-button-normal.png in Resources */,
 				E949E6D616B594E8006FFBC7 /* title.jpg in Resources */,
-				E9996AD116B59D670065C5E0 /* FacebookSDKResources.bundle in Resources */,
-				E9996AD216B59D670065C5E0 /* FBUserSettingsViewResources.bundle in Resources */,
 				E93B871A16B5E07B00EE9084 /* Video_Test_DB.sqlite in Resources */,
+				E9D32A6016B8310B0076932E /* FacebookSDKResources.bundle in Resources */,
+				E9D32A6116B8310B0076932E /* FBUserSettingsViewResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +304,7 @@
 				E93B871816B5B7D800EE9084 /* DetailViewController.m in Sources */,
 				E97067E816B7018500F515EF /* ProfileViewController.m in Sources */,
 				E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */,
+				E9D32A5C16B82A870076932E /* CategoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

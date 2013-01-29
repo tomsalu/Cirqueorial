@@ -31,13 +31,18 @@ CGPoint location4 = {500, 250};
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    locationIndex = 1;
     self.navigationItem.title = @"Main Menu";
 }
 
 - (void)viewDidUnload{
     [super viewDidUnload];
+    
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    locationIndex = 1;
+    NSLog(@"Segway Location: %i", locationIndex);
 }
 
 
