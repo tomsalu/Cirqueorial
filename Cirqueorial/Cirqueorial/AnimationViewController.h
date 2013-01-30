@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface AnimationViewController : UIViewController
+- (IBAction)logoutButton:(id)sender;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 
 @property (strong, nonatomic) IBOutlet UIButton *libraryButton;
 @property (strong, nonatomic) IBOutlet UIButton *settingsButton;
 @property (strong, nonatomic) IBOutlet UIButton *searchButton;
 @property (strong, nonatomic) IBOutlet UIButton *profileButton;
+@property (strong, nonatomic) UIAlertView *alert;
 
 
 

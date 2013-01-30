@@ -18,6 +18,8 @@
 @synthesize detailURL;
 @synthesize detailVideo;
 @synthesize videoPlayer;
+@synthesize expandVideo;
+@synthesize expandText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,21 +33,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    /*
-    NSString *videoURL = [NSString stringWithFormat:@"<iframe width=\"300\" height=\"200\" src=\"http://www.youtube.com/embed/%@\" frameborder=\"0\" allowfullscreen></iframe>", self.detailVideo.videoURL];
-    */
+    
+    
+	//Do any additional setup after loading the view.
     
     NSString *videoURL = [NSString stringWithFormat:@"http://www.youtube.com/watch?v=%@", self.detailVideo.videoURL];
     
     [self.videoPlayer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:videoURL]]];
     
     NSLog(@"test");
+     
     
-    
-    //[self.videoPlayer loadHTMLString:videoURL baseURL:nil];
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -67,6 +68,7 @@
     
 }
 
+
 - (void)viewDidUnload{
     [self setDetailVideo:nil];
     [self setDetailName:nil];
@@ -74,4 +76,53 @@
     
 }
 
+- (IBAction)expandVideo:(id)sender {
+    
+
+    if (videoPlayer.hidden || videoPlayer.frame.size.height == 30) {
+        
+        videoPlayer.frame = CGRectMake(videoPlayer.frame.origin.x, videoPlayer.frame.origin.y, 320, 0);
+        
+        [UIView beginAnimations:@"Anim1" context:nil];
+        [UIView animateWithDuration:2.5 animations:^{
+        
+        videoPlayer.hidden = NO;
+        videoPlayer.frame = CGRectMake(videoPlayer.frame.origin.x-10, videoPlayer.frame.origin.y+37, 320, 320);
+
+        [self.expandVideo setTitle:@"Contract Video" forState:UIControlStateNormal];
+            
+            
+        // Move the 'text tutorial' button
+        expandText.frame = CGRectMake(expandText.frame.origin.x, expandText.frame.origin.y+320, 320, 40);
+        
+        }];
+        
+        [UIView commitAnimations];
+        
+
+        
+    }
+        
+    else if (videoPlayer.frame.size.height == 320){
+        
+        [UIView beginAnimations:@"Anim2" context:nil];
+        [UIView animateWithDuration:2.5 animations:^{
+            
+        videoPlayer.frame = CGRectMake(videoPlayer.frame.origin.x+10, videoPlayer.frame.origin.y-37, 300, 30);
+        [self.expandVideo setTitle:@"Expand Video" forState:UIControlStateNormal];
+            
+        // Move the 'text tutorial' button
+        expandText.frame = CGRectMake(expandText.frame.origin.x, expandText.frame.origin.y-320, 320, 40);
+            
+        }];
+        [UIView commitAnimations];
+        
+        
+    }
+
+    
+    
+
+    
+}
 @end

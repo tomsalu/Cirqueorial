@@ -16,6 +16,7 @@
 
 @implementation AnimationViewController
 
+@synthesize alert;
 
 int locationIndex = 1;
 
@@ -33,6 +34,7 @@ CGPoint location4 = {500, 250};
 	// Do any additional setup after loading the view, typically from a nib.
     locationIndex = 1;
     self.navigationItem.title = @"Main Menu";
+    //self.navigationItem.hidesBackButton = true;
 }
 
 - (void)viewDidUnload{
@@ -171,4 +173,9 @@ CGPoint location4 = {500, 250};
     
 }
 
+- (IBAction)logoutButton:(id)sender {
+    alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Are you sure?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Logout", nil];
+    [alert show];
+    
+}
 @end

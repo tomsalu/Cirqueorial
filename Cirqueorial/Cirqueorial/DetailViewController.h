@@ -9,15 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "VideoList.h"
 
+#define kCustomButtonHeight		30.0
+
 @class VideoList;
 
 @interface DetailViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *expandText;
+
+@property (strong, nonatomic) IBOutlet UIButton *expandVideo;
 @property (strong, nonatomic) IBOutlet UIWebView *videoPlayer;
 
 
 @property (strong, nonatomic) IBOutlet UILabel *detailName;
 @property (strong, nonatomic) IBOutlet UILabel *detailURL;
 @property (strong, nonatomic) VideoList * detailVideo;
+
+- (IBAction)expandVideo:(id)sender;
 
 
 @end
