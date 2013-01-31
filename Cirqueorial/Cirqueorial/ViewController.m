@@ -21,6 +21,7 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad
 {
     NSLog(@"viewDidLoad");
@@ -60,6 +61,7 @@
     }
     
     
+    
     [super viewDidLoad];
     
 }
@@ -97,6 +99,8 @@
 }
 
 - (void) sessionStateChanged:(NSNotification*) notification{
+    
+    //[activity startAnimating];
     
         NSLog(@"session state change");
     
@@ -162,6 +166,7 @@
         ];
         self.logoutButton.hidden = NO;
         [self.authButton setTitle:@"Enter" forState:UIControlStateNormal];
+        
         
     }
     else{

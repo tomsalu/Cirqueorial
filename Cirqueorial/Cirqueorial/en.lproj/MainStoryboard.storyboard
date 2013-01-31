@@ -244,8 +244,8 @@
                             <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZ9-E9-zpV">
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="etx-b0-tSG"/>
                                     <constraint firstAttribute="height" constant="30" id="qFn-hg-Jci"/>
+                                    <constraint firstAttribute="width" constant="300" id="xpU-k2-A3C"/>
                                 </constraints>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-jO-66E">
@@ -271,18 +271,27 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUc-ya-7ka">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="236" id="V1K-lc-IyT"/>
+                                </constraints>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UyL-jO-66E" firstAttribute="leading" secondItem="FmF-xm-4oB" secondAttribute="leading" type="default" id="0SA-Yn-szH"/>
                             <constraint firstItem="UyL-jO-66E" firstAttribute="top" secondItem="55D-Hv-17c" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="15N-QN-ijR"/>
+                            <constraint firstItem="oZ9-E9-zpV" firstAttribute="trailing" secondItem="OUc-ya-7ka" secondAttribute="trailing" type="default" id="184-3i-hY3"/>
                             <constraint firstItem="UyL-jO-66E" firstAttribute="centerY" secondItem="oZ9-E9-zpV" secondAttribute="centerY" type="default" id="70L-qy-tpM"/>
                             <constraint firstItem="1Y3-ay-mop" firstAttribute="trailing" secondItem="FmF-xm-4oB" secondAttribute="trailing" type="default" id="7xn-Im-OXM"/>
+                            <constraint firstItem="OUc-ya-7ka" firstAttribute="leading" secondItem="oZ9-E9-zpV" secondAttribute="leading" type="default" id="AwO-Cv-G0e"/>
                             <constraint firstItem="55D-Hv-17c" firstAttribute="leading" secondItem="FmF-xm-4oB" secondAttribute="leading" constant="39" id="C9u-Ca-TGQ"/>
                             <constraint firstAttribute="trailing" secondItem="NId-AZ-Wq1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WTS-w8-Spy"/>
                             <constraint firstItem="NId-AZ-Wq1" firstAttribute="top" secondItem="FmF-xm-4oB" secondAttribute="top" constant="8" id="YEb-dw-ZSO"/>
                             <constraint firstItem="UyL-jO-66E" firstAttribute="trailing" secondItem="FmF-xm-4oB" secondAttribute="trailing" type="default" id="fF1-KY-9Tz"/>
                             <constraint firstItem="1Y3-ay-mop" firstAttribute="leading" secondItem="FmF-xm-4oB" secondAttribute="leading" type="default" id="hNz-tF-rvx"/>
+                            <constraint firstItem="OUc-ya-7ka" firstAttribute="top" secondItem="1Y3-ay-mop" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kRl-Dk-dkd"/>
                             <constraint firstItem="oZ9-E9-zpV" firstAttribute="centerX" secondItem="UyL-jO-66E" secondAttribute="centerX" type="default" id="l5I-j5-ics"/>
                             <constraint firstItem="1Y3-ay-mop" firstAttribute="top" secondItem="oZ9-E9-zpV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oe9-PN-Dub"/>
                             <constraint firstItem="55D-Hv-17c" firstAttribute="top" secondItem="FmF-xm-4oB" secondAttribute="top" constant="20" symbolic="YES" type="default" id="xJe-G6-goa"/>
@@ -294,12 +303,13 @@
                         <outlet property="detailURL" destination="NId-AZ-Wq1" id="Qn4-Ul-O7R"/>
                         <outlet property="expandText" destination="1Y3-ay-mop" id="Cfy-1R-ROb"/>
                         <outlet property="expandVideo" destination="UyL-jO-66E" id="yBN-8I-FOt"/>
+                        <outlet property="textViewer" destination="OUc-ya-7ka" id="T6M-9O-TBl"/>
                         <outlet property="videoPlayer" destination="oZ9-E9-zpV" id="FJw-IH-SmW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQ4-cA-wNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3742" y="252"/>
+            <point key="canvasLocation" x="3466" y="219"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="rhU-s2-uja">
@@ -420,7 +430,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2701" y="252"/>
+            <point key="canvasLocation" x="2653" y="219"/>
         </scene>
         <!--Library View Controller-->
         <scene sceneID="JTr-ZX-wyA">
@@ -456,7 +466,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYc-jx-KOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3287" y="252"/>
+            <point key="canvasLocation" x="3083" y="219"/>
         </scene>
         <!--View Controller - Profile-->
         <scene sceneID="99N-X1-BiR">
@@ -472,13 +482,13 @@
                                     <constraint firstAttribute="height" constant="273" id="aES-TX-Zx8"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="blah" translatesAutoresizingMaskIntoConstraints="NO" id="CKS-tu-hol">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading..." translatesAutoresizingMaskIntoConstraints="NO" id="CKS-tu-hol">
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="286" id="z5f-lU-4Wh"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B2c-bp-ozn">
@@ -503,10 +513,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="288-3Y-EVw" firstAttribute="centerX" secondItem="B2c-bp-ozn" secondAttribute="centerX" type="default" id="Bty-Q1-8Vl"/>
                             <constraint firstAttribute="bottom" secondItem="3gc-tx-JN1" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="C1L-iD-f24"/>
                             <constraint firstItem="zbi-IR-vWT" firstAttribute="leading" secondItem="sBW-Iv-k4V" secondAttribute="leading" constant="116" id="IBJ-El-6jq"/>
                             <constraint firstItem="B2c-bp-ozn" firstAttribute="centerX" secondItem="sBW-Iv-k4V" secondAttribute="centerX" type="default" id="MBL-b6-Kcn"/>
-                            <constraint firstItem="288-3Y-EVw" firstAttribute="centerX" secondItem="B2c-bp-ozn" secondAttribute="centerX" type="default" id="XKV-3V-EuO"/>
                             <constraint firstAttribute="bottom" secondItem="CKS-tu-hol" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Y7y-hF-Dc4"/>
                             <constraint firstAttribute="bottom" secondItem="zbi-IR-vWT" secondAttribute="bottom" constant="395" id="bDS-rx-WSS"/>
                             <constraint firstItem="B2c-bp-ozn" firstAttribute="top" secondItem="sBW-Iv-k4V" secondAttribute="top" constant="124" id="dQo-Si-OU3"/>
@@ -529,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSx-VP-FKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2210" y="-586"/>
+            <point key="canvasLocation" x="2210" y="-432"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nlq-tD-tV0">
@@ -560,6 +570,76 @@
         <image name="silver-button-normal.png" width="307" height="48"/>
         <image name="title.jpg" width="640" height="228"/>
     </resources>
+    <classes>
+        <class className="AnimationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logoutButton:"/>
+                <relationship kind="action" name="swipeActionLeft:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="swipeActionRight:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="outlet" name="libraryButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logoutButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="moreText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="profileButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tapOutlet" candidateClass="UITapGestureRecognizer"/>
+            </relationships>
+        </class>
+        <class className="CategoryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="diaboloSelection:"/>
+                <relationship kind="action" name="jugglingSelection:"/>
+                <relationship kind="action" name="poiSelection:"/>
+                <relationship kind="action" name="staffSelection:"/>
+                <relationship kind="action" name="swipeLeft:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="swipeRight:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="outlet" name="catDiabolo" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="catJuggling" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="catPoi" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="catStaff" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="expandVideo:"/>
+                <relationship kind="outlet" name="detailName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailURL" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="expandText" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="expandVideo" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textViewer" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="videoPlayer" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="FBProfilePictureView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBProfilePictureView.h"/>
+        </class>
+        <class className="LibraryViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LibraryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="videoTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logoutButton:"/>
+                <relationship kind="action" name="publishButtonAction:"/>
+                <relationship kind="action" name="testButton:"/>
+                <relationship kind="outlet" name="authButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logoutButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="publishButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="userInfoTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="userNameBox" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="userProfileImage" candidateClass="FBProfilePictureView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

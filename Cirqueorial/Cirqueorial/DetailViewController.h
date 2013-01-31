@@ -14,7 +14,9 @@
 @class VideoList;
 
 @interface DetailViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIButton *expandText;
+@property (strong, nonatomic) IBOutlet UIWebView *textViewer;
 
 @property (strong, nonatomic) IBOutlet UIButton *expandVideo;
 @property (strong, nonatomic) IBOutlet UIWebView *videoPlayer;

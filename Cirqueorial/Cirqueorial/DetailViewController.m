@@ -20,6 +20,7 @@
 @synthesize videoPlayer;
 @synthesize expandVideo;
 @synthesize expandText;
+@synthesize textViewer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,6 +41,10 @@
     NSString *videoURL = [NSString stringWithFormat:@"http://www.youtube.com/watch?v=%@", self.detailVideo.videoURL];
     
     [self.videoPlayer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:videoURL]]];
+    
+    NSString *textURL = [NSString stringWithFormat:@"http://www.diabolotricks.com/Grinds.htm#adamgrind"];
+    
+    [self.textViewer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:textURL]]];
     
     NSLog(@"test");
      
@@ -94,6 +99,7 @@
             
         // Move the 'text tutorial' button
         expandText.frame = CGRectMake(expandText.frame.origin.x, expandText.frame.origin.y+320, 320, 40);
+        textViewer.frame = CGRectMake(textViewer.frame.origin.x, textViewer.frame.origin.y+320, textViewer.frame.size.width, textViewer.frame.size.height);
         
         }];
         
@@ -113,6 +119,7 @@
             
         // Move the 'text tutorial' button
         expandText.frame = CGRectMake(expandText.frame.origin.x, expandText.frame.origin.y-320, 320, 40);
+        textViewer.frame = CGRectMake(textViewer.frame.origin.x, textViewer.frame.origin.y-320, textViewer.frame.size.width, textViewer.frame.size.height);
             
         }];
         [UIView commitAnimations];

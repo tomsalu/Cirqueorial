@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface ProfileViewController ()
 @property (strong, nonatomic) IBOutlet UITextView *userNameBox;
@@ -113,6 +114,7 @@
              }
          }
          ];
+
         
         
         
