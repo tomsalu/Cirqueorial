@@ -20,6 +20,8 @@
 
 @synthesize ops;
 @synthesize tableVideos;
+@synthesize filteredtableVidoes;
+@synthesize searchWasActive, savedScopeButtonIndex, savedSearchTerm;
 
 NSString *sel = @"";
 
@@ -37,29 +39,48 @@ NSString *sel = @"";
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    //[super viewDidLoad];
     
     self.videoTable.dataSource = self;
     self.videoTable.delegate = self;
     
+    // create a filtered list that will contain products for the search results table.
+	self.filteredtableVidoes = [NSMutableArray arrayWithCapacity:[self.tableVideos count]];
+	
+	// restore search settings if they were saved in didReceiveMemoryWarning.
+    if (self.savedSearchTerm)
+	{
+        [self.searchDisplayController setActive:self.searchWasActive];
+        [self.searchDisplayController.searchBar setSelectedScopeButtonIndex:self.savedScopeButtonIndex];
+        [self.searchDisplayController.searchBar setText:savedSearchTerm];
+        
+        self.savedSearchTerm = nil;
+    }
+	
+	[self.tableView reloadData];
+    self.tableView.scrollEnabled = YES;
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    /*
-    ops = [[Database alloc] init];
-    [ops getVideo];
-    tableVideos = [self.ops videoArray];
-     */
+    NSLog(@"Normal Array Count: %i", tableVideos.count);
+    NSLog(@"Filtered Array Count: %i", filteredtableVidoes.count);
+    
 }
 
 - (void)viewDidUnload{
     
     [self setVideoTable:nil];
-    [super viewDidUnload];
+    self.filteredtableVidoes = nil;
+
+    //[super viewDidUnload];
     
+}
+
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    // save the state of the search UI so that it can be restored if the view is re-created
+    self.searchWasActive = [self.searchDisplayController isActive];
+    self.savedSearchTerm = [self.searchDisplayController.searchBar text];
+    self.savedScopeButtonIndex = [self.searchDisplayController.searchBar selectedScopeButtonIndex];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -68,7 +89,6 @@ NSString *sel = @"";
 
     ops = [[Database alloc]init];
 
-    CategoryViewController *catVC;
     //[self.ops getVideo];
     
     
@@ -120,8 +140,17 @@ NSString *sel = @"";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+	{
+        return [filteredtableVidoes count];
+    }
+    else{
     return [tableVideos count];
+    }
 }
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -136,6 +165,18 @@ NSString *sel = @"";
     cell.textLabel.text = [NSString stringWithFormat:@"%@", userObj.videoName];
     NSLog(@"Cell Text Label: %@", userObj.videoName);
 
+    /*
+	 If there's been a search, use the filtered list. If not, use the regular.
+	 */
+	VideoList *videoL = nil;
+	if (tableView == self.searchDisplayController.searchResultsTableView)
+	{
+        videoL = [self.filteredtableVidoes objectAtIndex:indexPath.row];
+    }
+	else
+	{
+        videoL = [self.tableVideos objectAtIndex:indexPath.row];
+    }
     
     return cell;
 }
@@ -149,58 +190,116 @@ NSString *sel = @"";
     }
 }
 
-        
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark -
+#pragma mark Content Filtering
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    // Return NO if you do not want the specified item to be editable.
+	/*
+	 Update the filtered array based on the search text and scope.
+	 */
+	
+	[self.filteredtableVidoes removeAllObjects]; // First clear the filtered array.
+	
+	/*
+	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
+	 */
+	for (VideoList *videoL in tableVideos)
+	{
+		if ([scope isEqualToString:@"All"] || [videoL.videoName isEqualToString:scope])
+		{
+			NSComparisonResult result = [videoL.videoName compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+            if (result == NSOrderedSame)
+			{
+				[self.filteredtableVidoes addObject:videoL];
+            }
+		}
+	}
+}
+
+#pragma mark -
+#pragma mark UISearchDisplayController Delegate Methods
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    // Return YES to cause the search result table view to be reloaded.
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
+    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    
+    // Return YES to cause the search result table view to be reloaded.
     return YES;
 }
-*/
+
 
 #pragma mark - Table view delegate
 
-- (void)tableVideos:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    UIViewController *detailsViewController = [[UIViewController alloc] init];
+    
+	/*
+	 If the requesting table view is the search display controller's table view, configure the next view controller using the filtered content, otherwise use the main list.
+	 */
+	VideoList *videoL = nil;
+	if (tableView == self.searchDisplayController.searchResultsTableView)
+	{
+        videoL = [self.filteredtableVidoes objectAtIndex:indexPath.row];
+    }
+	else
+	{
+        videoL = [self.tableVideos objectAtIndex:indexPath.row];
+    }
+	detailsViewController.title = videoL.videoName;
+    
+    [[self navigationController] pushViewController:detailsViewController animated:YES];
 }
+
+/*
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
+
+/*
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 @end
