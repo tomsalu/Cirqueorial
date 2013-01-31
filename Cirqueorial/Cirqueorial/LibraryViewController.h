@@ -12,14 +12,13 @@
 #import "CategoryViewController.h"
 
 
-@interface LibraryViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate>{
+@interface LibraryViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
     
     NSMutableArray *tableVideos;
     
 }
 
 @property (strong, nonatomic) NSMutableArray *tableVideos;
-@property (nonatomic, retain) NSMutableArray *filteredtableVidoes;
 /*
 @property (strong, nonatomic) IBOutlet UILabel *tableID;
 @property (strong, nonatomic) IBOutlet UILabel *tableName;
@@ -27,10 +26,6 @@
 */
 @property (strong, nonatomic) IBOutlet UITableView *videoTable;
 @property(nonatomic, strong) Database * ops;
-
-@property (nonatomic, copy) NSString *savedSearchTerm;
-@property (nonatomic) NSInteger savedScopeButtonIndex;
-@property (nonatomic) BOOL searchWasActive;
 
 - (void) createTable:(NSString *) selection;
 
