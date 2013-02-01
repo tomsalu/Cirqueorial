@@ -12,6 +12,8 @@
 @implementation Database
 
 @synthesize videoArray;
+@synthesize fileMgr;
+@synthesize homeDir;
 
 
 - (NSMutableArray *) getVideo{
@@ -103,6 +105,8 @@
         
         const char *sql;
         
+        
+        
         if ([catSQL isEqualToString:@"juggling"]) {
             sql = "SELECT rowid, Video_Name, Video_URL FROM videos WHERE video_Category='juggling'";
         }
@@ -115,6 +119,10 @@
         if ([catSQL isEqualToString:@"diabolo"]) {
             sql = "SELECT rowid, Video_Name, Video_URL FROM videos WHERE video_Category='diabolo'";
         }
+         
+         
+        
+
         
         
         
@@ -161,6 +169,53 @@
         return videoArray;
     }
     
+}
+
+- (void) newUser:(NSString *) firstName:(NSString *) surname:(NSString *) email:(NSString *) password{
+    
+    @try {
+        
+        
+        NSString *firstName = firstName;
+        NSString *surname = surname;
+        NSString *email = email;
+        NSString *password = password;
+        
+
+        fileMgr = [NSFileManager defaultManager];
+        sqlite3_stmt *stmt=nil;
+        sqlite3 *cruddb;
+        
+        
+        //insert
+        const char *sql = "INSERT INTO data(coltext, colint, coldouble) VALUES(?,?,?)";
+        
+        //Open db
+        NSString *cruddatabase = [self.GetDocumentDirectory stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
+        sqlite3_open([cruddatabase UTF8String], &cruddb);
+        sqlite3_prepare_v2(cruddb, sql, 1, &stmt, NULL);
+        sqlite3_step(stmt);
+        sqlite3_finalize(stmt);
+        sqlite3_close(cruddb);
+        
+        
+        
+        
+        
+        
+        
+    }
+    @catch (NSException *exception) {
+        NSLog(@"TOM ERROR: An exception occured: %@", [exception reason]);
+    }
+    
+}
+
+-(NSString *)GetDocumentDirectory{
+    fileMgr = [NSFileManager defaultManager];
+    homeDir = [NSHomeDirectory() stringByAppendingPathComponent:@""];
+    
+    return homeDir;
 }
 
 

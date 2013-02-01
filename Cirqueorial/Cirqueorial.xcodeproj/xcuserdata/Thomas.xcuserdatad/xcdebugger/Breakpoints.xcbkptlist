@@ -7,26 +7,13 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Cirqueorial/AnimationViewController.m"
-         timestampString = "381334853.525456"
+         filePath = "Cirqueorial/Database.m"
+         timestampString = "381443695.413588"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
-         landmarkName = "-prepareForSegue:sender:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Cirqueorial/ViewController.m"
-         timestampString = "381335796.698342"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "101"
-         endingLineNumber = "101"
-         landmarkName = "-sessionStateChanged:"
+         startingLineNumber = "174"
+         endingLineNumber = "174"
+         landmarkName = "-newUser::::"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

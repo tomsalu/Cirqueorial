@@ -17,8 +17,12 @@
 
 @property (strong, nonatomic) NSMutableArray *videoArray;
 @property (strong, nonatomic) NSMutableArray *jugglingVideoArray;
+@property (nonatomic,retain) NSFileManager *fileMgr;
+@property (nonatomic,retain) NSString *homeDir;
+
 
 - (NSMutableArray *) getVideo;
 - (NSMutableArray *) getJugglingVideo:(NSString *) catSQL;
+- (void) newUser:(NSString *) firstName:(NSString *) surname:(NSString *) email:(NSString *) password;
 
 @end

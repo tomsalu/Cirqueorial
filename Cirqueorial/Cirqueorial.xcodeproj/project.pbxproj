@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9301B5F16BC3E13000B2338 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */; };
 		E9329D3816B331CE008E33BC /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9329D3716B331CE008E33BC /* applogo.png */; };
 		E93B86FF16B5A97100EE9084 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B86FE16B5A97100EE9084 /* AnimationViewController.m */; };
 		E93B870716B5AA3800EE9084 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B870616B5AA3800EE9084 /* Database.m */; };
@@ -48,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9301B5D16BC3E13000B2338 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		E9329D3716B331CE008E33BC /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
 		E93B86FD16B5A97100EE9084 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		E93B86FE16B5A97100EE9084 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */,
 				E949E6C416B594E8006FFBC7 /* ViewController.h */,
 				E949E6C516B594E8006FFBC7 /* ViewController.m */,
+				E9301B5D16BC3E13000B2338 /* RegistrationViewController.h */,
+				E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */,
 				E9D32A5A16B82A870076932E /* CategoryViewController.h */,
 				E9D32A5B16B82A870076932E /* CategoryViewController.m */,
 				E97067E216B6FF8C00F515EF /* LibraryViewController.h */,
@@ -305,6 +310,7 @@
 				E97067E816B7018500F515EF /* ProfileViewController.m in Sources */,
 				E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */,
 				E9D32A5C16B82A870076932E /* CategoryViewController.m in Sources */,
+				E9301B5F16BC3E13000B2338 /* RegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
