@@ -17,4 +17,8 @@ extern NSString *const FBSessionStateChangedNotification;
 - (BOOL) openSessionWithAllowLoginUI: (BOOL) allowLoginUI;
 - (void) closeSession;
 
+@property (nonatomic,retain) NSFileManager *fileMgr;
+@property (nonatomic,retain) NSString *homeDir;
+@property (nonatomic,retain) NSString *title;
+
 @end

@@ -192,6 +192,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="H1P-lc-cOZ" kind="push" id="vzi-2f-Zgc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfv-Fa-NZ5">
                                 <constraints>
@@ -253,6 +256,39 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2220" y="219"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="2Nx-xv-7by">
+            <objects>
+                <tableViewController id="H1P-lc-cOZ" customClass="UserViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qUG-ed-zBu">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell2" id="bD1-sF-hKm">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H1P-lc-cOZ" id="Cub-qD-lps"/>
+                            <outlet property="delegate" destination="H1P-lc-cOZ" id="yId-tN-WOD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="q6q-Ch-jTv"/>
+                    <connections>
+                        <outlet property="userTable" destination="qUG-ed-zBu" id="xjJ-wD-h0O"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4r-j4-dxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2278" y="908"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="oS4-Hx-7o2">
@@ -832,6 +868,12 @@
                 <relationship kind="outlet" name="inFirstName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="inPassword" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="inSurname" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="UserViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="userTable" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">

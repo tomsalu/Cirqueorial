@@ -68,7 +68,6 @@ NSString *sel = @"";
 
     ops = [[Database alloc]init];
 
-    CategoryViewController *catVC;
     //[self.ops getVideo];
     
     

@@ -7,10 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "FMDatabase.h"
 
 
 
 @implementation AppDelegate
+
+@synthesize homeDir;
+@synthesize fileMgr;
 
 NSString *const FBSessionStateChangedNotification =
     @"uk.ac.aber.SecondFacebookApp:FBSessionStateChangedNotification";
@@ -20,6 +24,9 @@ NSString *const FBSessionStateChangedNotification =
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
+
+    [self checkAndCreateDatabase];
     [FBProfilePictureView class];
     return YES;
 }
@@ -121,23 +128,26 @@ openURL:(NSURL *) url
     [FBSession.activeSession closeAndClearTokenInformation];
 }
 
+-(NSString *)GetDocumentDirectory{
+    fileMgr = [NSFileManager defaultManager];
+    homeDir = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    return homeDir;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-(void) checkAndCreateDatabase{
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *databasePath = [self.GetDocumentDirectory stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
+    success = [fileManager fileExistsAtPath:databasePath];
+    if(success) {
+        NSLog(@"working");
+        return;}
+    else{
+        NSLog(@"notworking");
+        NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
+        [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
+    }
+}
 
 
 
