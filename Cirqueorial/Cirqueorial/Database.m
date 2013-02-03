@@ -12,8 +12,6 @@
 @implementation Database
 
 @synthesize videoArray;
-@synthesize fileMgr;
-@synthesize homeDir;
 
 
 - (NSMutableArray *) getVideo{
@@ -103,31 +101,12 @@
             NSLog(@"TOM ERROR: An error has occured.");
         }
         
-        const char *sql;
-        
-        
-        
-        if ([catSQL isEqualToString:@"juggling"]) {
-            sql = "SELECT rowid, Video_Name, Video_URL FROM videos WHERE video_Category='juggling'";
-        }
-        if ([catSQL isEqualToString:@"poi"]) {
-            sql = "SELECT rowid, Video_Name, Video_URL FROM videos WHERE video_Category='poi'";
-        }
-        if ([catSQL isEqualToString:@"staff"]) {
-            sql = "SELECT rowid, Video_Name, Video_URL FROM videos WHERE video_Category='staff'";
-        }
-        if ([catSQL isEqualToString:@"diabolo"]) {
-            sql = "SELECT rowid, Video_Name, Video_URL FROM videos WHERE video_Category='diabolo'";
-        }
-         
-         
-        
+        //NSString *querySQL = @"SELECT rowid, Video_Name, Video_URL FROM videos WHERE video_Category='%@'", catSQL;
 
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT rowid, Video_Name, Video_URL FROM videos WHERE video_Category='%@'", catSQL];
         
-        
-        
-        
-        
+        const char *sql = [querySQL UTF8String];
+
         sqlite3_stmt *sqlStatement;
         
         int result = sqlite3_prepare_v2(db, sql, -1, &sqlStatement, NULL);
@@ -135,7 +114,6 @@
         if(result != SQLITE_OK) {
             NSLog(@"Inside IF Prepare-error #%i: %s", result, sqlite3_errmsg(db));
         }
-        
         
         
         while (sqlite3_step(sqlStatement) == SQLITE_ROW) {
@@ -171,51 +149,59 @@
     
 }
 
-- (void) newUser:(NSString *) firstName:(NSString *) surname:(NSString *) email:(NSString *) password{
+- (void) newUser:(NSString *) pFirstName:(NSString *) pSurname:(NSString *) pEmail:(NSString *) pPassword{
+    
+    NSString *firstName = pFirstName;
+    NSString *surname = pSurname;
+    NSString *email = pEmail;
+    NSString *password = pPassword;
+    
+    NSLog(@"First Name: %@", firstName);
+    NSLog(@"Surname: %@", surname);
+    NSLog(@"Email: %@", email);
+    NSLog(@"Password: %@", password);
     
     @try {
         
         
-        NSString *firstName = firstName;
-        NSString *surname = surname;
-        NSString *email = email;
-        NSString *password = password;
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        NSString *dbPath = [[[NSBundle mainBundle]resourcePath]stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
+        BOOL success = [fileMgr fileExistsAtPath:dbPath];
         
-
-        fileMgr = [NSFileManager defaultManager];
-        sqlite3_stmt *stmt=nil;
-        sqlite3 *cruddb;
+        if(!success){
+            NSLog(@"TOM ERROR: Cannot locate database at '%@' path", dbPath);
+        }
         
+        if(!(sqlite3_open([dbPath UTF8String], &db) == SQLITE_OK)){
+            NSLog(@"TOM ERROR: An error has occured.");
+        }
         
-        //insert
-        const char *sql = "INSERT INTO data(coltext, colint, coldouble) VALUES(?,?,?)";
+        const char *sql;
         
-        //Open db
-        NSString *cruddatabase = [self.GetDocumentDirectory stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
-        sqlite3_open([cruddatabase UTF8String], &cruddb);
-        sqlite3_prepare_v2(cruddb, sql, 1, &stmt, NULL);
-        sqlite3_step(stmt);
-        sqlite3_finalize(stmt);
-        sqlite3_close(cruddb);
+        sql = "INSERT INTO users VALUES (\"bill\", \"jones\", \"bill@example.com\", \"123\")";
+        
+        sqlite3_stmt *sqlStatement;
+        
+        int result = sqlite3_prepare_v2(db, sql, -1, &sqlStatement, NULL);
         
         
+        if(result != SQLITE_OK) {
+            NSLog(@"Inside IF Prepare-error #%i: %s", result, sqlite3_errmsg(db));
+        }
         
+        NSString *querySQL = @"SELECT address, phone FROM contacts";
+        
+        
+        const char *query_stmt = [querySQL UTF8String];
         
         
         
         
     }
     @catch (NSException *exception) {
-        NSLog(@"TOM ERROR: An exception occured: %@", [exception reason]);
+        NSLog(@"New User Error: An exception occured: %@", [exception reason]);
     }
     
-}
-
--(NSString *)GetDocumentDirectory{
-    fileMgr = [NSFileManager defaultManager];
-    homeDir = [NSHomeDirectory() stringByAppendingPathComponent:@""];
-    
-    return homeDir;
 }
 
 
