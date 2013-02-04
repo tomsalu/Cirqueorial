@@ -24,6 +24,7 @@
 
 
 
+@property (strong, nonatomic) IBOutlet UIView *movingObj;
 
 
 @end

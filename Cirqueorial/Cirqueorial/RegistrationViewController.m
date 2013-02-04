@@ -53,12 +53,52 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     [self.keyboardControls setActiveField:textField];
+    
+    if (textField == self.inPassword) {
+        
+        [UIView beginAnimations:@"Anim1" context:nil];
+        [UIView animateWithDuration:2.5 animations:^{
+        
+        self.movingObj.frame = CGRectMake(self.movingObj.frame.origin.x, self.movingObj.frame.origin.y-85, self.movingObj.frame.size.height, self.movingObj.frame.size.width);
+            
+        }];
+        [UIView commitAnimations];
+    }
+    else if (textField == self.inConfirmPassword) {
+        [UIView beginAnimations:@"Anim1" context:nil];
+        [UIView animateWithDuration:2.5 animations:^{
+        
+        self.movingObj.frame = CGRectMake(self.movingObj.frame.origin.x, self.movingObj.frame.origin.y-145, self.movingObj.frame.size.height, self.movingObj.frame.size.width);
+        
+        }];
+        [UIView commitAnimations];
+    }
+    
 }
 
-- (void)textViewDidBeginEditing:(UITextView *)textView
-{
-    [self.keyboardControls setActiveField:textView];
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    
+    if (textField == self.inPassword) {
+        [UIView beginAnimations:@"Anim1" context:nil];
+        [UIView animateWithDuration:2.5 animations:^{
+
+        self.movingObj.frame = CGRectMake(self.movingObj.frame.origin.x, self.movingObj.frame.origin.y+85, self.movingObj.frame.size.height, self.movingObj.frame.size.width);
+            
+        }];
+        [UIView commitAnimations];
+    }
+    else if (textField == self.inConfirmPassword) {
+        [UIView beginAnimations:@"Anim1" context:nil];
+        [UIView animateWithDuration:2.5 animations:^{
+
+        self.movingObj.frame = CGRectMake(self.movingObj.frame.origin.x, self.movingObj.frame.origin.y+145, self.movingObj.frame.size.height, self.movingObj.frame.size.width);
+            
+        }];
+        [UIView commitAnimations];
+    }
+    
 }
+
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.inFirstName||self.inSurname||self.inEmail||self.inPassword||self.inConfirmPassword) {
