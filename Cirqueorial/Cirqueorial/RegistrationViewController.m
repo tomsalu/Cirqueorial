@@ -9,11 +9,14 @@
 #import "RegistrationViewController.h"
 #import "UserViewController.h"
 
+
+
 @interface RegistrationViewController ()
 
 @end
 
 @implementation RegistrationViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +32,42 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self.scroller setScrollEnabled:YES];
+    [self.scroller setContentSize:CGSizeMake(320, 1000)];
+
+    
+    
+    NSArray *fields = @[ self.inFirstName, self.inSurname,
+    self.inEmail, self.inPassword,
+    self.inConfirmPassword];
+    
+    [self setKeyboardControls:[[BSKeyboardControls alloc] initWithFields:fields]];
+    [self.keyboardControls setDelegate:self];
+    
+    
+    
+    
+}
+
+- (void)keyboardControlsDonePressed:(BSKeyboardControls *)keyboardControls
+{
+    [keyboardControls.activeField resignFirstResponder];
+}
+
+- (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
+{
+    UIView *view = keyboardControls.activeField.superview.superview;
+    //[self.tableView scrollRectToVisible:view.frame animated:YES];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self.keyboardControls setActiveField:textField];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [self.keyboardControls setActiveField:textView];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -65,6 +104,8 @@
      
     
 }
+
+
 
 
 @end
