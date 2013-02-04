@@ -21,6 +21,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *inFirstName;
 
 @property (nonatomic, strong) BSKeyboardControls *keyboardControls;
+<<<<<<< HEAD
+=======
+
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scroller;
+>>>>>>> Attempt at a scrollable reg page - not working
 
 
 

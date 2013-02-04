@@ -28,6 +28,7 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+<<<<<<< HEAD
          filePath = "Cirqueorial/Database.m"
          timestampString = "382011148.072842"
          startingColumnNumber = "9223372036854775807"
@@ -35,6 +36,15 @@
          startingLineNumber = "137"
          endingLineNumber = "137"
          landmarkName = "-getJugglingVideo:"
+=======
+         filePath = "Cirqueorial/RegistrationViewController.m"
+         timestampString = "381687089.552199"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-textFieldShouldReturn:"
+>>>>>>> Attempt at a scrollable reg page - not working
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
