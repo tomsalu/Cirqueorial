@@ -50,6 +50,11 @@
 		E96B5F1D16BFDE2800720CA5 /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */; };
 		E97067E816B7018500F515EF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E716B7018500F515EF /* ProfileViewController.m */; };
 		E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E316B6FF8C00F515EF /* LibraryViewController.m */; };
+		E98E977A16C01E4D0063606F /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = E98E977316C01E4D0063606F /* BSKeyboardControls.m */; };
+		E98E977B16C01E4D0063606F /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = E98E977416C01E4D0063606F /* BSKeyboardControls.strings */; };
+		E98E977C16C01E4D0063606F /* BSKeyboardControls.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E98E977716C01E4D0063606F /* BSKeyboardControls.podspec */; };
+		E98E977D16C01E4D0063606F /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = E98E977816C01E4D0063606F /* License.txt */; };
+		E98E977E16C01E4D0063606F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E98E977916C01E4D0063606F /* README.md */; };
 		E9996ACD16B59D540065C5E0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */; };
 		E9D32A5C16B82A870076932E /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D32A5B16B82A870076932E /* CategoryViewController.m */; };
 		E9D32A6016B8310B0076932E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */; };
@@ -120,6 +125,13 @@
 		E97067E316B6FF8C00F515EF /* LibraryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
 		E97067E616B7018400F515EF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		E97067E716B7018500F515EF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		E98E977216C01E4D0063606F /* BSKeyboardControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSKeyboardControls.h; sourceTree = "<group>"; };
+		E98E977316C01E4D0063606F /* BSKeyboardControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSKeyboardControls.m; sourceTree = "<group>"; };
+		E98E977516C01E4D0063606F /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		E98E977616C01E4D0063606F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		E98E977716C01E4D0063606F /* BSKeyboardControls.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BSKeyboardControls.podspec; sourceTree = "<group>"; };
+		E98E977816C01E4D0063606F /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		E98E977916C01E4D0063606F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		E9D32A5A16B82A870076932E /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		E9D32A5B16B82A870076932E /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
@@ -220,6 +232,7 @@
 		E965300616B2F092009D4307 = {
 			isa = PBXGroup;
 			children = (
+				E98E977016C01E4D0063606F /* BSKeyboardControls */,
 				E93B870F16B5B46000EE9084 /* Model */,
 				E949E6AE16B594E8006FFBC7 /* Cirqueorial */,
 				E969439516BECBE00012664F /* FMDB */,
@@ -270,6 +283,27 @@
 			name = FMDB;
 			sourceTree = "<group>";
 		};
+		E98E977016C01E4D0063606F /* BSKeyboardControls */ = {
+			isa = PBXGroup;
+			children = (
+				E98E977116C01E4D0063606F /* BSKeyboardControls */,
+				E98E977716C01E4D0063606F /* BSKeyboardControls.podspec */,
+				E98E977816C01E4D0063606F /* License.txt */,
+				E98E977916C01E4D0063606F /* README.md */,
+			);
+			path = BSKeyboardControls;
+			sourceTree = "<group>";
+		};
+		E98E977116C01E4D0063606F /* BSKeyboardControls */ = {
+			isa = PBXGroup;
+			children = (
+				E98E977216C01E4D0063606F /* BSKeyboardControls.h */,
+				E98E977316C01E4D0063606F /* BSKeyboardControls.m */,
+				E98E977416C01E4D0063606F /* BSKeyboardControls.strings */,
+			);
+			path = BSKeyboardControls;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +339,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				da,
 			);
 			mainGroup = E965300616B2F092009D4307;
 			productRefGroup = E965301216B2F092009D4307 /* Products */;
@@ -342,6 +377,10 @@
 				E9D32A6116B8310B0076932E /* FBUserSettingsViewResources.bundle in Resources */,
 				E969437D16BEB4AE0012664F /* Video_Test_DB.sqlite in Resources */,
 				E969438116BEBAEA0012664F /* test.db in Resources */,
+				E98E977B16C01E4D0063606F /* BSKeyboardControls.strings in Resources */,
+				E98E977C16C01E4D0063606F /* BSKeyboardControls.podspec in Resources */,
+				E98E977D16C01E4D0063606F /* License.txt in Resources */,
+				E98E977E16C01E4D0063606F /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +410,7 @@
 				E969439816BEDCE20012664F /* UserList.m in Sources */,
 				E969439B16BEDF6D0012664F /* UserViewController.m in Sources */,
 				E96B5F1D16BFDE2800720CA5 /* AuthenticationViewController.m in Sources */,
+				E98E977A16C01E4D0063606F /* BSKeyboardControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +431,15 @@
 				E949E6B816B594E8006FFBC7 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		E98E977416C01E4D0063606F /* BSKeyboardControls.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E98E977516C01E4D0063606F /* da */,
+				E98E977616C01E4D0063606F /* en */,
+			);
+			name = BSKeyboardControls.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

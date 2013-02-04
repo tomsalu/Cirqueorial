@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Database.h"
+#import "BSKeyboardControls.h"
 
-@interface RegistrationViewController : UIViewController <UITextFieldDelegate>
+@interface RegistrationViewController : UIViewController <UITextFieldDelegate, BSKeyboardControlsDelegate, UITextViewDelegate>
 
 - (IBAction)confirmButton:(id)sender;
 
@@ -18,6 +19,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *inEmail;
 @property (strong, nonatomic) IBOutlet UITextField *inSurname;
 @property (strong, nonatomic) IBOutlet UITextField *inFirstName;
+
+@property (nonatomic, strong) BSKeyboardControls *keyboardControls;
+
 
 
 
