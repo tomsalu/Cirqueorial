@@ -25,6 +25,7 @@ NSString *const FBSessionStateChangedNotification =
 {
     // Override point for customization after application launch.
 
+    
 
     [self checkAndCreateDatabase];
     [FBProfilePictureView class];

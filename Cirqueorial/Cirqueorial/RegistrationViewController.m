@@ -7,6 +7,7 @@
 //
 
 #import "RegistrationViewController.h"
+#import "UserViewController.h"
 
 @interface RegistrationViewController ()
 
@@ -53,6 +54,15 @@
     Database *db;
     db = [[Database alloc] init];
     [db newUser:self.inFirstName.text :self.inSurname.text :self.inEmail.text :self.inPassword.text];
+    
+    UserViewController *userView = [[UserViewController alloc] init];
+    [userView reIndexTable];
+    
+    NSString *alertMessage = [NSString stringWithFormat:@"Congratulations %@, you have successfully registered. You are now free to use the app.", self.inFirstName.text];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Registration" message:alertMessage delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+    [alert show];
+     
     
 }
 

@@ -25,5 +25,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *userTable;
 @property(nonatomic, strong) Database * ops;
 
+- (void) reIndexTable;
+
 
 @end

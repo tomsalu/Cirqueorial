@@ -161,7 +161,8 @@
         @try {
             
             NSFileManager *fileMgr = [NSFileManager defaultManager];
-            NSString *dbPath = [[[NSBundle mainBundle]resourcePath]stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
+            //NSString *dbPath = [[[NSBundle mainBundle]resourcePath]stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
+            NSString *dbPath = [self.GetDocumentDirectory stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
             BOOL success = [fileMgr fileExistsAtPath:dbPath];
             
             if(!success){
@@ -200,12 +201,11 @@
                 myUser.password = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];
                 
                 
-                NSLog(@"\nUser ID:%i \nFirstName: %@ \nSurname: %@\nEmail: %@\nPassword: %@\n\n", myUser.userID, myUser.firstName, myUser.surname
-                      , myUser.email, myUser.password);
+                //NSLog(@"\nUser ID:%i \nFirstName: %@ \nSurname: %@\nEmail: %@\nPassword: %@\n\n", myUser.userID, myUser.firstName, myUser.surname, myUser.email, myUser.password);
                 
                 [userArray addObject:myUser];
                 
-                NSLog(@"%i", SQLITE_ROW);
+                //NSLog(@"%i", SQLITE_ROW);
                 
                 
                 

@@ -76,6 +76,19 @@
     
 }
 
+- (void) reIndexTable{
+    //ops = [[Database alloc]init];
+    
+    [self.ops getUsers];
+    
+    
+    tableUsers = [ops userArray];
+    [self.userTable reloadData];
+
+}
+
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

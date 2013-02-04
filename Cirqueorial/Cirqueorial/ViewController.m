@@ -93,7 +93,7 @@
     
         [appDelegate closeSession];
         self.logoutButton.hidden = YES;
-        [self.authButton setTitle:@"Login with Facebook" forState:UIControlStateNormal];
+        [self.authButton setTitle:@"Login" forState:UIControlStateNormal];
     
     
 }
