@@ -34,7 +34,7 @@ CGPoint location4 = {500, 250};
 	// Do any additional setup after loading the view, typically from a nib.
     locationIndex = 1;
     self.navigationItem.title = @"Main Menu";
-    //self.navigationItem.hidesBackButton = true;
+    self.navigationItem.hidesBackButton = true;
 }
 
 - (void)viewDidUnload{
@@ -45,6 +45,7 @@ CGPoint location4 = {500, 250};
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     locationIndex = 1;
     NSLog(@"Segway Location: %i", locationIndex);
+
 }
 
 
@@ -177,5 +178,24 @@ CGPoint location4 = {500, 250};
     alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Are you sure?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Logout", nil];
     [alert show];
     
+    
+
+    
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex != [alertView cancelButtonIndex]) {
+        NSLog(@"Logging Out");
+        [self.navigationController popViewControllerAnimated:YES];
+        
+
+    }
+}
+
+-(void)segway:(id)sender2{
+
+    [self performSegueWithIdentifier:@"firstSegue" sender:sender2];
+    
+}
+
 @end

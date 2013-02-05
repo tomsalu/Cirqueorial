@@ -185,6 +185,7 @@
     
     BOOL dispalyedNativeDialog =
     [FBNativeDialogs presentShareDialogModallyFrom:self
+     //set status text
        initialText:@""
              image:[UIImage imageNamed:@"testimage.png"]
                url:nil/*[NSURL URLWithString:@"http:www.nyt.com"]*/

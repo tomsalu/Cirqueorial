@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nex-m8-D76">
-                                <rect key="frame" x="64" y="344" width="193" height="48"/>
+                                <rect key="frame" x="72" y="344" width="193" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Login" backgroundImage="silver-button-normal.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VF5-rO-ioK">
-                                <rect key="frame" x="64" y="408" width="193" height="31"/>
+                                <rect key="frame" x="72" y="408" width="193" height="31"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Logout" backgroundImage="silver-button-normal.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,28 +41,14 @@
                                     <action selector="logoutButton:" destination="2" eventType="touchUpInside" id="eh1-4u-i0G"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Li-oR-vkV">
-                                <rect key="frame" x="64" y="460" width="193" height="31"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Publish" backgroundImage="silver-button-normal.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="publishButtonAction:" destination="2" eventType="touchUpInside" id="ki0-SS-eL2"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Library_Icon.png" id="cwO-ii-ciL">
-                                <rect key="frame" x="56" y="73" width="208" height="167"/>
+                                <rect key="frame" x="64" y="73" width="208" height="167"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="title.jpg" id="TGM-ct-8Yu">
-                                <rect key="frame" x="20" y="-23" width="280" height="149"/>
+                                <rect key="frame" x="28" y="-24" width="280" height="149"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p0E-OS-jrX">
-                                <rect key="frame" x="64" y="229" width="193" height="44"/>
+                                <rect key="frame" x="72" y="229" width="193" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Register with Facebook" backgroundImage="silver-button-normal.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,7 +59,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CmO-1P-Oqc">
-                                <rect key="frame" x="64" y="277" width="193" height="44"/>
+                                <rect key="frame" x="72" y="277" width="193" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Register with Email" backgroundImage="silver-button-normal.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,7 +83,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xL4-ZU-N7D" kind="push" id="OKQ-ek-Dho"/>
+                                    <segue destination="xL4-ZU-N7D" kind="push" identifier="" id="OKQ-ek-Dho"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,7 +93,6 @@
                     <connections>
                         <outlet property="authButton" destination="nex-m8-D76" id="20m-cL-arV"/>
                         <outlet property="logoutButton" destination="VF5-rO-ioK" id="BS2-y0-Xhr"/>
-                        <outlet property="publishButton" destination="4Li-oR-vkV" id="Rjq-4h-6n8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -123,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pxD-dB-oUP">
-                                <rect key="frame" x="45" y="-13" width="180" height="180"/>
+                                <rect key="frame" x="45" y="-17" width="180" height="180"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="Library_Icon.png">
                                     <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -220,8 +205,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" id="gQf-5Y-8rv">
-                                <rect key="frame" x="36" y="20" width="249" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" id="gQf-5Y-8rv">
+                                <rect key="frame" x="35" y="16" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -229,7 +214,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" id="jfR-ss-N8u">
-                                <rect key="frame" x="36" y="74" width="249" height="30"/>
+                                <rect key="frame" x="35" y="70" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -237,7 +222,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3D3-Ro-twy">
-                                <rect key="frame" x="16" y="440" width="289" height="44"/>
+                                <rect key="frame" x="15" y="118" width="289" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Login" backgroundImage="silver-button-normal.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -263,6 +248,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzm-Yi-AoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1626" y="664"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KXh-O6-6Dl">
+            <objects>
+                <viewController id="luj-q2-dFI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EgI-xj-Wye">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DfB-7m-xqu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bf5-vk-ccr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="1111"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="2Nx-xv-7by">
@@ -306,7 +306,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Video Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="55D-Hv-17c">
-                                <rect key="frame" x="194" y="-5" width="255" height="60"/>
+                                <rect key="frame" x="194" y="-9" width="255" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -377,7 +377,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RdC-3j-eAx">
-                                <rect key="frame" x="75" y="10" width="180" height="180"/>
+                                <rect key="frame" x="83" y="10" width="180" height="180"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -394,7 +394,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9h8-44-X5X">
-                                <rect key="frame" x="-57" y="105" width="180" height="180"/>
+                                <rect key="frame" x="-49" y="105" width="180" height="180"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Poi" backgroundImage="silver-button-normal.png">
                                     <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -513,7 +513,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="qmS-8q-ucH">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="-1" width="320" height="504"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please fill in the following:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NFf-vh-RJ5">
                                         <rect key="frame" x="42" y="20" width="246" height="39"/>
@@ -573,6 +573,7 @@
                                         </state>
                                         <connections>
                                             <action selector="confirmButton:" destination="LYe-jf-IFP" eventType="touchUpInside" id="UpY-Zs-H17"/>
+                                            <segue destination="xL4-ZU-N7D" kind="push" id="HgQ-PF-QMp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -627,6 +628,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="facebook-logo.png" id="3gc-tx-JN1">
                                 <rect key="frame" x="120" y="449" width="86" height="35"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Li-oR-vkV">
+                                <rect key="frame" x="64" y="172" width="193" height="31"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Publish" backgroundImage="silver-button-normal.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="publishButtonAction:" destination="vy0-MY-5dQ" eventType="touchUpInside" id="f7d-kL-i8u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -634,6 +649,7 @@
                         <barButtonItem key="backBarButtonItem" title="profileBack" id="VVA-DP-cpZ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="publishButton" destination="4Li-oR-vkV" id="Ns2-yv-B7O"/>
                         <outlet property="userInfoTextView" destination="CKS-tu-hol" id="T8R-Sr-DhU"/>
                         <outlet property="userNameBox" destination="B2c-bp-ozn" id="SZk-hc-6eo"/>
                         <outlet property="userProfileImage" destination="zbi-IR-vWT" id="Pvk-Hh-Sua"/>
@@ -641,13 +657,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSx-VP-FKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2766" y="-451"/>
+            <point key="canvasLocation" x="2742" y="-505"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nlq-tD-tV0">
             <objects>
                 <navigationController id="osS-sN-CVe" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PpS-Sg-MrA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sg6-WM-H21">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
