@@ -34,6 +34,23 @@
 {
     [super viewDidLoad];
     
+    NSString *name = [NSString stringWithFormat:@"%@", self.detailVideo.videoName];
+    
+    self.navigationItem.title = name;
+    
+    [self.scroller addSubview:self.logo];
+    
+
+    [self.scroller addSubview:self.videoPlayer];
+    [self.scroller addSubview:self.self.expandVideo];
+    
+
+    [self.scroller addSubview:self.textViewer];
+    [self.scroller addSubview:self.expandText];
+    
+    self.scroller.userInteractionEnabled = YES;
+    [self.scroller setContentSize:CGSizeMake(320, 900)];
+    
     
 	//Do any additional setup after loading the view.
     
@@ -121,8 +138,9 @@
         }];
         [UIView commitAnimations];
         
-        
     }
+    
+    
 
     
 }

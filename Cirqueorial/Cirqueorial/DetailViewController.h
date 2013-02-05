@@ -15,6 +15,8 @@
 
 @interface DetailViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *logo;
+
 @property (strong, nonatomic) IBOutlet UIButton *expandText;
 @property (strong, nonatomic) IBOutlet UIWebView *textViewer;
 
@@ -28,5 +30,7 @@
 
 - (IBAction)expandVideo:(id)sender;
 - (IBAction)expandText:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scroller;
 
 @end
