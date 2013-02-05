@@ -15,7 +15,6 @@
 @implementation DetailViewController
 
 @synthesize detailName;
-@synthesize detailURL;
 @synthesize detailVideo;
 @synthesize videoPlayer;
 @synthesize expandVideo;
@@ -68,7 +67,6 @@
     NSLog(@"Name Name Name:%@", self.detailVideo.videoName);
     
     self.detailName.text = self.detailVideo.videoName;
-    self.detailURL.text = self.detailVideo.videoURL;
 
     
 }
@@ -77,7 +75,6 @@
 - (void)viewDidUnload{
     [self setDetailVideo:nil];
     [self setDetailName:nil];
-    [self setDetailURL:nil];
     
 }
 
@@ -128,8 +125,44 @@
     }
 
     
-    
+}
 
+- (IBAction)expandText:(id)sender {
+    if (textViewer.hidden || textViewer.frame.size.height == 30) {
+        
+        textViewer.frame = CGRectMake(textViewer.frame.origin.x, textViewer.frame.origin.y, 320, 0);
+        
+        [UIView beginAnimations:@"Anim3" context:nil];
+        [UIView animateWithDuration:2.5 animations:^{
+            
+            textViewer.hidden = NO;
+            textViewer.frame = CGRectMake(textViewer.frame.origin.x-10, textViewer.frame.origin.y+37, 320, 320);
+            
+            [self.expandText setTitle:@"Contract Text" forState:UIControlStateNormal];
+            
+            
+        }];
+        
+        [UIView commitAnimations];
+        
+        
+        
+    }
+    
+    else if (textViewer.frame.size.height == 320){
+        
+        [UIView beginAnimations:@"Anim4" context:nil];
+        [UIView animateWithDuration:2.5 animations:^{
+            
+            textViewer.frame = CGRectMake(textViewer.frame.origin.x+10, textViewer.frame.origin.y-37, 300, 30);
+            [self.expandText setTitle:@"Expand Text" forState:UIControlStateNormal];
+            
+            
+        }];
+        [UIView commitAnimations];
+        
+        
+    }
     
 }
 @end

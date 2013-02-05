@@ -23,10 +23,10 @@
 
 
 @property (strong, nonatomic) IBOutlet UILabel *detailName;
-@property (strong, nonatomic) IBOutlet UILabel *detailURL;
+
 @property (strong, nonatomic) VideoList * detailVideo;
 
 - (IBAction)expandVideo:(id)sender;
-
+- (IBAction)expandText:(id)sender;
 
 @end

@@ -164,8 +164,8 @@
              }
          }
         ];
-        self.logoutButton.hidden = NO;
-        [self.authButton setTitle:@"Enter" forState:UIControlStateNormal];
+        //self.logoutButton.hidden = NO;
+        //[self.authButton setTitle:@"Enter" forState:UIControlStateNormal];
         
         
     }
