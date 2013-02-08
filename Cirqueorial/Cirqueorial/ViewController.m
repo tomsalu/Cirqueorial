@@ -79,12 +79,18 @@
 
 - (IBAction)testButton:(id)sender {
     
+
+}
+
+- (IBAction)fbButton:(id)sender {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
-
-        // User has initiated login, so call the opensession method
-        // and show the login UX if necessary.
-        [appDelegate openSessionWithAllowLoginUI:YES];
+    
+    // User has initiated login, so call the opensession method
+    // and show the login UX if necessary.
+    [appDelegate openSessionWithAllowLoginUI:YES];
+    
+    
 }
 
 - (IBAction)logoutButton:(id)sender {
@@ -206,6 +212,7 @@
         //
     }
 }
+
 
 
 

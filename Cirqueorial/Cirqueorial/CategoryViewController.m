@@ -52,7 +52,7 @@ LibraryViewController *lvc;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    catLocationIndex = 1;
+    //catLocationIndex = 1;
     NSLog(@"Segway Location: %i", catLocationIndex);
     
     if (self.catPoi.highlighted) {

@@ -43,7 +43,7 @@ CGPoint location4 = {500, 250};
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    locationIndex = 1;
+    //locationIndex = 1;
     NSLog(@"Segway Location: %i", locationIndex);
 
 }
