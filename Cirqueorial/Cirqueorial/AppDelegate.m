@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FMDatabase.h"
+#import <Parse/Parse.h>
 
 
 
@@ -25,7 +26,8 @@ NSString *const FBSessionStateChangedNotification =
 {
     // Override point for customization after application launch.
 
-    
+    [Parse setApplicationId:@"YN1ow77nwfbLryiAu7XsqXpqxigWjTlTmQL025ax"
+                  clientKey:@"PgGSZ7HyMqXo9YAy8xeq0tKg7mpWhZWGaUogBber"];
 
     [self checkAndCreateDatabase];
     [FBProfilePictureView class];

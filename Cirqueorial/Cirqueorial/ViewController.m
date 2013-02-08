@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UITextView *userNameBox;
@@ -60,6 +61,10 @@
         NSLog(@"Bugger");
     }
     
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
     
     
     [super viewDidLoad];
