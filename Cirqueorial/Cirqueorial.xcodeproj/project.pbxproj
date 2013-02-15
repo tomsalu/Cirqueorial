@@ -48,11 +48,6 @@
 		E969439816BEDCE20012664F /* UserList.m in Sources */ = {isa = PBXBuildFile; fileRef = E969439716BEDCE20012664F /* UserList.m */; };
 		E969439B16BEDF6D0012664F /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E969439A16BEDF6D0012664F /* UserViewController.m */; };
 		E96B5F1D16BFDE2800720CA5 /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */; };
-		E96B5F4B16C0027E00720CA5 /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = E96B5F2A16C0027E00720CA5 /* BSKeyboardControls.m */; };
-		E96B5F4C16C0027E00720CA5 /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = E96B5F2B16C0027E00720CA5 /* BSKeyboardControls.strings */; };
-		E96B5F4D16C0027E00720CA5 /* BSKeyboardControls.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E96B5F2E16C0027E00720CA5 /* BSKeyboardControls.podspec */; };
-		E96B5F5916C0027E00720CA5 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = E96B5F4516C0027E00720CA5 /* License.txt */; };
-		E96B5F5A16C0027E00720CA5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E96B5F4616C0027E00720CA5 /* README.md */; };
 		E97067E816B7018500F515EF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E716B7018500F515EF /* ProfileViewController.m */; };
 		E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E316B6FF8C00F515EF /* LibraryViewController.m */; };
 		E9724F7F16C56BE900F50491 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9724F7E16C56BE900F50491 /* Parse.framework */; };
@@ -137,13 +132,6 @@
 		E969439A16BEDF6D0012664F /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		E96B5F1B16BFDE2800720CA5 /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewController.h; sourceTree = "<group>"; };
 		E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationViewController.m; sourceTree = "<group>"; };
-		E96B5F2916C0027E00720CA5 /* BSKeyboardControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSKeyboardControls.h; sourceTree = "<group>"; };
-		E96B5F2A16C0027E00720CA5 /* BSKeyboardControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSKeyboardControls.m; sourceTree = "<group>"; };
-		E96B5F2C16C0027E00720CA5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
-		E96B5F2D16C0027E00720CA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
-		E96B5F2E16C0027E00720CA5 /* BSKeyboardControls.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BSKeyboardControls.podspec; sourceTree = "<group>"; };
-		E96B5F4516C0027E00720CA5 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
-		E96B5F4616C0027E00720CA5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E97067E216B6FF8C00F515EF /* LibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
 		E97067E316B6FF8C00F515EF /* LibraryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
 		E97067E616B7018400F515EF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -277,11 +265,7 @@
 		E965300616B2F092009D4307 = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				E98E977016C01E4D0063606F /* BSKeyboardControls */,
-=======
-				E96B5F2716C0027E00720CA5 /* BSKeyboardControls */,
->>>>>>> Attempt at a scrollable reg page - not working
 				E93B870F16B5B46000EE9084 /* Model */,
 				E949E6AE16B594E8006FFBC7 /* Cirqueorial */,
 				E969439516BECBE00012664F /* FMDB */,
@@ -343,7 +327,6 @@
 			name = FMDB;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		E98E977016C01E4D0063606F /* BSKeyboardControls */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,34 +334,16 @@
 				E98E977716C01E4D0063606F /* BSKeyboardControls.podspec */,
 				E98E977816C01E4D0063606F /* License.txt */,
 				E98E977916C01E4D0063606F /* README.md */,
-=======
-		E96B5F2716C0027E00720CA5 /* BSKeyboardControls */ = {
-			isa = PBXGroup;
-			children = (
-				E96B5F2816C0027E00720CA5 /* BSKeyboardControls */,
-				E96B5F2E16C0027E00720CA5 /* BSKeyboardControls.podspec */,
-				E96B5F4516C0027E00720CA5 /* License.txt */,
-				E96B5F4616C0027E00720CA5 /* README.md */,
->>>>>>> Attempt at a scrollable reg page - not working
 			);
 			path = BSKeyboardControls;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		E98E977116C01E4D0063606F /* BSKeyboardControls */ = {
 			isa = PBXGroup;
 			children = (
 				E98E977216C01E4D0063606F /* BSKeyboardControls.h */,
 				E98E977316C01E4D0063606F /* BSKeyboardControls.m */,
 				E98E977416C01E4D0063606F /* BSKeyboardControls.strings */,
-=======
-		E96B5F2816C0027E00720CA5 /* BSKeyboardControls */ = {
-			isa = PBXGroup;
-			children = (
-				E96B5F2916C0027E00720CA5 /* BSKeyboardControls.h */,
-				E96B5F2A16C0027E00720CA5 /* BSKeyboardControls.m */,
-				E96B5F2B16C0027E00720CA5 /* BSKeyboardControls.strings */,
->>>>>>> Attempt at a scrollable reg page - not working
 			);
 			path = BSKeyboardControls;
 			sourceTree = "<group>";
@@ -456,17 +421,10 @@
 				E9D32A6116B8310B0076932E /* FBUserSettingsViewResources.bundle in Resources */,
 				E969437D16BEB4AE0012664F /* Video_Test_DB.sqlite in Resources */,
 				E969438116BEBAEA0012664F /* test.db in Resources */,
-<<<<<<< HEAD
 				E98E977B16C01E4D0063606F /* BSKeyboardControls.strings in Resources */,
 				E98E977C16C01E4D0063606F /* BSKeyboardControls.podspec in Resources */,
 				E98E977D16C01E4D0063606F /* License.txt in Resources */,
 				E98E977E16C01E4D0063606F /* README.md in Resources */,
-=======
-				E96B5F4C16C0027E00720CA5 /* BSKeyboardControls.strings in Resources */,
-				E96B5F4D16C0027E00720CA5 /* BSKeyboardControls.podspec in Resources */,
-				E96B5F5916C0027E00720CA5 /* License.txt in Resources */,
-				E96B5F5A16C0027E00720CA5 /* README.md in Resources */,
->>>>>>> Attempt at a scrollable reg page - not working
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,11 +454,7 @@
 				E969439816BEDCE20012664F /* UserList.m in Sources */,
 				E969439B16BEDF6D0012664F /* UserViewController.m in Sources */,
 				E96B5F1D16BFDE2800720CA5 /* AuthenticationViewController.m in Sources */,
-<<<<<<< HEAD
 				E98E977A16C01E4D0063606F /* BSKeyboardControls.m in Sources */,
-=======
-				E96B5F4B16C0027E00720CA5 /* BSKeyboardControls.m in Sources */,
->>>>>>> Attempt at a scrollable reg page - not working
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,19 +477,11 @@
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		E98E977416C01E4D0063606F /* BSKeyboardControls.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E98E977516C01E4D0063606F /* da */,
 				E98E977616C01E4D0063606F /* en */,
-=======
-		E96B5F2B16C0027E00720CA5 /* BSKeyboardControls.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E96B5F2C16C0027E00720CA5 /* da */,
-				E96B5F2D16C0027E00720CA5 /* en */,
->>>>>>> Attempt at a scrollable reg page - not working
 			);
 			name = BSKeyboardControls.strings;
 			sourceTree = "<group>";

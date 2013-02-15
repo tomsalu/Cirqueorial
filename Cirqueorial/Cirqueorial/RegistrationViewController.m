@@ -9,8 +9,6 @@
 #import "RegistrationViewController.h"
 #import "UserViewController.h"
 
-
-
 @interface RegistrationViewController ()
 
 @end
@@ -32,14 +30,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-<<<<<<< HEAD
-=======
-    [self.scroller setScrollEnabled:YES];
-    [self.scroller setContentSize:CGSizeMake(320, 1000)];
-
-    
-    
->>>>>>> Attempt at a scrollable reg page - not working
     NSArray *fields = @[ self.inFirstName, self.inSurname,
     self.inEmail, self.inPassword,
     self.inConfirmPassword];
@@ -47,36 +37,11 @@
     [self setKeyboardControls:[[BSKeyboardControls alloc] initWithFields:fields]];
     [self.keyboardControls setDelegate:self];
     
-<<<<<<< HEAD
-=======
-    
-    
-    
->>>>>>> Attempt at a scrollable reg page - not working
 }
 
 - (void)keyboardControlsDonePressed:(BSKeyboardControls *)keyboardControls
 {
     [keyboardControls.activeField resignFirstResponder];
-<<<<<<< HEAD
-=======
-}
-
-- (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
-{
-    UIView *view = keyboardControls.activeField.superview.superview;
-    //[self.tableView scrollRectToVisible:view.frame animated:YES];
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    [self.keyboardControls setActiveField:textField];
-}
-
-- (void)textViewDidBeginEditing:(UITextView *)textView
-{
-    [self.keyboardControls setActiveField:textView];
->>>>>>> Attempt at a scrollable reg page - not working
 }
 
 - (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
@@ -169,8 +134,6 @@
      
     
 }
-
-
 
 
 @end

@@ -25,6 +25,4 @@
 @property (strong, nonatomic) IBOutlet UIButton *fbButton;
 
 
-
-
 @end
