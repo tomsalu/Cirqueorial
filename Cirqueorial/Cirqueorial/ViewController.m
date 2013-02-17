@@ -94,7 +94,7 @@
     // User has initiated login, so call the opensession method
     // and show the login UX if necessary.
     [appDelegate openSessionWithAllowLoginUI:YES];
-    
+ 
     
 }
 

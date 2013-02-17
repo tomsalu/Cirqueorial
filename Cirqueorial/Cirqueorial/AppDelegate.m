@@ -28,12 +28,22 @@ NSString *const FBSessionStateChangedNotification =
 
     [Parse setApplicationId:@"YN1ow77nwfbLryiAu7XsqXpqxigWjTlTmQL025ax"
                   clientKey:@"PgGSZ7HyMqXo9YAy8xeq0tKg7mpWhZWGaUogBber"];
+    [PFFacebookUtils initializeWithApplicationId:@"YOUR FACEBOOK APP ID"];
 
     [self checkAndCreateDatabase];
     [FBProfilePictureView class];
     return YES;
 }
-							
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -120,12 +130,7 @@ NSString *const FBSessionStateChangedNotification =
 //If we have a valid session at the time of openURL call, we handle
 //Facebook transitions by passing the url argument to handleOpenURL.
 
--(BOOL) application:(UIApplication *)application
-openURL:(NSURL *) url
-  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    //Attempt to extract a token from the url
-    return [FBSession.activeSession handleOpenURL:url];
-}
+
 
 - (void) closeSession{
     [FBSession.activeSession closeAndClearTokenInformation];
