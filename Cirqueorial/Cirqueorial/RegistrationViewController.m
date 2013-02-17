@@ -8,6 +8,7 @@
 
 #import "RegistrationViewController.h"
 #import "UserViewController.h"
+#import <Parse/Parse.h>
 
 @interface RegistrationViewController ()
 
@@ -120,6 +121,9 @@
 
 - (IBAction)confirmButton:(id)sender {
     
+    //OLD SQL DATABASE CODE
+    /*
+    
     Database *db;
     db = [[Database alloc] init];
     [db newUser:self.inFirstName.text :self.inSurname.text :self.inEmail.text :self.inPassword.text];
@@ -131,6 +135,62 @@
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Registration" message:alertMessage delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
     [alert show];
+    */
+    
+    
+    //NEW PARSE DATABASE CODE
+    
+    PFUser *user = [PFUser user];
+    
+    if ([self.inPassword.text isEqual:self.inConfirmPassword.text]) {
+        //Passwords match up
+        user.password = self.inPassword.text;
+        
+        user.email = self.inEmail.text;
+        user.username = self.inUsername.text;
+        [user setObject:self.inFirstName.text forKey:@"First_Name"];
+        [user setObject:self.inSurname.text forKey:@"Surname"];
+        
+        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                //Display Alert with Success message & name.
+                NSString *alertMessage = [NSString stringWithFormat:@"Congratulations %@, you have successfully registered. You are now free to use the app.", self.inFirstName.text];
+                
+                [self performSegueWithIdentifier:@"regSeg" sender:sender];
+                
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Registration" message:alertMessage delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+                [alert show];
+                
+                
+            }
+            
+            
+            else{
+                NSString *errorString = [[error userInfo] objectForKey:@"error"];
+                
+                //Display Alert with ERROR message.
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unsuccessful Registration" message:errorString delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }];
+        
+        
+        
+        
+        
+        
+    }
+    else{
+        //Passwords did not match up
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unsuccessful Registration" message:@"Passwords did not match up" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+
+    
+    
+     
+     
      
     
 }

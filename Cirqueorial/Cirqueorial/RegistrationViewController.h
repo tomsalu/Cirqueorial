@@ -17,8 +17,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *inConfirmPassword;
 @property (strong, nonatomic) IBOutlet UITextField *inPassword;
 @property (strong, nonatomic) IBOutlet UITextField *inEmail;
+@property (strong, nonatomic) IBOutlet UITextField *inUsername;
 @property (strong, nonatomic) IBOutlet UITextField *inSurname;
 @property (strong, nonatomic) IBOutlet UITextField *inFirstName;
+
 
 @property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 

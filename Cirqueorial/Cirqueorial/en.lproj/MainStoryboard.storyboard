@@ -527,7 +527,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="lAT-oi-2Eo">
-                                        <rect key="frame" x="20" y="223" width="210" height="30"/>
+                                        <rect key="frame" x="20" y="258" width="210" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -535,7 +535,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" id="aWs-Oe-dbh">
-                                        <rect key="frame" x="20" y="356" width="210" height="30"/>
+                                        <rect key="frame" x="20" y="381" width="210" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -543,7 +543,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="CSQ-yY-e8I">
-                                        <rect key="frame" x="20" y="287" width="210" height="30"/>
+                                        <rect key="frame" x="20" y="319" width="210" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -551,11 +551,19 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" minimumFontSize="17" id="fpG-uN-hA5">
-                                        <rect key="frame" x="20" y="158" width="210" height="30"/>
+                                        <rect key="frame" x="20" y="144" width="210" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="LYe-jf-IFP" id="chV-AI-Ktt"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="98n-hf-bwA">
+                                        <rect key="frame" x="20" y="200" width="210" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="LYe-jf-IFP" id="3Lj-v7-Hiz"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" id="KPL-Xa-QYJ">
@@ -578,7 +586,6 @@
                                         </state>
                                         <connections>
                                             <action selector="confirmButton:" destination="LYe-jf-IFP" eventType="touchUpInside" id="UpY-Zs-H17"/>
-                                            <segue destination="xL4-ZU-N7D" kind="push" id="HgQ-PF-QMp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -594,7 +601,9 @@
                         <outlet property="inFirstName" destination="KPL-Xa-QYJ" id="5OB-2H-QVG"/>
                         <outlet property="inPassword" destination="CSQ-yY-e8I" id="u4e-Nr-qae"/>
                         <outlet property="inSurname" destination="fpG-uN-hA5" id="rCc-vA-Fba"/>
+                        <outlet property="inUsername" destination="98n-hf-bwA" id="2ee-iJ-Nzv"/>
                         <outlet property="movingObj" destination="qmS-8q-ucH" id="QMr-XZ-9qL"/>
+                        <segue destination="xL4-ZU-N7D" kind="push" identifier="regSeg" id="uXP-2y-WmE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6G-eL-hZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -765,6 +774,7 @@
                 <relationship kind="outlet" name="inFirstName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="inPassword" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="inSurname" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inUsername" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="movingObj" candidateClass="UIView"/>
             </relationships>
         </class>
@@ -797,7 +807,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="HgQ-PF-QMp"/>
+        <segue reference="uXP-2y-WmE"/>
         <segue reference="WGH-dW-C09"/>
     </inferredMetricsTieBreakers>
 </document>
