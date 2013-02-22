@@ -28,7 +28,7 @@ NSString *const FBSessionStateChangedNotification =
     [Parse setApplicationId:@"YN1ow77nwfbLryiAu7XsqXpqxigWjTlTmQL025ax"
                   clientKey:@"PgGSZ7HyMqXo9YAy8xeq0tKg7mpWhZWGaUogBber"];
         
-    [self.window makeKeyAndVisible];
+    //[self.window makeKeyAndVisible];
     
     
     [PFFacebookUtils initializeWithApplicationId:@"YOUR FACEBOOK APP ID"];
