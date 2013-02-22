@@ -52,6 +52,19 @@
     return self;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    static NSString *identifier = @"Cell";
+    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    cell.textLabel.text = [object objectForKey:@"title"];
+    
+    
+    return cell;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
