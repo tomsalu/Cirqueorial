@@ -7,6 +7,7 @@
 //
 
 #import "RegistrationViewController.h"
+#import "UserViewController.h"
 #import <Parse/Parse.h>
 
 @interface RegistrationViewController ()
