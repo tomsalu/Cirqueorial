@@ -28,7 +28,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-<<<<<<< HEAD
         
         // Custom the table
         
@@ -48,9 +47,6 @@
         self.objectsPerPage = 5;
         
         
-=======
-        // Custom initialization
->>>>>>> Revert "FAIL - Parse User Table"
     }
     return self;
 }
