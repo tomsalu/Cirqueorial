@@ -10,7 +10,6 @@
 #import "VideoList.h"
 #import "UserList.h"
 #import "FMDatabase.h"
-#import <Parse/Parse.h>
 
 @implementation Database
 
@@ -158,11 +157,8 @@
 - (NSMutableArray *) getUsers{
         
         userArray = [[NSMutableArray alloc] init];
-
-    
+        
         @try {
-            
-            /*
             
             NSFileManager *fileMgr = [NSFileManager defaultManager];
             //NSString *dbPath = [[[NSBundle mainBundle]resourcePath]stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
@@ -188,9 +184,7 @@
             if(result != SQLITE_OK) {
                 NSLog(@"Inside IF Prepare-error #%i: %s", result, sqlite3_errmsg(db));
             }
-            */
             
-            /*
             
             while (sqlite3_step(sqlStatement) == SQLITE_ROW) {
                 
@@ -219,35 +213,6 @@
             }
         
         
-             */
-            
-            PFQuery *query = [PFUser query];
-            [query whereKey:@"username" notEqualTo:@""]; // find all the users
-            NSArray *users = [query findObjects];
-            
-            int loop = 0;
-            
-            
-            while (loop < users.count) {
-                
-                
-                   users
-                
-                
-                
-                
-                
-            }
-            
-
-            
-            
-            
-            
-             
-             
-             
-             
         
     }
     
