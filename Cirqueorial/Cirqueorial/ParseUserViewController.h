@@ -10,7 +10,4 @@
 
 @interface ParseUserViewController : PFQueryTableViewController
 
-
-@property (strong, nonatomic) NSArray *myObjects;
-
 @end

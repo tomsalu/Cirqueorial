@@ -263,22 +263,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userCell" id="bD1-sF-hKm">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell2" id="bD1-sF-hKm">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <connections>
-                                    <segue destination="90X-rm-mqz" kind="push" id="Ken-g1-bjQ"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="className" value="User"/>
-                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="H1P-lc-cOZ" id="Cub-qD-lps"/>
                             <outlet property="delegate" destination="H1P-lc-cOZ" id="yId-tN-WOD"/>
@@ -289,21 +283,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4r-j4-dxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2742" y="1012"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="bKt-3P-H1t">
-            <objects>
-                <viewController id="90X-rm-mqz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zrs-22-1DU">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="7bt-Ps-WaK"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JQZ-0I-1wU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3204" y="1018"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="oS4-Hx-7o2">
@@ -832,6 +811,115 @@
         <image name="silver-button-normal.png" width="307" height="48"/>
         <image name="title.jpg" width="640" height="228"/>
     </resources>
+    <classes>
+        <class className="AnimationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logoutButton:"/>
+                <relationship kind="action" name="swipeActionLeft:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="swipeActionRight:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="outlet" name="libraryButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logoutButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="moreText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="profileButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tapOutlet" candidateClass="UITapGestureRecognizer"/>
+            </relationships>
+        </class>
+        <class className="AuthenticationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AuthenticationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="attemptLogin:"/>
+                <relationship kind="outlet" name="fPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fUsername" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CategoryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="diaboloSelection:"/>
+                <relationship kind="action" name="jugglingSelection:"/>
+                <relationship kind="action" name="poiSelection:"/>
+                <relationship kind="action" name="staffSelection:"/>
+                <relationship kind="action" name="swipeLeft:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="swipeRight:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="outlet" name="catDiabolo" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="catJuggling" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="catPoi" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="catStaff" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="expandText:"/>
+                <relationship kind="action" name="expandVideo:"/>
+                <relationship kind="outlet" name="detailName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="expandText" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="expandVideo" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="textViewer" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="videoPlayer" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="FBProfilePictureView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBProfilePictureView.h"/>
+        </class>
+        <class className="FBRegistrationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBRegistrationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="inConfirmPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inEmail" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inFirstName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inSurname" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inUsername" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="LibraryViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LibraryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="videoTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="PFQueryTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFQueryTableViewController.h"/>
+        </class>
+        <class className="ParseUserViewController" superclassName="PFQueryTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParseUserViewController.h"/>
+        </class>
+        <class className="RegistrationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RegistrationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="confirmButton:"/>
+                <relationship kind="outlet" name="inConfirmPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inEmail" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inFirstName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inSurname" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inUsername" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="movingObj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="fbButton:"/>
+                <relationship kind="action" name="logoutButton:"/>
+                <relationship kind="action" name="publishButtonAction:"/>
+                <relationship kind="action" name="testButton:"/>
+                <relationship kind="outlet" name="authButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="fbButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logoutButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="publishButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="userInfoTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="userNameBox" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="userProfileImage" candidateClass="FBProfilePictureView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
