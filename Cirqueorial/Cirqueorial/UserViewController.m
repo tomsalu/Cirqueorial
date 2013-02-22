@@ -55,6 +55,32 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aCoder {
+    self = [super initWithCoder:aCoder];
+    if (self) {
+        // Customize the table
+        
+        // The className to query on
+        self.className = @"User";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"text";
+        
+        // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
+        // self.imageKey = @"image";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 25;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -83,7 +109,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    
+    /*
         
         ops = [[Database alloc]init];
         
@@ -93,12 +119,14 @@
         tableUsers = [ops userArray];
         [self.userTable reloadData];
     
+     */
     
     [super viewWillAppear:animated];
     
 }
 
 - (void) reIndexTable{
+    /*
     //ops = [[Database alloc]init];
     
     [self.ops getUsers];
@@ -106,6 +134,7 @@
     
     tableUsers = [ops userArray];
     [self.userTable reloadData];
+     */
 
 }
 
@@ -120,19 +149,20 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+{/*
     // Return the number of sections.
     return 1;
+  */
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+{/*
     // Return the number of rows in the section.
-    return [tableUsers count];
+    return [tableUsers count];*/
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+{/*
     static NSString *CellIdentifier = @"listCell2";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -146,6 +176,7 @@
     
     
     return cell;
+  */
 }
 /*
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
