@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "UserList.h"
 #import "Database.h"
+#import <Parse/Parse.h>
 
-@interface UserViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
+@interface UserViewController : PFQueryTableViewController <UITableViewDataSource, UITableViewDelegate>{
     
-    NSMutableArray *tableUsers;
+    NSMutableArray *userTableArray;
     
 }
 
-@property (strong, nonatomic) NSMutableArray *tableUsers;
+@property (strong, nonatomic) NSMutableArray *userTableArray;
 /*
  @property (strong, nonatomic) IBOutlet UILabel *tableID;
  @property (strong, nonatomic) IBOutlet UILabel *tableName;
