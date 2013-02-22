@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E90F405B16D507B5007ABE17 /* ParseData.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F405A16D507B5007ABE17 /* ParseData.m */; };
 		E9301B5F16BC3E13000B2338 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */; };
 		E9329D3816B331CE008E33BC /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9329D3716B331CE008E33BC /* applogo.png */; };
 		E93B86FF16B5A97100EE9084 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B86FE16B5A97100EE9084 /* AnimationViewController.m */; };
@@ -76,8 +75,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E90F405916D507B5007ABE17 /* ParseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseData.h; sourceTree = "<group>"; };
-		E90F405A16D507B5007ABE17 /* ParseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseData.m; sourceTree = "<group>"; };
 		E9301B5D16BC3E13000B2338 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		E9329D3716B331CE008E33BC /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
@@ -209,8 +206,6 @@
 				E969439716BEDCE20012664F /* UserList.m */,
 				E93B870516B5AA3800EE9084 /* Database.h */,
 				E93B870616B5AA3800EE9084 /* Database.m */,
-				E90F405916D507B5007ABE17 /* ParseData.h */,
-				E90F405A16D507B5007ABE17 /* ParseData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -466,7 +461,6 @@
 				E96B5F1D16BFDE2800720CA5 /* AuthenticationViewController.m in Sources */,
 				E98E977A16C01E4D0063606F /* BSKeyboardControls.m in Sources */,
 				E9D2527B16D13657008A9232 /* FBRegistrationViewController.m in Sources */,
-				E90F405B16D507B5007ABE17 /* ParseData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
