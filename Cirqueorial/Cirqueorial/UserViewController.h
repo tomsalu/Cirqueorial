@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "UserList.h"
 #import "Database.h"
-#import <Parse/Parse.h>
 
-@interface UserViewController : PFQueryTableViewController <UITableViewDataSource, UITableViewDelegate>{
+@interface UserViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
     
     NSMutableArray *tableUsers;
     
