@@ -66,6 +66,7 @@
 		E98E977D16C01E4D0063606F /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = E98E977816C01E4D0063606F /* License.txt */; };
 		E98E977E16C01E4D0063606F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E98E977916C01E4D0063606F /* README.md */; };
 		E9996ACD16B59D540065C5E0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */; };
+		E99FC81A16D7AF4600A05851 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E99FC81916D7AF4600A05851 /* UserDetailViewController.m */; };
 		E9D2527B16D13657008A9232 /* FBRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */; };
 		E9D32A5C16B82A870076932E /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D32A5B16B82A870076932E /* CategoryViewController.m */; };
 		E9D32A6016B8310B0076932E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */; };
@@ -154,6 +155,8 @@
 		E98E977816C01E4D0063606F /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		E98E977916C01E4D0063606F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		E99FC81816D7AF4600A05851 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
+		E99FC81916D7AF4600A05851 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
 		E9D2527916D13657008A9232 /* FBRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRegistrationViewController.h; sourceTree = "<group>"; };
 		E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRegistrationViewController.m; sourceTree = "<group>"; };
 		E9D32A5A16B82A870076932E /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 				E9F9DE9316D64071005CA429 /* ParseUserViewController.m */,
 				E96B5F1B16BFDE2800720CA5 /* AuthenticationViewController.h */,
 				E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */,
+				E99FC81816D7AF4600A05851 /* UserDetailViewController.h */,
+				E99FC81916D7AF4600A05851 /* UserDetailViewController.m */,
 				E93B871616B5B7D700EE9084 /* DetailViewController.h */,
 				E93B871716B5B7D700EE9084 /* DetailViewController.m */,
 				E93B86FD16B5A97100EE9084 /* AnimationViewController.h */,
@@ -461,6 +466,7 @@
 				E98E977A16C01E4D0063606F /* BSKeyboardControls.m in Sources */,
 				E9D2527B16D13657008A9232 /* FBRegistrationViewController.m in Sources */,
 				E9F9DE9416D64071005CA429 /* ParseUserViewController.m in Sources */,
+				E99FC81A16D7AF4600A05851 /* UserDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
