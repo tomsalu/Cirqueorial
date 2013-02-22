@@ -19,22 +19,42 @@
 @implementation UserViewController
 
 @synthesize ops;
-@synthesize tableUsers;
+@synthesize userTableArray;
 
 //ViewController *vc;
 
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithStyle:style];
+    self = [super initWithClassName:@"_User"];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Custom initialization
+        // Custom the table
+        
+        // The className to query on
+        self.className = @"_User";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"username";
+        
+        // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
+        // self.imageKey = @"image";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 25;
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
+    /*
     [super viewDidLoad];
     
     self.userTable.dataSource = self;
@@ -46,7 +66,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    /*
+    
      ops = [[Database alloc] init];
      [ops getVideo];
      tableVideos = [self.ops videoArray];
@@ -55,22 +75,26 @@
 
 - (void)viewDidUnload{
     
+    /*
+    
     [self setUserTable:nil];
     [super viewDidUnload];
     
+     */
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     
+    /*
         
         ops = [[Database alloc]init];
         
         [self.ops getUsers];
         
         
-        tableUsers = [ops userArray];
+        userTableArray = [ops userArray];
         [self.userTable reloadData];
-    
+    */
     
     [super viewWillAppear:animated];
     
@@ -82,7 +106,7 @@
     [self.ops getUsers];
     
     
-    tableUsers = [ops userArray];
+    userTableArray = [ops userArray];
     [self.userTable reloadData];
 
 }
@@ -96,19 +120,22 @@
 }
 
 #pragma mark - Table view data source
-
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
     return 1;
 }
-
+ */
+/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [tableUsers count];
+    return [userTableArray count];
 }
-
+ */
+ 
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"listCell2";
@@ -125,6 +152,9 @@
     
     return cell;
 }
+ */
+
+
 /*
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
