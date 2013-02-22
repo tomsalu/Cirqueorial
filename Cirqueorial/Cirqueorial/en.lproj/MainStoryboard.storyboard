@@ -254,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="1626" y="664"/>
         </scene>
-        <!--User View Controller-->
+        <!--Parse User View Controller-->
         <scene sceneID="2Nx-xv-7by">
             <objects>
-                <tableViewController id="H1P-lc-cOZ" customClass="UserViewController" sceneMemberID="viewController">
+                <tableViewController id="H1P-lc-cOZ" customClass="ParseUserViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qUG-ed-zBu">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,9 +279,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="q6q-Ch-jTv"/>
-                    <connections>
-                        <outlet property="userTable" destination="qUG-ed-zBu" id="xjJ-wD-h0O"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4r-j4-dxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -887,6 +884,12 @@
                 <relationship kind="outlet" name="videoTable" candidateClass="UITableView"/>
             </relationships>
         </class>
+        <class className="PFQueryTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFQueryTableViewController.h"/>
+        </class>
+        <class className="ParseUserViewController" superclassName="PFQueryTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParseUserViewController.h"/>
+        </class>
         <class className="RegistrationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RegistrationViewController.h"/>
             <relationships>
@@ -898,12 +901,6 @@
                 <relationship kind="outlet" name="inSurname" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="inUsername" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="movingObj" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="UserViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="userTable" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
