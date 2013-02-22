@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "FMDatabase.h"
-#import "ParseUserViewController.h"
 #import <Parse/Parse.h>
+#import "UserViewController.h"
 
 
 
@@ -30,6 +30,10 @@ NSString *const FBSessionStateChangedNotification =
     [Parse setApplicationId:@"YN1ow77nwfbLryiAu7XsqXpqxigWjTlTmQL025ax"
                   clientKey:@"PgGSZ7HyMqXo9YAy8xeq0tKg7mpWhZWGaUogBber"];
     
+    UserViewController *controller = [[UserViewController alloc] init];
+    
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
     
     
     [PFFacebookUtils initializeWithApplicationId:@"YOUR FACEBOOK APP ID"];
