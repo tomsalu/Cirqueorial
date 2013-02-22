@@ -46,7 +46,6 @@
 		E969439316BECBCF0012664F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E969438D16BECBCF0012664F /* FMDatabaseQueue.m */; };
 		E969439416BECBCF0012664F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E969438F16BECBCF0012664F /* FMResultSet.m */; };
 		E969439816BEDCE20012664F /* UserList.m in Sources */ = {isa = PBXBuildFile; fileRef = E969439716BEDCE20012664F /* UserList.m */; };
-		E969439B16BEDF6D0012664F /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E969439A16BEDF6D0012664F /* UserViewController.m */; };
 		E96B5F1D16BFDE2800720CA5 /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */; };
 		E97067E816B7018500F515EF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E716B7018500F515EF /* ProfileViewController.m */; };
 		E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E316B6FF8C00F515EF /* LibraryViewController.m */; };
@@ -72,6 +71,7 @@
 		E9D32A6016B8310B0076932E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */; };
 		E9D32A6116B8310B0076932E /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5F16B8310B0076932E /* FBUserSettingsViewResources.bundle */; };
 		E9D6AD6816B3217E00311E4C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */; };
+		E9F9DE9416D64071005CA429 /* ParseUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F9DE9316D64071005CA429 /* ParseUserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,8 +129,6 @@
 		E969438F16BECBCF0012664F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = Cirqueorial/FMResultSet.m; sourceTree = "<group>"; };
 		E969439616BEDCE20012664F /* UserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserList.h; path = Cirqueorial/UserList.h; sourceTree = "<group>"; };
 		E969439716BEDCE20012664F /* UserList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserList.m; path = Cirqueorial/UserList.m; sourceTree = "<group>"; };
-		E969439916BEDF6D0012664F /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
-		E969439A16BEDF6D0012664F /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		E96B5F1B16BFDE2800720CA5 /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewController.h; sourceTree = "<group>"; };
 		E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationViewController.m; sourceTree = "<group>"; };
 		E97067E216B6FF8C00F515EF /* LibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
@@ -163,6 +161,8 @@
 		E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		E9D32A5F16B8310B0076932E /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E9F9DE9216D64071005CA429 /* ParseUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseUserViewController.h; sourceTree = "<group>"; };
+		E9F9DE9316D64071005CA429 /* ParseUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,8 +226,8 @@
 				E9D32A5B16B82A870076932E /* CategoryViewController.m */,
 				E97067E216B6FF8C00F515EF /* LibraryViewController.h */,
 				E97067E316B6FF8C00F515EF /* LibraryViewController.m */,
-				E969439916BEDF6D0012664F /* UserViewController.h */,
-				E969439A16BEDF6D0012664F /* UserViewController.m */,
+				E9F9DE9216D64071005CA429 /* ParseUserViewController.h */,
+				E9F9DE9316D64071005CA429 /* ParseUserViewController.m */,
 				E96B5F1B16BFDE2800720CA5 /* AuthenticationViewController.h */,
 				E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */,
 				E93B871616B5B7D700EE9084 /* DetailViewController.h */,
@@ -457,10 +457,10 @@
 				E969439316BECBCF0012664F /* FMDatabaseQueue.m in Sources */,
 				E969439416BECBCF0012664F /* FMResultSet.m in Sources */,
 				E969439816BEDCE20012664F /* UserList.m in Sources */,
-				E969439B16BEDF6D0012664F /* UserViewController.m in Sources */,
 				E96B5F1D16BFDE2800720CA5 /* AuthenticationViewController.m in Sources */,
 				E98E977A16C01E4D0063606F /* BSKeyboardControls.m in Sources */,
 				E9D2527B16D13657008A9232 /* FBRegistrationViewController.m in Sources */,
+				E9F9DE9416D64071005CA429 /* ParseUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
