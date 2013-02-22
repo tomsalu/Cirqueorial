@@ -10,6 +10,7 @@
 #import "Database.h"
 #import "UserList.h"
 #import "AnimationViewController.h"
+#import <Parse/Parse.h>
 
 @interface AuthenticationViewController ()
 
@@ -54,6 +55,9 @@ bool authSuccess;
 }
 
 - (IBAction)attemptLogin:(id)sender {
+    
+    //OLD USER LOGIN STUFF!
+    /*
     authDB = [[Database alloc] init];
    [authDB getUsers];
     
@@ -91,8 +95,29 @@ bool authSuccess;
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unsuccessful Login" message:@"I'm sorry, you have supplied an incorrect username and/or password" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
         [alert show];
-        
-    }
+     
+    }*/
+    
+    [PFUser logInWithUsernameInBackground:self.fUsername.text password:self.fPassword.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            
+                                            
+                                            NSString *message = [NSString stringWithFormat:@"Welcome back, %@", user.username];
+                                            
+                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Login" message:message delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+                                            [alert show];
+                                            
+                                            [self performSegueWithIdentifier:@"authSegue" sender:sender];
+                                            
+                                            
+                                        } else {
+                                            // The login failed. Check error to see why.
+                                        }
+                                    }];
+    
+    self.fUsername.text = nil;
+    self.fPassword.text = nil;
 
     
 }
