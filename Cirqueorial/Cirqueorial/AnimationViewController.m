@@ -9,7 +9,6 @@
 #import "AnimationViewController.h"
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import <Parse/Parse.h>
 
 @interface AnimationViewController ()
 
@@ -187,9 +186,6 @@ CGPoint location4 = {500, 250};
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex != [alertView cancelButtonIndex]) {
         NSLog(@"Logging Out");
-        
-        [PFUser logOut];
-        
         [self.navigationController popViewControllerAnimated:YES];
         
 
