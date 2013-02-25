@@ -18,78 +18,24 @@
 @synthesize objects;
 @synthesize myObjects;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        
-    }
-    return self;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadObjects) name:@"geoPointAnnotiationUpdated" object:nil];
+    
 }
 
-- (id)initWithCoder:(NSCoder *)aCoder {
-    self = [super initWithCoder:aCoder];
-    if (self) {
-
-        // Customize the table
-
-        // The className to query on
-       // self.className = @"_User";
-
-        // The key of the PFObject to display in the label of the default cell style
-        self.textKey = @"username";
-
-        // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
-        // self.imageKey = @"image";
-
-        // Whether the built-in pull-to-refresh is enabled
-        self.pullToRefreshEnabled = YES;
-
-        // Whether the built-in pagination is enabled
-        self.paginationEnabled = YES;
-
-        // The number of objects to show per page
-        self.objectsPerPage = 25;
-        
-        NSLog(@"First Object Array Count: %i", objects.count);
-        
-        
-        PFQuery *userQuery = [PFUser query];
-        [userQuery whereKey:@"username" notEqualTo:@""];
-        NSArray *usersArray = [userQuery findObjects];
-        
-        NSLog(@"First User: %@", usersArray[0]);
-        
-        
- 
-        
-    }
-    return self;
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"geoPointAnnotiationUpdated" object:nil];
 }
- 
- 
-/*
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"userSegue"]) {
-         UserDetailViewController *userDetail = [segue destinationViewController];
-        
-        userDetail.userDetailArray = [myObjects objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-    }
-}
- */
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"userSegue"]) {
-        // Row selection
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        PFObject *object = [self.objects objectAtIndex:indexPath.row];
-        [[segue destinationViewController] setUserObject:object];
-    }
-}
-
-
 
 
 - (void)didReceiveMemoryWarning {
@@ -102,15 +48,19 @@
 
 #pragma mark - UIViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showUserDetail"]) {
+        // Row selection
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        PFObject *object = [self.objects objectAtIndex:indexPath.row];
+//        [[segue destinationViewController] setUserObject:object];
+        NSLog(@"Count: %i", self.objects.count);
+        PFUser *user = [self.objects objectAtIndex:indexPath.row];
+        [[segue destinationViewController] setUserObject:user];
+    }
 }
+
+
 
 - (void)viewDidUnload {
     [super viewDidUnload];
@@ -177,25 +127,24 @@
  }
  */
 
-/*
+
  // Override to customize the look of a cell representing an object. The default is to display
  // a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
  // and the imageView being the imageKey in the object.
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
- static NSString *CellIdentifier = @"Cell";
  
- PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
- if (cell == nil) {
- cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+ 
+     PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"UserCell"];
+
+     
+     // Configure the cell
+ 
+     cell.textLabel.text = [object objectForKey:@"First_Name"];
+     
+     //cell.imageView.file = [object objectForKey:self.imageKey];
+     
+     return cell;
  }
- 
- // Configure the cell
- cell.textLabel.text = [object objectForKey:self.textKey];
- cell.imageView.file = [object objectForKey:self.imageKey];
- 
- return cell;
- }
- */
 
 /*
  // Override if you need to change the ordering of objects in the table.

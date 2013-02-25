@@ -12,5 +12,6 @@
 
 
 @property (strong, nonatomic) NSArray *myObjects;
+@property (nonatomic, strong) PFObject *detailItem;
 
 @end

@@ -15,6 +15,7 @@
 @implementation UserDetailViewController
 
 @synthesize userDetailArray;
+@synthesize userObject = _userObject;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +31,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSLog(@"User Detail Page Array: %i", userDetailArray.count);
+    self.firstName.text = [_userObject objectForKey:@"First_Name"];
+    self.surname.text = [_userObject objectForKey:@"Surname"];
+    
+    NSLog(@"Firstname: %@", self.userObject.objectId);
+    
+//    NSLog(@"User Detail Page Array: %i", userDetailArray.count);
     
 }
 

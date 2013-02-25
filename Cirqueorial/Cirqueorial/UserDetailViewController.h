@@ -10,9 +10,10 @@
 #import <Parse/Parse.h>
 
 @interface UserDetailViewController : ViewController
-
+@property (strong, nonatomic) IBOutlet UILabel *firstName;
+@property (strong, nonatomic) IBOutlet UILabel *surname;
 
 @property (strong, nonatomic) NSMutableArray *userDetailArray;
-@property (strong, nonatomic) PFObject *userObject;
+@property (strong, nonatomic) PFUser *userObject;
 
 @end
