@@ -14,6 +14,7 @@
 		E93B870B16B5AAA200EE9084 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */; };
 		E93B870E16B5B21900EE9084 /* VideoList.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B870D16B5B21900EE9084 /* VideoList.m */; };
 		E93B871816B5B7D800EE9084 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B871716B5B7D700EE9084 /* DetailViewController.m */; };
+		E93F426D16DBFBB900831A1E /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F426C16DBFBB800831A1E /* MasterViewController.m */; };
 		E949E6C616B594E8006FFBC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E949E6B016B594E8006FFBC7 /* AppDelegate.m */; };
 		E949E6C716B594E8006FFBC7 /* Cirqueorial-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */; };
 		E949E6C816B594E8006FFBC7 /* Default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B316B594E8006FFBC7 /* Default.jpg */; };
@@ -88,6 +89,8 @@
 		E93B870D16B5B21900EE9084 /* VideoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoList.m; path = Cirqueorial/VideoList.m; sourceTree = "<group>"; };
 		E93B871616B5B7D700EE9084 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		E93B871716B5B7D700EE9084 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E93F426B16DBFBB800831A1E /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		E93F426C16DBFBB800831A1E /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		E949E6AF16B594E8006FFBC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E949E6B016B594E8006FFBC7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Cirqueorial-Info.plist"; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 		E949E6AE16B594E8006FFBC7 /* Cirqueorial */ = {
 			isa = PBXGroup;
 			children = (
+				E93F426B16DBFBB800831A1E /* MasterViewController.h */,
+				E93F426C16DBFBB800831A1E /* MasterViewController.m */,
 				E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */,
 				E949E6AF16B594E8006FFBC7 /* AppDelegate.h */,
 				E949E6B016B594E8006FFBC7 /* AppDelegate.m */,
@@ -467,6 +472,7 @@
 				E9D2527B16D13657008A9232 /* FBRegistrationViewController.m in Sources */,
 				E9F9DE9416D64071005CA429 /* ParseUserViewController.m in Sources */,
 				E99FC81A16D7AF4600A05851 /* UserDetailViewController.m in Sources */,
+				E93F426D16DBFBB900831A1E /* MasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

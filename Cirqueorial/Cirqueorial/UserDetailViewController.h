@@ -12,6 +12,7 @@
 @interface UserDetailViewController : ViewController
 @property (strong, nonatomic) IBOutlet UILabel *firstName;
 @property (strong, nonatomic) IBOutlet UILabel *surname;
+@property (strong, nonatomic) IBOutlet UILabel *email;
 
 @property (strong, nonatomic) NSMutableArray *userDetailArray;
 @property (strong, nonatomic) PFUser *userObject;

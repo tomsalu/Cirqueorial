@@ -33,6 +33,7 @@
     
     self.firstName.text = [_userObject objectForKey:@"First_Name"];
     self.surname.text = [_userObject objectForKey:@"Surname"];
+    self.email.text = [_userObject objectForKey:@"email"];
     
     NSLog(@"Firstname: %@", self.userObject.objectId);
     
