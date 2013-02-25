@@ -14,7 +14,6 @@
 		E93B870B16B5AAA200EE9084 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */; };
 		E93B870E16B5B21900EE9084 /* VideoList.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B870D16B5B21900EE9084 /* VideoList.m */; };
 		E93B871816B5B7D800EE9084 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B871716B5B7D700EE9084 /* DetailViewController.m */; };
-		E93F426D16DBFBB900831A1E /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F426C16DBFBB800831A1E /* MasterViewController.m */; };
 		E949E6C616B594E8006FFBC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E949E6B016B594E8006FFBC7 /* AppDelegate.m */; };
 		E949E6C716B594E8006FFBC7 /* Cirqueorial-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */; };
 		E949E6C816B594E8006FFBC7 /* Default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B316B594E8006FFBC7 /* Default.jpg */; };
@@ -77,8 +76,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E9301B5D16BC3E13000B2338 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
-		E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		E9301B5D16BC3E13000B2338 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationViewController.h; path = Cirqueorial/RegistrationViewController.h; sourceTree = "<group>"; };
+		E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationViewController.m; path = Cirqueorial/RegistrationViewController.m; sourceTree = "<group>"; };
 		E9329D3716B331CE008E33BC /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
 		E93B86FD16B5A97100EE9084 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		E93B86FE16B5A97100EE9084 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
@@ -87,14 +86,12 @@
 		E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		E93B870C16B5B21900EE9084 /* VideoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoList.h; path = Cirqueorial/VideoList.h; sourceTree = "<group>"; };
 		E93B870D16B5B21900EE9084 /* VideoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoList.m; path = Cirqueorial/VideoList.m; sourceTree = "<group>"; };
-		E93B871616B5B7D700EE9084 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		E93B871716B5B7D700EE9084 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		E93F426B16DBFBB800831A1E /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		E93F426C16DBFBB800831A1E /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		E93B871616B5B7D700EE9084 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Cirqueorial/DetailViewController.h; sourceTree = "<group>"; };
+		E93B871716B5B7D700EE9084 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Cirqueorial/DetailViewController.m; sourceTree = "<group>"; };
 		E949E6AF16B594E8006FFBC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E949E6B016B594E8006FFBC7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Cirqueorial-Info.plist"; sourceTree = "<group>"; };
-		E949E6B216B594E8006FFBC7 /* Cirqueorial-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cirqueorial-Prefix.pch"; sourceTree = "<group>"; };
+		E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Cirqueorial-Info.plist"; path = "Cirqueorial/Cirqueorial-Info.plist"; sourceTree = "<group>"; };
+		E949E6B216B594E8006FFBC7 /* Cirqueorial-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Cirqueorial-Prefix.pch"; path = "Cirqueorial/Cirqueorial-Prefix.pch"; sourceTree = "<group>"; };
 		E949E6B316B594E8006FFBC7 /* Default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Default.jpg; path = Cirqueorial/Default.jpg; sourceTree = "<group>"; };
 		E949E6B416B594E8006FFBC7 /* Default@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Default@2x.jpg"; path = "Cirqueorial/Default@2x.jpg"; sourceTree = "<group>"; };
 		E949E6B616B594E8006FFBC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -104,7 +101,7 @@
 		E949E6BB16B594E8006FFBC7 /* Library_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Icon.png; path = Cirqueorial/Library_Icon.png; sourceTree = "<group>"; };
 		E949E6BC16B594E8006FFBC7 /* loginBackgroundIPhonePortrait@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "loginBackgroundIPhonePortrait@2x.jpg"; path = "Cirqueorial/loginBackgroundIPhonePortrait@2x.jpg"; sourceTree = "<group>"; };
 		E949E6BD16B594E8006FFBC7 /* mag_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mag_glass.png; path = Cirqueorial/mag_glass.png; sourceTree = "<group>"; };
-		E949E6BE16B594E8006FFBC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E949E6BE16B594E8006FFBC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Cirqueorial/main.m; sourceTree = "<group>"; };
 		E949E6BF16B594E8006FFBC7 /* Profile_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Profile_Icon.png; path = Cirqueorial/Profile_Icon.png; sourceTree = "<group>"; };
 		E949E6C016B594E8006FFBC7 /* Search_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Search_Icon.png; path = Cirqueorial/Search_Icon.png; sourceTree = "<group>"; };
 		E949E6C116B594E8006FFBC7 /* Settings_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Settings_Icon.png; path = Cirqueorial/Settings_Icon.png; sourceTree = "<group>"; };
@@ -133,12 +130,12 @@
 		E969438F16BECBCF0012664F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = Cirqueorial/FMResultSet.m; sourceTree = "<group>"; };
 		E969439616BEDCE20012664F /* UserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserList.h; path = Cirqueorial/UserList.h; sourceTree = "<group>"; };
 		E969439716BEDCE20012664F /* UserList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserList.m; path = Cirqueorial/UserList.m; sourceTree = "<group>"; };
-		E96B5F1B16BFDE2800720CA5 /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewController.h; sourceTree = "<group>"; };
-		E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationViewController.m; sourceTree = "<group>"; };
-		E97067E216B6FF8C00F515EF /* LibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
-		E97067E316B6FF8C00F515EF /* LibraryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
-		E97067E616B7018400F515EF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		E97067E716B7018500F515EF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		E96B5F1B16BFDE2800720CA5 /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthenticationViewController.h; path = Cirqueorial/AuthenticationViewController.h; sourceTree = "<group>"; };
+		E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthenticationViewController.m; path = Cirqueorial/AuthenticationViewController.m; sourceTree = "<group>"; };
+		E97067E216B6FF8C00F515EF /* LibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LibraryViewController.h; path = Cirqueorial/LibraryViewController.h; sourceTree = "<group>"; };
+		E97067E316B6FF8C00F515EF /* LibraryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LibraryViewController.m; path = Cirqueorial/LibraryViewController.m; sourceTree = "<group>"; };
+		E97067E616B7018400F515EF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Cirqueorial/ProfileViewController.h; sourceTree = "<group>"; };
+		E97067E716B7018500F515EF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Cirqueorial/ProfileViewController.m; sourceTree = "<group>"; };
 		E9724F7E16C56BE900F50491 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E9724F8016C56C1400F50491 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E9724F8216C56C6F00F50491 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -158,17 +155,17 @@
 		E98E977816C01E4D0063606F /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		E98E977916C01E4D0063606F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		E99FC81816D7AF4600A05851 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
-		E99FC81916D7AF4600A05851 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
-		E9D2527916D13657008A9232 /* FBRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRegistrationViewController.h; sourceTree = "<group>"; };
-		E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRegistrationViewController.m; sourceTree = "<group>"; };
+		E99FC81816D7AF4600A05851 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailViewController.h; path = Cirqueorial/UserDetailViewController.h; sourceTree = "<group>"; };
+		E99FC81916D7AF4600A05851 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailViewController.m; path = Cirqueorial/UserDetailViewController.m; sourceTree = "<group>"; };
+		E9D2527916D13657008A9232 /* FBRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBRegistrationViewController.h; path = Cirqueorial/FBRegistrationViewController.h; sourceTree = "<group>"; };
+		E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBRegistrationViewController.m; path = Cirqueorial/FBRegistrationViewController.m; sourceTree = "<group>"; };
 		E9D32A5A16B82A870076932E /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		E9D32A5B16B82A870076932E /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		E9D32A5F16B8310B0076932E /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E9F9DE9216D64071005CA429 /* ParseUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseUserViewController.h; sourceTree = "<group>"; };
-		E9F9DE9316D64071005CA429 /* ParseUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseUserViewController.m; sourceTree = "<group>"; };
+		E9F9DE9216D64071005CA429 /* ParseUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseUserViewController.h; path = Cirqueorial/ParseUserViewController.h; sourceTree = "<group>"; };
+		E9F9DE9316D64071005CA429 /* ParseUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseUserViewController.m; path = Cirqueorial/ParseUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,40 +213,74 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E93F426E16DC030600831A1E /* User Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				E97067E616B7018400F515EF /* ProfileViewController.h */,
+				E97067E716B7018500F515EF /* ProfileViewController.m */,
+				E9F9DE9216D64071005CA429 /* ParseUserViewController.h */,
+				E9F9DE9316D64071005CA429 /* ParseUserViewController.m */,
+				E99FC81816D7AF4600A05851 /* UserDetailViewController.h */,
+				E99FC81916D7AF4600A05851 /* UserDetailViewController.m */,
+			);
+			name = "User Functionality";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E93F426F16DC031A00831A1E /* Library Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				E97067E216B6FF8C00F515EF /* LibraryViewController.h */,
+				E97067E316B6FF8C00F515EF /* LibraryViewController.m */,
+				E93B871616B5B7D700EE9084 /* DetailViewController.h */,
+				E93B871716B5B7D700EE9084 /* DetailViewController.m */,
+			);
+			name = "Library Functionality";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E93F427016DC037D00831A1E /* Registration & Login */ = {
+			isa = PBXGroup;
+			children = (
+				E9301B5D16BC3E13000B2338 /* RegistrationViewController.h */,
+				E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */,
+				E9D2527916D13657008A9232 /* FBRegistrationViewController.h */,
+				E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */,
+				E96B5F1B16BFDE2800720CA5 /* AuthenticationViewController.h */,
+				E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */,
+			);
+			name = "Registration & Login";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E93F427116DC03B400831A1E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E949E6BE16B594E8006FFBC7 /* main.m */,
+				E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */,
+				E949E6B216B594E8006FFBC7 /* Cirqueorial-Prefix.pch */,
+				E949E6B516B594E8006FFBC7 /* InfoPlist.strings */,
+			);
+			name = Other;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		E949E6AE16B594E8006FFBC7 /* Cirqueorial */ = {
 			isa = PBXGroup;
 			children = (
-				E93F426B16DBFBB800831A1E /* MasterViewController.h */,
-				E93F426C16DBFBB800831A1E /* MasterViewController.m */,
 				E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */,
 				E949E6AF16B594E8006FFBC7 /* AppDelegate.h */,
 				E949E6B016B594E8006FFBC7 /* AppDelegate.m */,
 				E949E6C416B594E8006FFBC7 /* ViewController.h */,
 				E949E6C516B594E8006FFBC7 /* ViewController.m */,
-				E9301B5D16BC3E13000B2338 /* RegistrationViewController.h */,
-				E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */,
-				E9D2527916D13657008A9232 /* FBRegistrationViewController.h */,
-				E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */,
-				E9D32A5A16B82A870076932E /* CategoryViewController.h */,
-				E9D32A5B16B82A870076932E /* CategoryViewController.m */,
-				E97067E216B6FF8C00F515EF /* LibraryViewController.h */,
-				E97067E316B6FF8C00F515EF /* LibraryViewController.m */,
-				E9F9DE9216D64071005CA429 /* ParseUserViewController.h */,
-				E9F9DE9316D64071005CA429 /* ParseUserViewController.m */,
-				E99FC81816D7AF4600A05851 /* UserDetailViewController.h */,
-				E99FC81916D7AF4600A05851 /* UserDetailViewController.m */,
-				E96B5F1B16BFDE2800720CA5 /* AuthenticationViewController.h */,
-				E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */,
-				E93B871616B5B7D700EE9084 /* DetailViewController.h */,
-				E93B871716B5B7D700EE9084 /* DetailViewController.m */,
 				E93B86FD16B5A97100EE9084 /* AnimationViewController.h */,
 				E93B86FE16B5A97100EE9084 /* AnimationViewController.m */,
-				E97067E616B7018400F515EF /* ProfileViewController.h */,
-				E97067E716B7018500F515EF /* ProfileViewController.m */,
-				E949E6BE16B594E8006FFBC7 /* main.m */,
-				E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */,
-				E949E6B216B594E8006FFBC7 /* Cirqueorial-Prefix.pch */,
-				E949E6B516B594E8006FFBC7 /* InfoPlist.strings */,
+				E9D32A5A16B82A870076932E /* CategoryViewController.h */,
+				E9D32A5B16B82A870076932E /* CategoryViewController.m */,
+				E93F427016DC037D00831A1E /* Registration & Login */,
+				E93F426E16DC030600831A1E /* User Functionality */,
+				E93F426F16DC031A00831A1E /* Library Functionality */,
+				E93F427116DC03B400831A1E /* Other */,
 				E949E6D916B59518006FFBC7 /* Supporting Files */,
 			);
 			path = Cirqueorial;
@@ -472,7 +503,6 @@
 				E9D2527B16D13657008A9232 /* FBRegistrationViewController.m in Sources */,
 				E9F9DE9416D64071005CA429 /* ParseUserViewController.m in Sources */,
 				E99FC81A16D7AF4600A05851 /* UserDetailViewController.m in Sources */,
-				E93F426D16DBFBB900831A1E /* MasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +515,7 @@
 				E949E6B616B594E8006FFBC7 /* en */,
 			);
 			name = InfoPlist.strings;
+			path = Cirqueorial;
 			sourceTree = "<group>";
 		};
 		E949E6B716B594E8006FFBC7 /* MainStoryboard.storyboard */ = {
