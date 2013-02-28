@@ -12,9 +12,8 @@
 
 #define kCustomButtonHeight		30.0
 
-@class VideoList;
-
 @interface DetailViewController : UIViewController
+
 
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 

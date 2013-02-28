@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "CommentViewController.h"
 
 @interface DetailViewController ()
 
@@ -85,6 +86,17 @@
     
     //self.detailName.text = self.detailVideo.videoName;
 
+    
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"showComments"]) {
+
+        NSLog(@"Object ID: %@", [self.libObject objectId]);
+        [[segue destinationViewController] setID:[self.libObject objectId]];
+    }
+    
+    
     
 }
 

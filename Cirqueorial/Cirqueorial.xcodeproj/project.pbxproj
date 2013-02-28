@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E9301B5F16BC3E13000B2338 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */; };
 		E9329D3816B331CE008E33BC /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9329D3716B331CE008E33BC /* applogo.png */; };
+		E932CC1816DFE8C7006BFD19 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932CC1716DFE8C7006BFD19 /* CommentViewController.m */; };
 		E93B86FF16B5A97100EE9084 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B86FE16B5A97100EE9084 /* AnimationViewController.m */; };
 		E93B870B16B5AAA200EE9084 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */; };
 		E93B871816B5B7D800EE9084 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B871716B5B7D700EE9084 /* DetailViewController.m */; };
@@ -76,6 +77,8 @@
 		E9301B5D16BC3E13000B2338 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationViewController.h; path = Cirqueorial/RegistrationViewController.h; sourceTree = "<group>"; };
 		E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationViewController.m; path = Cirqueorial/RegistrationViewController.m; sourceTree = "<group>"; };
 		E9329D3716B331CE008E33BC /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
+		E932CC1616DFE8C6006BFD19 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		E932CC1716DFE8C7006BFD19 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 		E93B86FD16B5A97100EE9084 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		E93B86FE16B5A97100EE9084 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
 		E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -219,6 +222,8 @@
 				E93B871716B5B7D700EE9084 /* DetailViewController.m */,
 				E968150316DF88A700C789FC /* ParseLibraryViewController.h */,
 				E968150416DF88A700C789FC /* ParseLibraryViewController.m */,
+				E932CC1616DFE8C6006BFD19 /* CommentViewController.h */,
+				E932CC1716DFE8C7006BFD19 /* CommentViewController.m */,
 			);
 			name = "Library Functionality";
 			path = ..;
@@ -485,6 +490,7 @@
 				E9F9DE9416D64071005CA429 /* ParseUserViewController.m in Sources */,
 				E99FC81A16D7AF4600A05851 /* UserDetailViewController.m in Sources */,
 				E968150516DF88A700C789FC /* ParseLibraryViewController.m in Sources */,
+				E932CC1816DFE8C7006BFD19 /* CommentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
