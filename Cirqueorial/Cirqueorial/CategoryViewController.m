@@ -7,6 +7,7 @@
 //
 
 #import "CategoryViewController.h"
+#import "ParseLibraryViewController.h"
 
 @interface CategoryViewController ()
 
@@ -22,8 +23,6 @@ CGPoint catLocation1 = {170,250};
 CGPoint catLocation2 = {-100, 150};
 CGPoint catLocation3 = {100,100};
 CGPoint catLocation4 = {500, 250};
-LibraryViewController *lvc;
-
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,8 +40,6 @@ LibraryViewController *lvc;
 	// Do any additional setup after loading the view.
     catLocationIndex = 1;
     self.navigationItem.title = @"Categories";
-    lvc = [[LibraryViewController alloc] init];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,9 +49,33 @@ LibraryViewController *lvc;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    //catLocationIndex = 1;
-    NSLog(@"Segway Location: %i", catLocationIndex);
     
+    if ([[segue identifier] isEqualToString:@"catJuggling"]) {
+        // Row selection
+
+        [[segue destinationViewController] setCategoryChosen:@"juggling"];
+    }
+    else if ([[segue identifier] isEqualToString:@"catStaff"]) {
+        // Row selection
+        
+        [[segue destinationViewController] setCategoryChosen:@"staff"];
+    }
+    else if ([[segue identifier] isEqualToString:@"catPoi"]) {
+        // Row selection
+        
+        [[segue destinationViewController] setCategoryChosen:@"poi"];
+    }
+    else if ([[segue identifier] isEqualToString:@"catDiabolo"]) {
+        // Row selection
+        
+        [[segue destinationViewController] setCategoryChosen:@"diabolo"];
+    }
+    
+    /*
+     
+     catLocationIndex = 1;
+     NSLog(@"Segway Location: %i", catLocationIndex);
+
     if (self.catPoi.highlighted) {
 
         [lvc createTable:@"poi"];
@@ -72,7 +93,7 @@ LibraryViewController *lvc;
 
         [lvc createTable:@"juggling"];
     }
-    
+    */
     
     
     
@@ -200,28 +221,6 @@ LibraryViewController *lvc;
 }
 
 
-
-- (IBAction)poiSelection:(id)sender {
-
-    [lvc createTable:@"poi"];
-}
-
-- (IBAction)staffSelection:(id)sender {
-    
-    [lvc createTable:@"staff"];
-}
-
-- (IBAction)diaboloSelection:(id)sender {
-    
-    [lvc createTable:@"diabolo"];
-}
-
-- (IBAction)jugglingSelection:(id)sender {
-
-    
-    [lvc createTable:@"juggling"];
-    
-}
 
 - (NSString *)getSelection{
     return self.selection;

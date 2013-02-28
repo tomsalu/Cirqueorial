@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "VideoList.h"
+#import <Parse/Parse.h>
 
 #define kCustomButtonHeight		30.0
 
@@ -32,5 +33,8 @@
 - (IBAction)expandText:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scroller;
+
+@property (strong, nonatomic) PFObject *libObject;
+
 
 @end

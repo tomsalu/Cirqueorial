@@ -7,8 +7,6 @@
 //
 
 #import "AuthenticationViewController.h"
-#import "Database.h"
-#import "UserList.h"
 #import "AnimationViewController.h"
 
 @interface AuthenticationViewController ()
@@ -16,8 +14,6 @@
 @end
 
 @implementation AuthenticationViewController
-
-@synthesize authDB;
 
 bool authSuccess;
 
@@ -54,47 +50,34 @@ bool authSuccess;
 }
 
 - (IBAction)attemptLogin:(id)sender {
-    authDB = [[Database alloc] init];
-   [authDB getUsers];
     
-    int i = 0;
-    authSuccess = NO;
-    UserList *userObject;
-    
-    while (i < authDB.userArray.count && !authSuccess) {
-        userObject = authDB.userArray[i];
-        if ([userObject.password isEqualToString:self.fPassword.text] && [userObject.email isEqualToString:self.fUsername.text]) {
-            NSLog(@"Correct Login");
-            authSuccess = YES;
-        }
-        else{
-            NSLog(@"Incorrect Login");
-        }
-        i++;
-        
-    }
-    
-    if (authSuccess) {
-        
-        NSString *message = [NSString stringWithFormat:@"Welcome back, %@", userObject.firstName];
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Login" message:message delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-        [alert show];
-        
-        [self performSegueWithIdentifier:@"authSegue" sender:sender];
-        
-    }
-    
-    else{
-        
-        
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unsuccessful Login" message:@"I'm sorry, you have supplied an incorrect username and/or password" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-        [alert show];
-        
-    }
+    [PFUser logInWithUsernameInBackground:self.fUsername.text password:self.fPassword.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            // Do stuff after successful login.
+                                            NSLog(@"Success");
+                                            
+                                            NSString *message = [NSString stringWithFormat:@"Welcome back, %@", [user objectForKey:@"First_Name"]];
+                                            
+                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Login" message:message delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+                                            [alert show];
+                                            
+                                            [self performSegueWithIdentifier:@"authSegue" sender:sender];
+                                            
+                                            
+                                        } else {
+                                            // The login failed. Check error to see why.
+                                            NSLog(@"Failure");
+                                            
+                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unsuccessful Login" message:@"I'm sorry, you have supplied an incorrect username and/or password" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+                                            [alert show];
+                                        }
+                                    }];
+}
 
-    
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    self.fUsername.text = nil;
+    self.fPassword.text = nil;
 }
 
 

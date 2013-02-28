@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Database.h"
-#import "UserList.h"
+#import <Parse/Parse.h>
 
 @interface AuthenticationViewController : UIViewController <UITextFieldDelegate>
 
@@ -16,7 +15,5 @@
 @property (strong, nonatomic) IBOutlet UITextField *fUsername;
 
 - (IBAction)attemptLogin:(id)sender;
-
-@property (strong, nonatomic) Database *authDB;
 
 @end

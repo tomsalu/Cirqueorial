@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VideoList.h"
-#import "Database.h"
 #import "CategoryViewController.h"
 
 
@@ -25,7 +23,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *tableURL;
 */
 @property (strong, nonatomic) IBOutlet UITableView *videoTable;
-@property(nonatomic, strong) Database * ops;
 
 - (void) createTable:(NSString *) selection;
 

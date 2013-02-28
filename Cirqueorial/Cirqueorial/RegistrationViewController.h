@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Database.h"
 #import "BSKeyboardControls.h"
 
 @interface RegistrationViewController : UIViewController <UITextFieldDelegate, BSKeyboardControlsDelegate, UITextViewDelegate>

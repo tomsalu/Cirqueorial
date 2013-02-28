@@ -10,9 +10,7 @@
 		E9301B5F16BC3E13000B2338 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */; };
 		E9329D3816B331CE008E33BC /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9329D3716B331CE008E33BC /* applogo.png */; };
 		E93B86FF16B5A97100EE9084 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B86FE16B5A97100EE9084 /* AnimationViewController.m */; };
-		E93B870716B5AA3800EE9084 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B870616B5AA3800EE9084 /* Database.m */; };
 		E93B870B16B5AAA200EE9084 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */; };
-		E93B870E16B5B21900EE9084 /* VideoList.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B870D16B5B21900EE9084 /* VideoList.m */; };
 		E93B871816B5B7D800EE9084 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B871716B5B7D700EE9084 /* DetailViewController.m */; };
 		E949E6C616B594E8006FFBC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E949E6B016B594E8006FFBC7 /* AppDelegate.m */; };
 		E949E6C716B594E8006FFBC7 /* Cirqueorial-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E949E6B116B594E8006FFBC7 /* Cirqueorial-Info.plist */; };
@@ -38,6 +36,7 @@
 		E965304816B2F4E5009D4307 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304516B2F4E5009D4307 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E965304916B2F4E5009D4307 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304616B2F4E5009D4307 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E965304A16B2F4E5009D4307 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304716B2F4E5009D4307 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E968150516DF88A700C789FC /* ParseLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E968150416DF88A700C789FC /* ParseLibraryViewController.m */; };
 		E969437D16BEB4AE0012664F /* Video_Test_DB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E969437C16BEB4AE0012664F /* Video_Test_DB.sqlite */; };
 		E969438116BEBAEA0012664F /* test.db in Resources */ = {isa = PBXBuildFile; fileRef = E969438016BEBAEA0012664F /* test.db */; };
 		E969439016BECBCF0012664F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E969438716BECBCF0012664F /* FMDatabase.m */; };
@@ -45,10 +44,8 @@
 		E969439216BECBCF0012664F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E969438B16BECBCF0012664F /* FMDatabasePool.m */; };
 		E969439316BECBCF0012664F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E969438D16BECBCF0012664F /* FMDatabaseQueue.m */; };
 		E969439416BECBCF0012664F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E969438F16BECBCF0012664F /* FMResultSet.m */; };
-		E969439816BEDCE20012664F /* UserList.m in Sources */ = {isa = PBXBuildFile; fileRef = E969439716BEDCE20012664F /* UserList.m */; };
 		E96B5F1D16BFDE2800720CA5 /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */; };
 		E97067E816B7018500F515EF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E716B7018500F515EF /* ProfileViewController.m */; };
-		E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97067E316B6FF8C00F515EF /* LibraryViewController.m */; };
 		E9724F7F16C56BE900F50491 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9724F7E16C56BE900F50491 /* Parse.framework */; };
 		E9724F8116C56C1400F50491 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9724F8016C56C1400F50491 /* AudioToolbox.framework */; };
 		E9724F8B16C56C6F00F50491 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9724F8216C56C6F00F50491 /* CFNetwork.framework */; };
@@ -81,11 +78,7 @@
 		E9329D3716B331CE008E33BC /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
 		E93B86FD16B5A97100EE9084 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		E93B86FE16B5A97100EE9084 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
-		E93B870516B5AA3800EE9084 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Database.h; path = Cirqueorial/Database.h; sourceTree = "<group>"; };
-		E93B870616B5AA3800EE9084 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Database.m; path = Cirqueorial/Database.m; sourceTree = "<group>"; };
 		E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		E93B870C16B5B21900EE9084 /* VideoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoList.h; path = Cirqueorial/VideoList.h; sourceTree = "<group>"; };
-		E93B870D16B5B21900EE9084 /* VideoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoList.m; path = Cirqueorial/VideoList.m; sourceTree = "<group>"; };
 		E93B871616B5B7D700EE9084 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Cirqueorial/DetailViewController.h; sourceTree = "<group>"; };
 		E93B871716B5B7D700EE9084 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Cirqueorial/DetailViewController.m; sourceTree = "<group>"; };
 		E949E6AF16B594E8006FFBC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +109,8 @@
 		E965304516B2F4E5009D4307 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		E965304616B2F4E5009D4307 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		E965304716B2F4E5009D4307 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E968150316DF88A700C789FC /* ParseLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLibraryViewController.h; sourceTree = "<group>"; };
+		E968150416DF88A700C789FC /* ParseLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLibraryViewController.m; sourceTree = "<group>"; };
 		E969437C16BEB4AE0012664F /* Video_Test_DB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Video_Test_DB.sqlite; path = Database/Video_Test_DB.sqlite; sourceTree = "<group>"; };
 		E969438016BEBAEA0012664F /* test.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.db; path = Database/test.db; sourceTree = "<group>"; };
 		E969438616BECBCF0012664F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = Cirqueorial/FMDatabase.h; sourceTree = "<group>"; };
@@ -128,12 +123,8 @@
 		E969438D16BECBCF0012664F /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = Cirqueorial/FMDatabaseQueue.m; sourceTree = "<group>"; };
 		E969438E16BECBCF0012664F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = Cirqueorial/FMResultSet.h; sourceTree = "<group>"; };
 		E969438F16BECBCF0012664F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = Cirqueorial/FMResultSet.m; sourceTree = "<group>"; };
-		E969439616BEDCE20012664F /* UserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserList.h; path = Cirqueorial/UserList.h; sourceTree = "<group>"; };
-		E969439716BEDCE20012664F /* UserList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserList.m; path = Cirqueorial/UserList.m; sourceTree = "<group>"; };
 		E96B5F1B16BFDE2800720CA5 /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthenticationViewController.h; path = Cirqueorial/AuthenticationViewController.h; sourceTree = "<group>"; };
 		E96B5F1C16BFDE2800720CA5 /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthenticationViewController.m; path = Cirqueorial/AuthenticationViewController.m; sourceTree = "<group>"; };
-		E97067E216B6FF8C00F515EF /* LibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LibraryViewController.h; path = Cirqueorial/LibraryViewController.h; sourceTree = "<group>"; };
-		E97067E316B6FF8C00F515EF /* LibraryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LibraryViewController.m; path = Cirqueorial/LibraryViewController.m; sourceTree = "<group>"; };
 		E97067E616B7018400F515EF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Cirqueorial/ProfileViewController.h; sourceTree = "<group>"; };
 		E97067E716B7018500F515EF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Cirqueorial/ProfileViewController.m; sourceTree = "<group>"; };
 		E9724F7E16C56BE900F50491 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -203,12 +194,6 @@
 			children = (
 				E969437C16BEB4AE0012664F /* Video_Test_DB.sqlite */,
 				E969438016BEBAEA0012664F /* test.db */,
-				E93B870C16B5B21900EE9084 /* VideoList.h */,
-				E93B870D16B5B21900EE9084 /* VideoList.m */,
-				E969439616BEDCE20012664F /* UserList.h */,
-				E969439716BEDCE20012664F /* UserList.m */,
-				E93B870516B5AA3800EE9084 /* Database.h */,
-				E93B870616B5AA3800EE9084 /* Database.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -230,10 +215,10 @@
 		E93F426F16DC031A00831A1E /* Library Functionality */ = {
 			isa = PBXGroup;
 			children = (
-				E97067E216B6FF8C00F515EF /* LibraryViewController.h */,
-				E97067E316B6FF8C00F515EF /* LibraryViewController.m */,
 				E93B871616B5B7D700EE9084 /* DetailViewController.h */,
 				E93B871716B5B7D700EE9084 /* DetailViewController.m */,
+				E968150316DF88A700C789FC /* ParseLibraryViewController.h */,
+				E968150416DF88A700C789FC /* ParseLibraryViewController.m */,
 			);
 			name = "Library Functionality";
 			path = ..;
@@ -485,11 +470,8 @@
 				E949E6D116B594E8006FFBC7 /* main.m in Sources */,
 				E949E6D716B594E8006FFBC7 /* ViewController.m in Sources */,
 				E93B86FF16B5A97100EE9084 /* AnimationViewController.m in Sources */,
-				E93B870716B5AA3800EE9084 /* Database.m in Sources */,
-				E93B870E16B5B21900EE9084 /* VideoList.m in Sources */,
 				E93B871816B5B7D800EE9084 /* DetailViewController.m in Sources */,
 				E97067E816B7018500F515EF /* ProfileViewController.m in Sources */,
-				E97067E916B70DE000F515EF /* LibraryViewController.m in Sources */,
 				E9D32A5C16B82A870076932E /* CategoryViewController.m in Sources */,
 				E9301B5F16BC3E13000B2338 /* RegistrationViewController.m in Sources */,
 				E969439016BECBCF0012664F /* FMDatabase.m in Sources */,
@@ -497,12 +479,12 @@
 				E969439216BECBCF0012664F /* FMDatabasePool.m in Sources */,
 				E969439316BECBCF0012664F /* FMDatabaseQueue.m in Sources */,
 				E969439416BECBCF0012664F /* FMResultSet.m in Sources */,
-				E969439816BEDCE20012664F /* UserList.m in Sources */,
 				E96B5F1D16BFDE2800720CA5 /* AuthenticationViewController.m in Sources */,
 				E98E977A16C01E4D0063606F /* BSKeyboardControls.m in Sources */,
 				E9D2527B16D13657008A9232 /* FBRegistrationViewController.m in Sources */,
 				E9F9DE9416D64071005CA429 /* ParseUserViewController.m in Sources */,
 				E99FC81A16D7AF4600A05851 /* UserDetailViewController.m in Sources */,
+				E968150516DF88A700C789FC /* ParseLibraryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

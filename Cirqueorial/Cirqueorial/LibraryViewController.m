@@ -9,8 +9,6 @@
 #import "LibraryViewController.h"
 #import "ViewController.h"
 #import "DetailViewController.h"
-#import "Database.h"
-#import "VideoList.h"
 
 @interface LibraryViewController ()
 
@@ -18,12 +16,7 @@
 
 @implementation LibraryViewController
 
-@synthesize ops;
-@synthesize tableVideos;
 
-NSString *sel = @"";
-
-//ViewController *vc;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -64,41 +57,7 @@ NSString *sel = @"";
 
 - (void)viewWillAppear:(BOOL)animated{
     
-    if (sel != nil) {
-
-    ops = [[Database alloc]init];
-
-    //[self.ops getVideo];
-    
-    
-    if ([sel isEqualToString:@"juggling"]) {
-        [self.ops getJugglingVideo:@"juggling"];
-    }
-    else if ([sel isEqualToString:@"poi"]) {
-        [self.ops getJugglingVideo:@"poi"];
-    }
-    else if ([sel isEqualToString:@"staff"]) {
-        [self.ops getJugglingVideo:@"staff"];
-    }
-    else if ([sel isEqualToString:@"diabolo"]) {
-        [self.ops getJugglingVideo:@"diabolo"];
-    }
-    else{
-        NSLog(@"Went Wrong");
-    }
-    
-    tableVideos = [ops videoArray];
-    [self.videoTable reloadData];
-    sel = nil;
-    }
-    
     [super viewWillAppear:animated];
-    
-}
-
-- (void) createTable:(NSString *) catSelection{
-    sel = catSelection;
-    
     
 }
 

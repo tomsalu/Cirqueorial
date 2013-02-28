@@ -20,6 +20,7 @@
 @synthesize expandVideo;
 @synthesize expandText;
 @synthesize textViewer;
+@synthesize libObject = _libObject;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,7 +35,7 @@
 {
     [super viewDidLoad];
     
-    NSString *name = [NSString stringWithFormat:@"%@", self.detailVideo.videoName];
+    NSString *name = [self.libObject objectForKey:@"Video_Name"];
     
     self.navigationItem.title = name;
     
@@ -54,7 +55,7 @@
     
 	//Do any additional setup after loading the view.
     
-    NSString *videoURL = [NSString stringWithFormat:@"http://www.youtube.com/watch?v=%@", self.detailVideo.videoURL];
+    NSString *videoURL = [NSString stringWithFormat:@"http://www.youtube.com/watch?v=%@", [self.libObject objectForKey:@"Video_URL"]];
     
     [self.videoPlayer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:videoURL]]];
     
@@ -79,19 +80,18 @@
 
     [super viewWillAppear:animated];
     
-    self.detailVideo = (VideoList *) [self detailVideo];
+    //self.detailVideo = (VideoList *) [self detailVideo];
     
-    NSLog(@"Name Name Name:%@", self.detailVideo.videoName);
     
-    self.detailName.text = self.detailVideo.videoName;
+    //self.detailName.text = self.detailVideo.videoName;
 
     
 }
 
 
 - (void)viewDidUnload{
-    [self setDetailVideo:nil];
-    [self setDetailName:nil];
+//    [self setDetailVideo:nil];
+//    [self setDetailName:nil];
     
 }
 
