@@ -86,8 +86,11 @@
     
     // Configure the cell
     
+        //Main Comment
     cell.textLabel.text = [object objectForKey:@"Comment_Text"];
-    cell.detailTextLabel.text = [object objectForKey:@"createdAt"];
+    
+        //Date of comment
+    cell.detailTextLabel.text = [NSDateFormatter localizedStringFromDate:[object createdAt] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
     
     //cell.imageView.file = [object objectForKey:self.imageKey];
     

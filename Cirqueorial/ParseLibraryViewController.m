@@ -96,6 +96,34 @@
     
     cell.textLabel.text = [object objectForKey:@"Video_Name"];
     
+    
+    ///////DISPLAY TRICK RATING!//////////    //////////////    //////////////    //////////////
+    
+    
+    
+    NSMutableArray *testArray = [object objectForKey:@"Rating"];
+    int total = 0;
+
+    NSLog(@"%@ :-\n", [object objectForKey:@"Video_Name"]);
+    for (int i = 0; i < testArray.count; i++) {
+
+        int arrayInt = [testArray[i] intValue];
+        total = total + arrayInt;
+        
+        
+    }
+
+
+    float newRating = (float)total / (float)testArray.count;
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Rating: %.1f of 5", newRating];
+    
+    
+    
+    
+    
+    //////////////    //////////////    //////////////    //////////////    //////////////
+    
     //cell.imageView.file = [object objectForKey:self.imageKey];
     
     return cell;
