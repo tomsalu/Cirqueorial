@@ -101,22 +101,22 @@
     
     
     
-    NSMutableArray *testArray = [object objectForKey:@"Rating"];
+    NSMutableArray *ratingArray = [object objectForKey:@"Rating"];
     int total = 0;
 
     NSLog(@"%@ :-\n", [object objectForKey:@"Video_Name"]);
-    for (int i = 0; i < testArray.count; i++) {
+    for (int i = 0; i < ratingArray.count; i++) {
 
-        int arrayInt = [testArray[i] intValue];
+        int arrayInt = [ratingArray[i] intValue];
         total = total + arrayInt;
         
         
     }
 
 
-    float newRating = (float)total / (float)testArray.count;
+    float newRating = (float)total / (float)ratingArray.count;
     
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Rating: %.1f of 5", newRating];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Rating: %.1f of 5 (Based on %i ratings)", newRating, ratingArray.count];
     
     
     
