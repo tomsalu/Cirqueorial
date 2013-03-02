@@ -90,7 +90,8 @@
     cell.textLabel.text = [object objectForKey:@"Comment_Text"];
     
         //Date of comment
-    cell.detailTextLabel.text = [NSDateFormatter localizedStringFromDate:[object createdAt] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
+    
+    cell.detailTextLabel.text = @"%@ by",[NSDateFormatter localizedStringFromDate:[object createdAt] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
     
     //cell.imageView.file = [object objectForKey:self.imageKey];
     

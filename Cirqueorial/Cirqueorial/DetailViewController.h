@@ -17,14 +17,28 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 
+//TEXT TUT
 @property (strong, nonatomic) IBOutlet UIButton *expandText;
 @property (strong, nonatomic) IBOutlet UIWebView *textViewer;
 
+//VIDEO TUT
 @property (strong, nonatomic) IBOutlet UIButton *expandVideo;
 @property (strong, nonatomic) IBOutlet UIWebView *videoPlayer;
 
+//RATING
+@property (strong, nonatomic) IBOutlet UIButton *star1;
+@property (strong, nonatomic) IBOutlet UIButton *star2;
+@property (strong, nonatomic) IBOutlet UIButton *star3;
+@property (strong, nonatomic) IBOutlet UIButton *star4;
+@property (strong, nonatomic) IBOutlet UIButton *star5;
+@property (strong, nonatomic) IBOutlet UIButton *submitRatingButton;
+- (IBAction)submitRating:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailName;
+
+
+//- (void) changeButtonImage:(id) sender;
+
+- (IBAction)changeButtonImage:(id)sender;
 
 @property (strong, nonatomic) VideoList * detailVideo;
 

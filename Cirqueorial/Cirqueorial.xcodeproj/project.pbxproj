@@ -69,6 +69,8 @@
 		E9D32A5C16B82A870076932E /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D32A5B16B82A870076932E /* CategoryViewController.m */; };
 		E9D32A6016B8310B0076932E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */; };
 		E9D32A6116B8310B0076932E /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5F16B8310B0076932E /* FBUserSettingsViewResources.bundle */; };
+		E9D45EF816E24BC300BD8AC8 /* starRating_off.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D45EF616E24BC300BD8AC8 /* starRating_off.png */; };
+		E9D45EF916E24BC300BD8AC8 /* starRating_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D45EF716E24BC300BD8AC8 /* starRating_on.png */; };
 		E9D6AD6816B3217E00311E4C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */; };
 		E9F9DE9416D64071005CA429 /* ParseUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F9DE9316D64071005CA429 /* ParseUserViewController.m */; };
 /* End PBXBuildFile section */
@@ -157,6 +159,8 @@
 		E9D32A5B16B82A870076932E /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		E9D32A5F16B8310B0076932E /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		E9D45EF616E24BC300BD8AC8 /* starRating_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starRating_off.png; sourceTree = "<group>"; };
+		E9D45EF716E24BC300BD8AC8 /* starRating_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starRating_on.png; sourceTree = "<group>"; };
 		E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E9F9DE9216D64071005CA429 /* ParseUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseUserViewController.h; path = Cirqueorial/ParseUserViewController.h; sourceTree = "<group>"; };
 		E9F9DE9316D64071005CA429 /* ParseUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseUserViewController.m; path = Cirqueorial/ParseUserViewController.m; sourceTree = "<group>"; };
@@ -279,6 +283,8 @@
 		E949E6D916B59518006FFBC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9D45EF616E24BC300BD8AC8 /* starRating_off.png */,
+				E9D45EF716E24BC300BD8AC8 /* starRating_on.png */,
 				E9329D3716B331CE008E33BC /* applogo.png */,
 				E9D6AD6716B3217E00311E4C /* Default-568h@2x.png */,
 				E949E6B316B594E8006FFBC7 /* Default.jpg */,
@@ -461,6 +467,8 @@
 				E98E977C16C01E4D0063606F /* BSKeyboardControls.podspec in Resources */,
 				E98E977D16C01E4D0063606F /* License.txt in Resources */,
 				E98E977E16C01E4D0063606F /* README.md in Resources */,
+				E9D45EF816E24BC300BD8AC8 /* starRating_off.png in Resources */,
+				E9D45EF916E24BC300BD8AC8 /* starRating_on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

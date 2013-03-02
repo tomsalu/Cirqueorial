@@ -470,15 +470,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Video Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="55D-Hv-17c">
-                                <rect key="frame" x="194" y="-9" width="255" height="60"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" id="UyL-jO-66E">
-                                <rect key="frame" x="0.0" y="131" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="165" width="320" height="40"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Expand Video" backgroundImage="silver-button-normal.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -489,11 +482,11 @@
                                 </connections>
                             </button>
                             <webView hidden="YES" contentMode="scaleToFill" id="oZ9-E9-zpV">
-                                <rect key="frame" x="10" y="135" width="300" height="30"/>
+                                <rect key="frame" x="10" y="169" width="300" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Y3-ay-mop">
-                                <rect key="frame" x="0.0" y="177" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="211" width="320" height="40"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Expand Text" backgroundImage="silver-button-normal.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -504,13 +497,103 @@
                                 </connections>
                             </button>
                             <webView hidden="YES" contentMode="scaleToFill" id="OUc-ya-7ka">
-                                <rect key="frame" x="10" y="181" width="300" height="30"/>
+                                <rect key="frame" x="10" y="215" width="300" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Library_Icon.png" id="31n-eZ-K8h">
                                 <rect key="frame" x="105" y="7" width="111" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="Y4g-89-9Au">
+                                <rect key="frame" x="15" y="130" width="30" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="starRating_off.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeButtonImage:" destination="h6T-XV-aqJ" eventType="touchUpInside" id="jgw-KD-dDy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="kNK-IP-XMx">
+                                <rect key="frame" x="155" y="130" width="30" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="starRating_off.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeButtonImage:" destination="h6T-XV-aqJ" eventType="touchUpInside" id="jRU-tv-e3b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="P6P-Ht-eII">
+                                <rect key="frame" x="120" y="130" width="30" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="starRating_off.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeButtonImage:" destination="h6T-XV-aqJ" eventType="touchUpInside" id="IL8-bH-tSM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="lpq-FZ-wVH">
+                                <rect key="frame" x="85" y="130" width="30" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="starRating_off.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeButtonImage:" destination="h6T-XV-aqJ" eventType="touchUpInside" id="DVx-ww-iYa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="Ej0-xZ-eRI">
+                                <rect key="frame" x="50" y="130" width="30" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="starRating_off.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeButtonImage:" destination="h6T-XV-aqJ" eventType="touchUpInside" id="9AW-jO-HBh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f55-s6-R3W">
+                                <rect key="frame" x="213" y="129" width="87" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Submit" backgroundImage="silver-button-normal.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitRating:" destination="h6T-XV-aqJ" eventType="touchUpInside" id="D0J-TD-KD8"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="dbz-Q8-K2I">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -537,11 +620,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="UW9-TT-KmB"/>
                     <connections>
-                        <outlet property="detailName" destination="55D-Hv-17c" id="1Fu-bv-wd9"/>
                         <outlet property="expandText" destination="1Y3-ay-mop" id="Cfy-1R-ROb"/>
                         <outlet property="expandVideo" destination="UyL-jO-66E" id="yBN-8I-FOt"/>
                         <outlet property="logo" destination="31n-eZ-K8h" id="yGI-0X-SDM"/>
                         <outlet property="scroller" destination="dbz-Q8-K2I" id="hVo-dw-X7H"/>
+                        <outlet property="star1" destination="Y4g-89-9Au" id="8JK-2r-WAA"/>
+                        <outlet property="star2" destination="Ej0-xZ-eRI" id="ZAm-Gc-3Zl"/>
+                        <outlet property="star3" destination="lpq-FZ-wVH" id="thL-6D-2AP"/>
+                        <outlet property="star4" destination="P6P-Ht-eII" id="ddR-0R-una"/>
+                        <outlet property="star5" destination="kNK-IP-XMx" id="EyX-r2-XRj"/>
+                        <outlet property="submitRatingButton" destination="f55-s6-R3W" id="fJG-v1-3IA"/>
                         <outlet property="textViewer" destination="OUc-ya-7ka" id="T6M-9O-TBl"/>
                         <outlet property="videoPlayer" destination="oZ9-E9-zpV" id="FJw-IH-SmW"/>
                     </connections>
@@ -1021,6 +1109,7 @@
         <image name="facebook-logo.png" width="193" height="44"/>
         <image name="loginBackgroundIPhonePortrait@2x.jpg" width="640" height="920"/>
         <image name="silver-button-normal.png" width="307" height="48"/>
+        <image name="starRating_off.png" width="30" height="30"/>
         <image name="title.jpg" width="640" height="228"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

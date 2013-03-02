@@ -15,13 +15,16 @@
 
 @implementation DetailViewController
 
-@synthesize detailName;
 @synthesize detailVideo;
 @synthesize videoPlayer;
 @synthesize expandVideo;
 @synthesize expandText;
 @synthesize textViewer;
 @synthesize libObject = _libObject;
+
+int currentRating = 0;
+
+@synthesize star1,star2,star3,star4,star5,submitRatingButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,6 +52,17 @@
 
     [self.scroller addSubview:self.textViewer];
     [self.scroller addSubview:self.expandText];
+    
+    
+    //RATING SECTION
+    
+    [self.scroller addSubview:star1];
+    [self.scroller addSubview:star2];
+    [self.scroller addSubview:star3];
+    [self.scroller addSubview:star4];
+    [self.scroller addSubview:star5];
+    [self.scroller addSubview:submitRatingButton];
+    
     
     self.scroller.userInteractionEnabled = YES;
     [self.scroller setContentSize:CGSizeMake(320, 900)];
@@ -193,6 +207,60 @@
         
         
     }
+    
+}
+
+
+- (IBAction) changeButtonImage:(id) sender{
+    
+    [star1 setBackgroundImage:[UIImage imageNamed:@"starRating_off.png"] forState:UIControlStateNormal];
+    [star2 setBackgroundImage:[UIImage imageNamed:@"starRating_off.png"] forState:UIControlStateNormal];
+    [star3 setBackgroundImage:[UIImage imageNamed:@"starRating_off.png"] forState:UIControlStateNormal];
+    [star4 setBackgroundImage:[UIImage imageNamed:@"starRating_off.png"] forState:UIControlStateNormal];
+    [star5 setBackgroundImage:[UIImage imageNamed:@"starRating_off.png"] forState:UIControlStateNormal];
+    
+    if (star1.highlighted) {
+       [star1 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        currentRating = 1;
+    }
+    else if (star2.highlighted) {
+        [star1 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star2 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        currentRating = 2;
+    }
+    else if (star3.highlighted) {
+        [star1 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star2 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star3 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        currentRating = 3;
+    }
+    else if (star4.highlighted) {
+        [star1 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star2 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star3 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star4 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        currentRating = 4;
+    }
+    else if (star5.highlighted) {
+        [star1 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star2 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star3 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star4 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        [star5 setBackgroundImage:[UIImage imageNamed:@"starRating_on.png"] forState:UIControlStateNormal];
+        currentRating = 5;
+    }
+}
+
+- (IBAction)submitRating:(id)sender {
+    
+    [self.libObject addObject:[NSNumber numberWithInt:currentRating] forKey:@"Rating"];
+    [self.libObject saveInBackground];
+    
+    NSString *message = [NSString stringWithFormat:@"You have successfully rated this trick %i stars", currentRating];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Rating" message:message delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil , nil];
+    [alert show];
+    
     
 }
 @end
