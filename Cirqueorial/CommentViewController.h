@@ -7,11 +7,14 @@
 //
 
 #import <Parse/Parse.h>
+#import "AuthenticationViewController.h"
 
 @interface CommentViewController : PFQueryTableViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *commentField;
 @property (strong, nonatomic) NSString *ID;
+
+
 
 - (IBAction)submitButton:(id)sender;
 

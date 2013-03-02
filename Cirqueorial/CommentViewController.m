@@ -88,10 +88,10 @@
     
         //Main Comment
     cell.textLabel.text = [object objectForKey:@"Comment_Text"];
+
     
         //Date of comment
-    
-    cell.detailTextLabel.text = @"%@ by",[NSDateFormatter localizedStringFromDate:[object createdAt] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ by %@", [NSDateFormatter localizedStringFromDate:[object createdAt] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle], [object objectForKey:@"Comment_Poster"]];
     
     //cell.imageView.file = [object objectForKey:self.imageKey];
     
@@ -117,9 +117,11 @@
 }
 
 - (IBAction)submitButton:(id)sender {
-    PFObject *comment = [PFObject objectWithClassName:@"Comment"];
+    PFObject *comment   = [PFObject objectWithClassName:@"Comment"];
+    PFUser *current     = [PFUser currentUser];
     [comment setObject:commentField.text forKey:@"Comment_Text"];
     [comment setObject:self.ID forKey:@"Comment_TrickID"];
+    [comment setObject:current.username forKey:@"Comment_Poster"];
     [comment saveInBackground];
     
     
