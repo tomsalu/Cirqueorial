@@ -1,21 +1,21 @@
 //
-//  ParseLibraryViewController.m
+//  SearchTableViewController.m
 //  Cirqueorial
 //
-//  Created by Tom Salu on 28/02/2013.
+//  Created by Tom Salu on 13/04/2013.
 //  Copyright (c) 2013 Aberystwyth University. All rights reserved.
 //
 
-#import "ParseLibraryViewController.h"
+#import "LibSearchTableController.h"
 #import "DetailViewController.h"
 
-@interface ParseLibraryViewController ()
+@interface LibSearchTableController ()
 
 @end
 
-@implementation ParseLibraryViewController
+@implementation LibSearchTableController
 
-@synthesize categoryChosen;
+@synthesize keywordSearch, ratingSearch, catSearch;
 
 - (void)viewDidLoad
 {
@@ -29,6 +29,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"showLibraryDetail"]) {
         //Row Selection
@@ -40,6 +42,8 @@
     
     
 }
+ 
+
 
 - (void)viewDidUnload {
     [super viewDidUnload];
@@ -80,21 +84,32 @@
 
 - (PFQuery *)queryForTable{
     
-    if (!categoryChosen) {
-        NSLog(@"CAT is null");
-    }
-    else if (categoryChosen){
-        NSLog(@"Cat is not null");
+    
+    PFQuery *catQuery = [PFQuery queryWithClassName:@"Video"];
+    
+    if ([keywordSearch isEqualToString:@""]) {
         
     }
     else{
-        NSLog(@"Unexpected result");
+    [catQuery whereKey:@"Video_Name" equalTo:keywordSearch];
     }
     
-    PFQuery *catQuery = [PFQuery queryWithClassName:@"Video"];
-    [catQuery whereKey:@"Video_Category" equalTo:categoryChosen];
+    [catQuery whereKey:@"Rating_Average" greaterThan:[NSString stringWithFormat:@"%i", ratingSearch]];
+    
+    NSLog(@"Cat Search is: %@", catSearch);
+    
+    if ([catSearch isEqualToString:@"All"]){
+        
+    }
+    else{
+        [catQuery whereKey:@"Video_Category" equalTo:catSearch];
+    }
+    
+    
     
     return  catQuery;
+
+    
 }
 
 
@@ -102,7 +117,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
     
-    PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"LibCell"];
+    PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
     
     
     // Configure the cell
@@ -116,17 +131,17 @@
     
     NSMutableArray *ratingArray = [object objectForKey:@"Rating"];
     int total = 0;
-
+    
     NSLog(@"%@ :-\n", [object objectForKey:@"Video_Name"]);
     for (int i = 0; i < ratingArray.count; i++) {
-
+        
         int arrayInt = [ratingArray[i] intValue];
         total = total + arrayInt;
         
         
     }
-
-
+    
+    
     float newRating = (float)total / (float)ratingArray.count;
     
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Rating: %.1f of 5 (Based on %i ratings)", newRating, ratingArray.count];

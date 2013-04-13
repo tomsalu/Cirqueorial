@@ -10,6 +10,10 @@
 		E9301B5F16BC3E13000B2338 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9301B5E16BC3E13000B2338 /* RegistrationViewController.m */; };
 		E9329D3816B331CE008E33BC /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9329D3716B331CE008E33BC /* applogo.png */; };
 		E932CC1816DFE8C7006BFD19 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932CC1716DFE8C7006BFD19 /* CommentViewController.m */; };
+		E934DC6317197319000DA2A8 /* LibSearchTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = E934DC6217197319000DA2A8 /* LibSearchTableController.m */; };
+		E934DC6617197361000DA2A8 /* LibSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E934DC6517197361000DA2A8 /* LibSearchViewController.m */; };
+		E934DC6917197A9F000DA2A8 /* UserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E934DC6817197A9F000DA2A8 /* UserSearchViewController.m */; };
+		E934DC6C17197C7F000DA2A8 /* UserSearchTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = E934DC6B17197C7F000DA2A8 /* UserSearchTableController.m */; };
 		E93B86FF16B5A97100EE9084 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B86FE16B5A97100EE9084 /* AnimationViewController.m */; };
 		E93B870B16B5AAA200EE9084 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */; };
 		E93B871816B5B7D800EE9084 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B871716B5B7D700EE9084 /* DetailViewController.m */; };
@@ -81,6 +85,14 @@
 		E9329D3716B331CE008E33BC /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
 		E932CC1616DFE8C6006BFD19 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
 		E932CC1716DFE8C7006BFD19 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		E934DC6117197319000DA2A8 /* LibSearchTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibSearchTableController.h; sourceTree = "<group>"; };
+		E934DC6217197319000DA2A8 /* LibSearchTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibSearchTableController.m; sourceTree = "<group>"; };
+		E934DC6417197361000DA2A8 /* LibSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibSearchViewController.h; path = Cirqueorial/LibSearchViewController.h; sourceTree = "<group>"; };
+		E934DC6517197361000DA2A8 /* LibSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LibSearchViewController.m; path = Cirqueorial/LibSearchViewController.m; sourceTree = "<group>"; };
+		E934DC6717197A9F000DA2A8 /* UserSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchViewController.h; sourceTree = "<group>"; };
+		E934DC6817197A9F000DA2A8 /* UserSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchViewController.m; sourceTree = "<group>"; };
+		E934DC6A17197C7F000DA2A8 /* UserSearchTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchTableController.h; sourceTree = "<group>"; };
+		E934DC6B17197C7F000DA2A8 /* UserSearchTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchTableController.m; sourceTree = "<group>"; };
 		E93B86FD16B5A97100EE9084 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		E93B86FE16B5A97100EE9084 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
 		E93B870A16B5AAA100EE9084 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -196,6 +208,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E934DC5D171972B5000DA2A8 /* Search Funcionality */ = {
+			isa = PBXGroup;
+			children = (
+				E934DC6717197A9F000DA2A8 /* UserSearchViewController.h */,
+				E934DC6817197A9F000DA2A8 /* UserSearchViewController.m */,
+				E934DC6417197361000DA2A8 /* LibSearchViewController.h */,
+				E934DC6517197361000DA2A8 /* LibSearchViewController.m */,
+				E934DC6A17197C7F000DA2A8 /* UserSearchTableController.h */,
+				E934DC6B17197C7F000DA2A8 /* UserSearchTableController.m */,
+				E934DC6117197319000DA2A8 /* LibSearchTableController.h */,
+				E934DC6217197319000DA2A8 /* LibSearchTableController.m */,
+			);
+			name = "Search Funcionality";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		E93B870F16B5B46000EE9084 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +302,7 @@
 				E93F427016DC037D00831A1E /* Registration & Login */,
 				E93F426E16DC030600831A1E /* User Functionality */,
 				E93F426F16DC031A00831A1E /* Library Functionality */,
+				E934DC5D171972B5000DA2A8 /* Search Funcionality */,
 				E93F427116DC03B400831A1E /* Other */,
 				E949E6D916B59518006FFBC7 /* Supporting Files */,
 			);
@@ -499,6 +528,10 @@
 				E99FC81A16D7AF4600A05851 /* UserDetailViewController.m in Sources */,
 				E968150516DF88A700C789FC /* ParseLibraryViewController.m in Sources */,
 				E932CC1816DFE8C7006BFD19 /* CommentViewController.m in Sources */,
+				E934DC6317197319000DA2A8 /* LibSearchTableController.m in Sources */,
+				E934DC6617197361000DA2A8 /* LibSearchViewController.m in Sources */,
+				E934DC6917197A9F000DA2A8 /* UserSearchViewController.m in Sources */,
+				E934DC6C17197C7F000DA2A8 /* UserSearchTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

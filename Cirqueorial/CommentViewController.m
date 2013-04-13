@@ -124,6 +124,8 @@
     [comment setObject:current.username forKey:@"Comment_Poster"];
     [comment saveInBackground];
     
+    [self loadNextPage];
     
 }
+
 @end

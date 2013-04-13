@@ -253,8 +253,29 @@ int currentRating = 0;
 
 - (IBAction)submitRating:(id)sender {
     
+    //ADD RATING TO RATING FIELD IN DATABASE (Rating)
     [self.libObject addObject:[NSNumber numberWithInt:currentRating] forKey:@"Rating"];
     [self.libObject saveInBackground];
+    
+    //SEND AVERAGE RATING TO DATABASE (Rating_Average)
+    
+    NSMutableArray *ratingArray = [self.libObject objectForKey:@"Rating"];
+    int total = 0;
+    
+    for (int i = 0; i < ratingArray.count; i++) {
+        
+        int arrayInt = [ratingArray[i] intValue];
+        total = total + arrayInt;
+        
+    }
+    
+
+    float newRating = (float)total / (float)ratingArray.count;
+    [self.libObject setObject:[NSString stringWithFormat:@"%.1f",newRating] forKey:@"Rating_Average"];
+    [self.libObject saveInBackground];
+    
+    
+    
     
     NSString *message = [NSString stringWithFormat:@"You have successfully rated this trick %i stars", currentRating];
     
