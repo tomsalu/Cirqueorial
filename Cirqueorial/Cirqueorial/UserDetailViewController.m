@@ -80,6 +80,20 @@ PFQuery *followQuery;
 
     if (isFollowing) {
 
+        NSMutableArray *followArray = [currentUser objectForKey:@"following"];
+        
+        for (int i = 0; i < followArray.count; i++) {
+            if ([followArray[i] isEqualToString:self.userObject.objectId]) {
+                [followArray removeObjectAtIndex:i];
+            }
+        }
+
+        
+        [currentUser setObject:followArray forKey:@"following"];
+        [currentUser saveInBackground];
+
+        self.followLabel.title = @"Follow";
+
         
         
         
