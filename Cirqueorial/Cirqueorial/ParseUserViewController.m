@@ -83,6 +83,32 @@
     // This method is called every time objects are loaded from Parse via the PFQuery
 }
 
+- (PFQuery *)queryForTable{
+    
+    /*
+    PFQuery *userQ = [PFUser query];
+    [userQ whereKey:@"following" equalTo:self.detailItem.objectId];
+    
+    
+    return  userQ;
+     */
+    //////////
+    
+    PFUser *user = [PFUser currentUser];
+    NSMutableArray *followArray = [user objectForKey:@"following"];
+    
+    PFQuery *followQuery = [PFUser query];
+
+    [followQuery whereKey:@"objectId" containedIn:followArray];
+    
+    return followQuery;
+
+    
+    
+    
+    
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
     
