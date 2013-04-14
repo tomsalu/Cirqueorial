@@ -250,10 +250,10 @@
 		E93F426F16DC031A00831A1E /* Library Functionality */ = {
 			isa = PBXGroup;
 			children = (
-				E93B871616B5B7D700EE9084 /* DetailViewController.h */,
-				E93B871716B5B7D700EE9084 /* DetailViewController.m */,
 				E968150316DF88A700C789FC /* ParseLibraryViewController.h */,
 				E968150416DF88A700C789FC /* ParseLibraryViewController.m */,
+				E93B871616B5B7D700EE9084 /* DetailViewController.h */,
+				E93B871716B5B7D700EE9084 /* DetailViewController.m */,
 				E932CC1616DFE8C6006BFD19 /* CommentViewController.h */,
 				E932CC1716DFE8C7006BFD19 /* CommentViewController.m */,
 			);

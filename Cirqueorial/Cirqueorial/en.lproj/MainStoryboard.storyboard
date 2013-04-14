@@ -281,7 +281,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="90X-rm-mqz" kind="push" identifier="showUserDetail" id="Ken-g1-bjQ"/>
+                                    <segue destination="eWV-M2-qLC" kind="push" identifier="showUserDetail" id="hUR-hA-aok"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -304,76 +304,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4r-j4-dxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3066" y="-547"/>
-        </scene>
-        <!--User Detail View Controller-->
-        <scene sceneID="bKt-3P-H1t">
-            <objects>
-                <viewController id="90X-rm-mqz" customClass="UserDetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zrs-22-1DU">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="First Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lHT-RN-0Oa">
-                                <rect key="frame" x="39" y="32" width="161" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Surname:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Vp-Dn-ffA">
-                                <rect key="frame" x="39" y="121" width="145" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FZt-Yz-9dQ">
-                                <rect key="frame" x="39" y="137" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*firstName*" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vaL-Ng-AIo">
-                                <rect key="frame" x="39" y="61" width="225" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*surname*" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rk5-gZ-HX5">
-                                <rect key="frame" x="39" y="155" width="225" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QdC-ml-iAx">
-                                <rect key="frame" x="39" y="203" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*email*" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GBp-eZ-OBZ">
-                                <rect key="frame" x="39" y="241" width="225" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="7bt-Ps-WaK"/>
-                    <connections>
-                        <outlet property="email" destination="GBp-eZ-OBZ" id="GXQ-81-PBJ"/>
-                        <outlet property="firstName" destination="vaL-Ng-AIo" id="qpS-as-neB"/>
-                        <outlet property="surname" destination="rk5-gZ-HX5" id="Dhc-ym-SeF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JQZ-0I-1wU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3516" y="-547"/>
         </scene>
         <!--Comment View Controller - Comments-->
         <scene sceneID="ffA-Kr-dt8">
@@ -746,7 +676,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="User Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OsE-4P-xjO">
                                 <rect key="frame" x="91" y="14" width="138" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -884,7 +814,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bae-j3-OtV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2516" y="1064"/>
+            <point key="canvasLocation" x="2532" y="1456"/>
         </scene>
         <!--Parse Library View Controller-->
         <scene sceneID="JTr-ZX-wyA">
@@ -1126,7 +1056,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0v-tz-ODc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2516" y="-547"/>
+            <point key="canvasLocation" x="2532" y="-883"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nlq-tD-tV0">
@@ -1390,66 +1320,71 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="First Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DfX-jh-IJS">
-                                <rect key="frame" x="39" y="32" width="161" height="21"/>
+                                <rect key="frame" x="28" y="218" width="161" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Surname:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A8d-sL-kho">
-                                <rect key="frame" x="39" y="121" width="145" height="21"/>
+                                <rect key="frame" x="28" y="252" width="145" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aRn-GU-Gbi">
-                                <rect key="frame" x="39" y="137" width="0.0" height="0.0"/>
+                                <rect key="frame" x="36" y="288" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*firstName*" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2uJ-YP-ILq">
-                                <rect key="frame" x="39" y="61" width="225" height="21"/>
+                                <rect key="frame" x="138" y="218" width="225" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*surname*" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nFb-Bk-XVl">
-                                <rect key="frame" x="39" y="155" width="225" height="21"/>
+                                <rect key="frame" x="138" y="252" width="225" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zQF-15-MTf">
-                                <rect key="frame" x="39" y="203" width="74" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*username*" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e22-i0-Qdg">
+                                <rect key="frame" x="48" y="20" width="225" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*email*" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e22-i0-Qdg">
-                                <rect key="frame" x="39" y="241" width="225" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Profile_Icon.png" id="7zX-ei-xGu">
+                                <rect key="frame" x="94" y="60" width="132" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Apk-n5-l7r"/>
+                    <navigationItem key="navigationItem" id="Apk-n5-l7r">
+                        <barButtonItem key="rightBarButtonItem" title="Follow" id="IaX-uh-Ztg">
+                            <color key="tintColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="followButton:" destination="M2O-3H-qX2" id="ykL-cB-ZFF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="email" destination="e22-i0-Qdg" id="VBf-40-K0c"/>
                         <outlet property="firstName" destination="2uJ-YP-ILq" id="qIm-GU-IaK"/>
                         <outlet property="surname" destination="nFb-Bk-XVl" id="HQE-A1-YW4"/>
+                        <outlet property="username" destination="e22-i0-Qdg" id="yxM-6d-P8t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvB-NX-nKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3954" y="1792"/>
+            <point key="canvasLocation" x="3976" y="1792"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="1Dm-3v-wrT">
@@ -1715,6 +1650,74 @@
             </objects>
             <point key="canvasLocation" x="4424" y="1064"/>
         </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="6jl-Bm-QoC">
+            <objects>
+                <viewController id="eWV-M2-qLC" customClass="UserDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PnV-ud-bG2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="First Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eQT-7U-bmf">
+                                <rect key="frame" x="28" y="218" width="161" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Surname:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ztm-A5-qfJ">
+                                <rect key="frame" x="28" y="252" width="145" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xjv-l2-ngS">
+                                <rect key="frame" x="36" y="288" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*firstName*" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="81g-zk-oWk">
+                                <rect key="frame" x="138" y="218" width="225" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*surname*" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lvo-mV-6bb">
+                                <rect key="frame" x="138" y="252" width="225" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*username*" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9bg-EV-K2u">
+                                <rect key="frame" x="48" y="20" width="225" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Profile_Icon.png" id="q0Q-4B-Zyj">
+                                <rect key="frame" x="94" y="60" width="132" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GZD-q3-7uj"/>
+                    <connections>
+                        <outlet property="firstName" destination="81g-zk-oWk" id="sLp-aD-oFj"/>
+                        <outlet property="surname" destination="lvo-mV-6bb" id="BAa-xo-Rdk"/>
+                        <outlet property="username" destination="9bg-EV-K2u" id="Wnb-WF-80l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZAs-fT-icv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3550" y="-547"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Library_Icon.png" width="75" height="75"/>
@@ -1728,159 +1731,13 @@
         <image name="starRating_on.png" width="30" height="30"/>
         <image name="title.jpg" width="640" height="228"/>
     </resources>
-    <classes>
-        <class className="AnimationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="logoutButton:"/>
-                <relationship kind="action" name="swipeActionLeft:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="action" name="swipeActionRight:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="outlet" name="libraryButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="logoutButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="moreText" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="profileButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tapOutlet" candidateClass="UITapGestureRecognizer"/>
-            </relationships>
-        </class>
-        <class className="AuthenticationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AuthenticationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="attemptLogin:"/>
-                <relationship kind="outlet" name="fPassword" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="fUsername" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="CategoryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoryViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="swipeLeft:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="action" name="swipeRight:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="outlet" name="catDiabolo" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="catJuggling" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="catPoi" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="catStaff" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="CommentViewController" superclassName="PFQueryTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CommentViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="submitButton:"/>
-                <relationship kind="outlet" name="commentField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeButtonImage:"/>
-                <relationship kind="action" name="expandText:"/>
-                <relationship kind="action" name="expandVideo:"/>
-                <relationship kind="action" name="submitRating:"/>
-                <relationship kind="outlet" name="expandText" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="expandVideo" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="logo" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="star1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="star2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="star3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="star4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="star5" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="submitRatingButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textViewer" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="videoPlayer" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="FBProfilePictureView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBProfilePictureView.h"/>
-        </class>
-        <class className="FBRegistrationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBRegistrationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="inConfirmPassword" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inEmail" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inFirstName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inPassword" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inSurname" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inUsername" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LibSearchTableController" superclassName="PFQueryTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LibSearchTableController.h"/>
-        </class>
-        <class className="LibSearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LibSearchViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="keywords" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="segment" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="PFQueryTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFQueryTableViewController.h"/>
-        </class>
-        <class className="ParseLibraryViewController" superclassName="PFQueryTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParseLibraryViewController.h"/>
-        </class>
-        <class className="ParseUserViewController" superclassName="PFQueryTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParseUserViewController.h"/>
-        </class>
-        <class className="RegistrationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RegistrationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="confirmButton:"/>
-                <relationship kind="outlet" name="inConfirmPassword" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inEmail" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inFirstName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inPassword" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inSurname" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inUsername" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="movingObj" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="UserDetailViewController" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="email" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="surname" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UserSearchTableController" superclassName="PFQueryTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserSearchTableController.h"/>
-        </class>
-        <class className="UserSearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserSearchViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="usernameSearch" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="fbButton:"/>
-                <relationship kind="action" name="logoutButton:"/>
-                <relationship kind="action" name="publishButtonAction:"/>
-                <relationship kind="action" name="testButton:"/>
-                <relationship kind="outlet" name="authButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="fbButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="logoutButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="publishButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="userInfoTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="userNameBox" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="userProfileImage" candidateClass="FBProfilePictureView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9Hb-uS-LEb"/>
+        <segue reference="uXP-2y-WmE"/>
         <segue reference="zhI-0P-ErS"/>
     </inferredMetricsTieBreakers>
 </document>
