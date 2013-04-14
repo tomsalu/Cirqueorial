@@ -21,10 +21,14 @@
 @synthesize expandText;
 @synthesize textViewer;
 @synthesize libObject = _libObject;
+@synthesize star1,star2,star3,star4,star5,submitRatingButton;
 
 int currentRating = 0;
+bool isAble;
+PFUser *currentUser;
+PFQuery *canDoQ;
 
-@synthesize star1,star2,star3,star4,star5,submitRatingButton;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -79,7 +83,31 @@ int currentRating = 0;
     [self.textViewer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:textURL]]];
     
     NSLog(@"test");
-     
+    
+    /////////////Can the user do this trick? ////////////////
+    
+    //Find out the current user //
+    currentUser = [PFUser currentUser];
+    
+    //Find out if already can do this trick//
+    canDoQ = [PFUser query];
+    [canDoQ whereKey:@"objectId" equalTo:currentUser.objectId];
+    [canDoQ whereKey:@"canDo" equalTo:self.libObject.objectId];
+    NSArray *canDoArray = [canDoQ findObjects];
+    isAble = NO;
+    
+    for (int i = 0; i < canDoArray.count; i++) {
+        isAble = YES;
+    }
+    
+    if (isAble) {
+        self.canDoLabel.tintColor = [UIColor colorWithHue:0.4 saturation:1.0 brightness:0.6 alpha:1.0];
+    }
+    else{
+        self.canDoLabel.tintColor = nil;
+        
+    }
+    
     
     
 }
@@ -281,6 +309,59 @@ int currentRating = 0;
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Rating" message:message delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil , nil];
     [alert show];
+    
+    
+}
+
+- (IBAction)canDo:(id)sender {
+    
+    
+    if (isAble) {
+        
+        NSMutableArray *canDoArray = [currentUser objectForKey:@"canDo"];
+        
+        for (int i = 0; i < canDoArray.count; i++) {
+            if ([canDoArray[i] isEqualToString:self.libObject.objectId]) {
+                [canDoArray removeObjectAtIndex:i];
+            }
+        }
+        
+        
+        [currentUser setObject:canDoArray forKey:@"canDo"];
+        
+        //[currentUser incrementKey:@"xp" byAmount:[self.libObject objectForKey:@"xpValue"]];
+
+        int dec = [[self.libObject objectForKey:@"xpValue"] intValue];
+        int newDec = 0 - dec;
+        [currentUser incrementKey:@"xp" byAmount:[NSNumber numberWithInt:newDec]];
+        
+        [currentUser saveInBackground];
+        
+        self.canDoLabel.tintColor = nil;
+        isAble = false;
+        
+        
+        
+        
+    }
+    else if (!isAble){
+        //Add the open trick's ID to the current users 'canDo' array
+        [currentUser addObject:self.libObject.objectId forKey:@"canDo"];
+        [currentUser incrementKey:@"xp" byAmount:[self.libObject objectForKey:@"xpValue"]];
+        //Save
+        [currentUser saveInBackground];
+        isAble = YES;
+        
+        self.canDoLabel.tintColor = [UIColor colorWithHue:0.4 saturation:1.0 brightness:0.6 alpha:1.0];
+        
+    }
+    else{
+        NSLog(@"Broke");
+    }
+    
+    
+    
+    
     
     
 }

@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Cirqueorial/DetailViewController.m"
-         timestampString = "387557013.498555"
+         timestampString = "387638342.96943"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "274"
-         endingLineNumber = "274"
+         startingLineNumber = "302"
+         endingLineNumber = "302"
          landmarkName = "-submitRating:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -66,6 +66,19 @@
          startingLineNumber = "96"
          endingLineNumber = "96"
          landmarkName = "-queryForTable"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Cirqueorial/DetailViewController.m"
+         timestampString = "387638412.793877"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "317"
+         endingLineNumber = "317"
+         landmarkName = "-canDo:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -34,6 +34,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *submitRatingButton;
 - (IBAction)submitRating:(id)sender;
 
+//CAN DO BUTTON
+
+- (IBAction)canDo:(id)sender;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *canDoLabel;
+
 
 
 //- (void) changeButtonImage:(id) sender;
