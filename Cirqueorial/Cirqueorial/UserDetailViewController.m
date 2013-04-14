@@ -17,6 +17,10 @@
 @synthesize userDetailArray;
 @synthesize userObject = _userObject;
 
+bool isFollowing;
+PFUser *currentUser;
+PFQuery *followQuery;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -37,7 +41,32 @@
     
     NSLog(@"Firstname: %@", self.userObject.objectId);
     
-//    NSLog(@"User Detail Page Array: %i", userDetailArray.count);
+    /////////////Is the user already following this person? ////////////////
+    
+    //Find out the current user //
+    currentUser = [PFUser currentUser];
+    
+    //Find out if already following//
+    followQuery = [PFUser query];
+    [followQuery whereKey:@"objectId" equalTo:currentUser.objectId];
+    [followQuery whereKey:@"following" equalTo:self.userObject.objectId];
+    NSArray *followArray = [followQuery findObjects];
+    isFollowing = NO;
+    
+    for (int i = 0; i < followArray.count; i++) {
+        isFollowing = YES;
+    }
+    
+    if (isFollowing) {
+        self.followLabel.title = @"Unfollow";
+    }
+    else{
+        self.followLabel.title = @"Follow";
+        
+    }
+
+    //////////////////    //////////////////    //////////////////
+    
     
 }
 
@@ -48,44 +77,22 @@
 }
 
 - (IBAction)followButton:(id)sender {
-    
-    //Find out the current user //
-    PFUser *currentUser = [PFUser currentUser];
-    
-    //Find out if already following//
-    PFQuery *followQuery = [PFUser query];
-    [followQuery whereKey:@"objectId" equalTo:currentUser.objectId];
-    [followQuery whereKey:@"following" equalTo:self.userObject.objectId];
-    
-    NSLog(@"The Follow Query: %@", [followQuery findObjects]);
-    
-    NSArray *followArray = [followQuery findObjects];
-    
-    bool isFollowing = NO;
-    
-    for (int i = 0; i < followArray.count; i++) {
-        NSLog(@"Follow Array: %@", followArray[i]);
-        isFollowing = YES;
-        
-    }
 
     if (isFollowing) {
-        NSLog(@"Is Following");
+
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Already Following" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil , nil];
-        [alert show];
         
         
     }
     else if (!isFollowing){
-            NSLog(@"Not Following");
             //Add the open user's ID to the current users 'following' array
             [currentUser addObject:self.userObject.objectId forKey:@"following"];
             //Save
             [currentUser saveInBackground];
+            isFollowing = YES;
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Now Following" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil , nil];
-        [alert show];
+            self.followLabel.title = @"Unfollow";
+        
     }
     else{
             NSLog(@"Broke");

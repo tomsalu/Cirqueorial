@@ -1378,6 +1378,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="firstName" destination="2uJ-YP-ILq" id="qIm-GU-IaK"/>
+                        <outlet property="followLabel" destination="IaX-uh-Ztg" id="b6I-wI-fOO"/>
                         <outlet property="surname" destination="nFb-Bk-XVl" id="HQE-A1-YW4"/>
                         <outlet property="username" destination="e22-i0-Qdg" id="yxM-6d-P8t"/>
                     </connections>

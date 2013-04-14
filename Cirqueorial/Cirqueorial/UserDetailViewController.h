@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic) NSMutableArray *userDetailArray;
 @property (strong, nonatomic) PFUser *userObject;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *followLabel;
 
 - (IBAction)followButton:(id)sender;
 
