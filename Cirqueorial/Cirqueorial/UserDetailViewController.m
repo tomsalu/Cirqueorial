@@ -67,12 +67,12 @@ PFQuery *followQuery;
 
     //////////////////How many tricks can they do?//////////////////
     
-    NSMutableArray *trickCount = [currentUser objectForKey:@"canDo"];
+    NSMutableArray *trickCount = [_userObject objectForKey:@"canDo"];
     self.noTricks.text = [NSString stringWithFormat:@"%i Tricks", trickCount.count];
     
     ///////////////// Level ///////////////////////
     
-    int totalXP = [[currentUser objectForKey:@"xp"] intValue];
+    int totalXP = [[_userObject objectForKey:@"xp"] intValue];
     int level = (totalXP / 400)+1;
     self.levelLabel.text =[NSString stringWithFormat:@"%i", level];
     

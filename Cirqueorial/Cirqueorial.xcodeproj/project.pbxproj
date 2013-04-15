@@ -69,6 +69,9 @@
 		E98E977E16C01E4D0063606F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E98E977916C01E4D0063606F /* README.md */; };
 		E9996ACD16B59D540065C5E0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */; };
 		E99FC81A16D7AF4600A05851 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E99FC81916D7AF4600A05851 /* UserDetailViewController.m */; };
+		E9A30461171B2D620007DF2B /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A30460171B2D620007DF2B /* title.png */; };
+		E9A30463171B30D90007DF2B /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A30462171B30D90007DF2B /* background2.png */; };
+		E9A30465171B34BE0007DF2B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A30464171B34BD0007DF2B /* background.png */; };
 		E9D2527B16D13657008A9232 /* FBRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */; };
 		E9D32A5C16B82A870076932E /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D32A5B16B82A870076932E /* CategoryViewController.m */; };
 		E9D32A6016B8310B0076932E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */; };
@@ -165,6 +168,9 @@
 		E9996ACC16B59D540065C5E0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		E99FC81816D7AF4600A05851 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailViewController.h; path = Cirqueorial/UserDetailViewController.h; sourceTree = "<group>"; };
 		E99FC81916D7AF4600A05851 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailViewController.m; path = Cirqueorial/UserDetailViewController.m; sourceTree = "<group>"; };
+		E9A30460171B2D620007DF2B /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		E9A30462171B30D90007DF2B /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		E9A30464171B34BD0007DF2B /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		E9D2527916D13657008A9232 /* FBRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBRegistrationViewController.h; path = Cirqueorial/FBRegistrationViewController.h; sourceTree = "<group>"; };
 		E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBRegistrationViewController.m; path = Cirqueorial/FBRegistrationViewController.m; sourceTree = "<group>"; };
 		E9D32A5A16B82A870076932E /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
@@ -312,6 +318,9 @@
 		E949E6D916B59518006FFBC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9A30460171B2D620007DF2B /* title.png */,
+				E9A30464171B34BD0007DF2B /* background.png */,
+				E9A30462171B30D90007DF2B /* background2.png */,
 				E9D45EF616E24BC300BD8AC8 /* starRating_off.png */,
 				E9D45EF716E24BC300BD8AC8 /* starRating_on.png */,
 				E9329D3716B331CE008E33BC /* applogo.png */,
@@ -498,6 +507,9 @@
 				E98E977E16C01E4D0063606F /* README.md in Resources */,
 				E9D45EF816E24BC300BD8AC8 /* starRating_off.png in Resources */,
 				E9D45EF916E24BC300BD8AC8 /* starRating_on.png in Resources */,
+				E9A30461171B2D620007DF2B /* title.png in Resources */,
+				E9A30463171B30D90007DF2B /* background2.png in Resources */,
+				E9A30465171B34BE0007DF2B /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

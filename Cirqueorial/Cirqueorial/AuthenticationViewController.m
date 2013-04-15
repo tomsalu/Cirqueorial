@@ -31,6 +31,9 @@ bool authSuccess;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.fUsername.borderStyle = UITextBorderStyleRoundedRect;
+    self.fPassword.borderStyle = UITextBorderStyleRoundedRect;
+    
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
