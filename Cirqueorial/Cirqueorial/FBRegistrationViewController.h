@@ -17,5 +17,11 @@
 @property (strong, nonatomic) IBOutlet UITextField *inPassword;
 @property (strong, nonatomic) IBOutlet UITextField *inConfirmPassword;
 
+@property (strong, retain) NSString *vFirstName;
+@property (strong, retain) NSString *vSurname;
+@property (strong, retain) NSString *vUsername;
+@property (strong, retain) NSString *vEmail;
+
+- (IBAction)confirmButton:(id)sender;
 
 @end

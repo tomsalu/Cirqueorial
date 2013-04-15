@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "FBRegistrationViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UITextView *userNameBox;
@@ -219,6 +220,15 @@
 }
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([[segue identifier] isEqualToString:@"showFBReg"]) {
+    
+        [FBRequestConnection superclass];
+    
+    }
+    
+}
 
 
 @end

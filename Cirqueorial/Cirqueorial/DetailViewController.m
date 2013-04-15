@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "CommentViewController.h"
+#import "AppDelegate.h"
 
 @interface DetailViewController ()
 
@@ -360,9 +361,33 @@ PFQuery *canDoQ;
     }
     
     
-    
-    
-    
-    
 }
+
+- (IBAction)shareButton:(id)sender {
+    
+    BOOL dispalyedNativeDialog =
+    [FBNativeDialogs presentShareDialogModallyFrom:self
+     //set status text
+                                       initialText:[NSString stringWithFormat:@"I'm currently learning \"%@\" on Cirqueorial!", [self.libObject objectForKey:@"Video_Name"]]
+                                             image:[UIImage imageNamed:@"testimage.png"]
+                                               url:nil/*[NSURL URLWithString:@"http:www.nyt.com"]*/
+                                           handler:^(FBNativeDialogResult result, NSError *error) {
+                                               if (error) {
+                                                   // Handle Failure
+                                               }
+                                               else{
+                                                   if (result == FBNativeDialogResultSucceeded) {
+                                                       // Handle Success
+                                                   }
+                                                   else{
+                                                       //Handle User Cancel
+                                                   }
+                                               }
+                                           }];
+    if (!dispalyedNativeDialog) {
+        //
+    }
+        
+}
+    
 @end

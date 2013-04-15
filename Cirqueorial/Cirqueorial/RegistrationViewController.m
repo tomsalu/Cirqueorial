@@ -120,24 +120,6 @@
 
 - (IBAction)confirmButton:(id)sender {
     
-    //OLD SQL DATABASE CODE
-    /*
-    
-    Database *db;
-    db = [[Database alloc] init];
-    [db newUser:self.inFirstName.text :self.inSurname.text :self.inEmail.text :self.inPassword.text];
-    
-    UserViewController *userView = [[UserViewController alloc] init];
-    [userView reIndexTable];
-    
-    NSString *alertMessage = [NSString stringWithFormat:@"Congratulations %@, you have successfully registered. You are now free to use the app.", self.inFirstName.text];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Registration" message:alertMessage delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-    [alert show];
-    */
-    
-    
-    //NEW PARSE DATABASE CODE
     
     PFUser *user = [PFUser user];
     

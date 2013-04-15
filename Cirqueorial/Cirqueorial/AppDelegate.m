@@ -31,7 +31,6 @@ NSString *const FBSessionStateChangedNotification =
     
     [PFFacebookUtils initializeWithApplicationId:@"YOUR FACEBOOK APP ID"];
 
-    [self checkAndCreateDatabase];
     [FBProfilePictureView class];
     return YES;
 }
@@ -94,7 +93,7 @@ NSString *const FBSessionStateChangedNotification =
             break;
         case FBSessionStateClosed:
         case FBSessionStateClosedLoginFailed:
-            [FBSession.activeSession closeAndClearTokenInformation];
+            //[FBSession.activeSession closeAndClearTokenInformation];
             break;
             
         default:
@@ -143,20 +142,7 @@ NSString *const FBSessionStateChangedNotification =
     return homeDir;
 }
 
--(void) checkAndCreateDatabase{
-    BOOL success;
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *databasePath = [self.GetDocumentDirectory stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
-    success = [fileManager fileExistsAtPath:databasePath];
-    if(success) {
-        NSLog(@"working");
-        return;}
-    else{
-        NSLog(@"notworking");
-        NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Video_Test_DB.sqlite"];
-        [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
-    }
-}
+
 
 
 

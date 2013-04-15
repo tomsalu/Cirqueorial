@@ -8,6 +8,7 @@
 
 #import "FBRegistrationViewController.h"
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface FBRegistrationViewController ()
 
@@ -24,6 +25,19 @@
     return self;
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.inFirstName||self.inSurname||self.inUsername||self.inEmail||self.inPassword||self.inConfirmPassword) {
+        [self.inFirstName resignFirstResponder];
+        [self.inSurname resignFirstResponder];
+        [self.inUsername resignFirstResponder];
+        [self.inEmail resignFirstResponder];
+        [self.inPassword resignFirstResponder];
+        [self.inConfirmPassword resignFirstResponder];
+        
+    }
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,7 +47,8 @@
         //[activity startAnimating];
         
         NSLog(@"session state change");
-        
+    
+    
         if (FBSession.activeSession.isOpen) {
             NSLog(@"IF");
 
@@ -43,7 +58,8 @@
                                                id<FBGraphUser> user,
                                                NSError *error){
                  
-                 self.inFirstName.text = user.name;
+                 self.inFirstName.text = user.first_name;
+                 self.inSurname.text = user.last_name;
                  self.inUsername.text = user.username;
                  self.inEmail.text = [user objectForKey:@"email"];
                  
@@ -65,4 +81,52 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)confirmButton:(id)sender {
+    PFUser *user = [PFUser user];
+    
+    if ([self.inPassword.text isEqual:self.inConfirmPassword.text]) {
+        //Passwords match up
+        user.password = self.inPassword.text;
+        
+        user.email = self.inEmail.text;
+        user.username = self.inUsername.text;
+        [user setObject:self.inFirstName.text forKey:@"First_Name"];
+        [user setObject:self.inSurname.text forKey:@"Surname"];
+        
+        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                //Display Alert with Success message & name.
+                NSString *alertMessage = [NSString stringWithFormat:@"Congratulations %@, you have successfully registered. You are now free to use the app.", self.inFirstName.text];
+                
+                [self performSegueWithIdentifier:@"FBRegSeg" sender:sender];
+                
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful Registration" message:alertMessage delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+                [alert show];
+                
+                
+            }
+            
+            
+            else{
+                NSString *errorString = [[error userInfo] objectForKey:@"error"];
+                
+                //Display Alert with ERROR message.
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unsuccessful Registration" message:errorString delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }];
+        
+        
+        
+        
+        
+        
+    }
+    else{
+        //Passwords did not match up
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unsuccessful Registration" message:@"Passwords did not match up" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+}
 @end

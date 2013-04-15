@@ -39,6 +39,8 @@
 - (IBAction)canDo:(id)sender;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *canDoLabel;
 
+//SHARE
+- (IBAction)shareButton:(id)sender;
 
 
 //- (void) changeButtonImage:(id) sender;
