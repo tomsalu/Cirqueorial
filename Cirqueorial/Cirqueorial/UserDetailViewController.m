@@ -10,6 +10,8 @@
 
 @interface UserDetailViewController ()
 
+
+
 @end
 
 @implementation UserDetailViewController

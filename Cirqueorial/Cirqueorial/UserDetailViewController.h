@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *noTricks;
 @property (strong, nonatomic) IBOutlet UILabel *levelLabel;
 
+
 - (IBAction)followButton:(id)sender;
 
 @end

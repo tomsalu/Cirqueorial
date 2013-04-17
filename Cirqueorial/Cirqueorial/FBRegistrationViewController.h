@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface FBRegistrationViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *inFirstName;
@@ -23,5 +24,8 @@
 @property (strong, retain) NSString *vEmail;
 
 - (IBAction)confirmButton:(id)sender;
+
+@property (strong, nonatomic) IBOutlet FBProfilePictureView *fbProfile;
+
 
 @end

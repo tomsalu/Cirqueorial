@@ -16,6 +16,8 @@
 
 @implementation FBRegistrationViewController
 
+@synthesize fbProfile;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -62,6 +64,8 @@
                  self.inSurname.text = user.last_name;
                  self.inUsername.text = user.username;
                  self.inEmail.text = [user objectForKey:@"email"];
+                 fbProfile.profileID = user.id;
+                 
                  
                      
              }];
@@ -92,6 +96,9 @@
         user.username = self.inUsername.text;
         [user setObject:self.inFirstName.text forKey:@"First_Name"];
         [user setObject:self.inSurname.text forKey:@"Surname"];
+        if (![fbProfile.profileID isEqualToString:@""]) {
+        [user setObject:fbProfile.profileID forKey:@"fbProfileID"];
+        }
         
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {

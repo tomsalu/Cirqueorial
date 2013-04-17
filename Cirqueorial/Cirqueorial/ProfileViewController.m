@@ -19,7 +19,7 @@
 
 @implementation ProfileViewController
 
-
+@synthesize fbProfilePic;
 @synthesize userDetailArray;
 @synthesize userObject = _userObject;
 
@@ -85,6 +85,9 @@ PFQuery *followQuery;
     int level = (totalXP / 400)+1;
     self.levelLabel.text =[NSString stringWithFormat:@"%i", level];
     
+    /////////////// Profile Pic ////////////////////
+    NSLog(@"Profile ID: %@", [currentUser objectForKey:@"fbProfileID"]);
+    fbProfilePic.profileID = [currentUser objectForKey:@"fbProfileID"];
     
     
     

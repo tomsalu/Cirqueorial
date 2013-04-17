@@ -103,9 +103,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pxD-dB-oUP">
-                                <rect key="frame" x="45" y="-17" width="180" height="180"/>
+                                <rect key="frame" x="45" y="-17" width="250" height="250"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" backgroundImage="Library_Icon.png">
+                                <state key="normal" backgroundImage="tom_library.png">
                                     <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -117,9 +117,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bN7-6b-tlj">
-                                <rect key="frame" x="-87" y="79" width="180" height="180"/>
+                                <rect key="frame" x="-87" y="79" width="250" height="250"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" backgroundImage="Profile_Icon.png">
+                                <state key="normal" backgroundImage="tom_profile.png">
                                     <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -130,10 +130,10 @@
                                     <segue destination="zxu-6V-9dB" kind="push" id="EQY-Sx-EDQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hvP-Tr-cZM">
-                                <rect key="frame" x="64" y="162" width="180" height="180"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hvP-Tr-cZM">
+                                <rect key="frame" x="64" y="162" width="250" height="250"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" backgroundImage="Search_Icon.png">
+                                <state key="normal" backgroundImage="tom_search.png">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -145,9 +145,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qfv-Fa-NZ5">
-                                <rect key="frame" x="202" y="53" width="180" height="180"/>
+                                <rect key="frame" x="202" y="53" width="250" height="250"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" backgroundImage="Settings_Icon.png">
+                                <state key="normal" backgroundImage="tom_logout.png">
                                     <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -398,9 +398,26 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" id="ZAn-kv-gDF">
-                                <rect key="frame" x="0.0" y="-67" width="320" height="570"/>
+                                <rect key="frame" x="0.0" y="-65" width="320" height="570"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Pbq-NK-uoQ">
+                                <rect key="frame" x="-1" y="460" width="321" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Share" id="eEh-y8-Iuc">
+                                        <connections>
+                                            <action selector="shareButton:" destination="h6T-XV-aqJ" id="XpK-bl-bJY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CgR-O6-Wov"/>
+                                    <barButtonItem title="Comments" id="2Ef-Ia-wlj">
+                                        <connections>
+                                            <segue destination="BBd-Un-eL2" kind="push" identifier="showComments" id="g9z-jU-GRW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" id="UyL-jO-66E">
                                 <rect key="frame" x="2" y="164" width="320" height="40"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -525,29 +542,6 @@
                                     <action selector="submitRating:" destination="h6T-XV-aqJ" eventType="touchUpInside" id="D0J-TD-KD8"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="dbz-Q8-K2I">
-                                <rect key="frame" x="-9" y="-2" width="331" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Pbq-NK-uoQ">
-                                        <rect key="frame" x="8" y="460" width="321" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <items>
-                                            <barButtonItem title="Share" id="eEh-y8-Iuc">
-                                                <connections>
-                                                    <action selector="shareButton:" destination="h6T-XV-aqJ" id="XpK-bl-bJY"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="CgR-O6-Wov"/>
-                                            <barButtonItem title="Comments" id="2Ef-Ia-wlj">
-                                                <connections>
-                                                    <segue destination="BBd-Un-eL2" kind="push" identifier="showComments" id="g9z-jU-GRW"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </items>
-                                    </toolbar>
-                                </subviews>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -563,7 +557,6 @@
                         <outlet property="expandText" destination="1Y3-ay-mop" id="Cfy-1R-ROb"/>
                         <outlet property="expandVideo" destination="UyL-jO-66E" id="yBN-8I-FOt"/>
                         <outlet property="logo" destination="31n-eZ-K8h" id="yGI-0X-SDM"/>
-                        <outlet property="scroller" destination="dbz-Q8-K2I" id="hVo-dw-X7H"/>
                         <outlet property="star1" destination="Y4g-89-9Au" id="8JK-2r-WAA"/>
                         <outlet property="star2" destination="Ej0-xZ-eRI" id="ZAm-Gc-3Zl"/>
                         <outlet property="star3" destination="lpq-FZ-wVH" id="thL-6D-2AP"/>
@@ -595,7 +588,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Juggling">
+                                <state key="normal" backgroundImage="tom_juggling.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -609,7 +602,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9h8-44-X5X">
                                 <rect key="frame" x="-49" y="105" width="180" height="180"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Poi" backgroundImage="silver-button-normal.png">
+                                <state key="normal" backgroundImage="tom_poi.png">
                                     <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -623,7 +616,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sme-3o-tFZ">
                                 <rect key="frame" x="94" y="187" width="180" height="180"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Staff" backgroundImage="silver-button-normal.png">
+                                <state key="normal" backgroundImage="tom_staff.png">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -637,7 +630,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6bR-to-hfb">
                                 <rect key="frame" x="232" y="76" width="180" height="180"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Diabolo" backgroundImage="silver-button-normal.png">
+                                <state key="normal" backgroundImage="tom_diabolo.png">
                                     <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1151,7 +1144,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" id="4wU-zg-m94">
-                                        <rect key="frame" x="54" y="313" width="210" height="30"/>
+                                        <rect key="frame" x="20" y="313" width="210" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1159,7 +1152,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="Ddk-Qo-Hco">
-                                        <rect key="frame" x="55" y="272" width="210" height="30"/>
+                                        <rect key="frame" x="20" y="272" width="210" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1232,13 +1225,17 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please create a password for Cirqueorial:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rMo-27-paB">
-                                        <rect key="frame" x="63" y="204" width="195" height="74"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please create a password for Cirqueorial:" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rMo-27-paB">
+                                        <rect key="frame" x="20" y="204" width="195" height="74"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" id="tr1-Dd-xMM" customClass="FBProfilePictureView">
+                                        <rect key="frame" x="238" y="266" width="70" height="72"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1247,6 +1244,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Facebook Registration" id="mbV-M8-Kgi"/>
                     <connections>
+                        <outlet property="fbProfile" destination="tr1-Dd-xMM" id="0hH-RG-vfR"/>
                         <outlet property="inConfirmPassword" destination="4wU-zg-m94" id="ui4-hg-9oV"/>
                         <outlet property="inEmail" destination="dWZ-4V-G0h" id="xtI-Xj-qmi"/>
                         <outlet property="inFirstName" destination="Gtg-sU-U3y" id="yS7-Km-CS3"/>
@@ -1808,10 +1806,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Profile_Icon.png" id="ajy-tr-wFz">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="Profile_Icon.png" id="ajy-tr-wFz">
                                 <rect key="frame" x="21" y="57" width="132" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" id="Q0O-TG-d6m" customClass="FBProfilePictureView">
+                                <rect key="frame" x="23" y="61" width="129" height="132"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*# tricks*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d3i-FJ-suC">
                                 <rect key="frame" x="138" y="296" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1839,6 +1841,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="fbProfilePic" destination="Q0O-TG-d6m" id="bq7-vY-nhB"/>
                         <outlet property="firstName" destination="s5q-jF-fsI" id="ETd-6m-xHw"/>
                         <outlet property="followLabel" destination="5wb-vs-Nld" id="ehs-PL-oQ0"/>
                         <outlet property="levelLabel" destination="5T6-Od-cPW" id="QAQ-bt-6Iu"/>
@@ -1972,8 +1975,6 @@
     <resources>
         <image name="Library_Icon.png" width="75" height="75"/>
         <image name="Profile_Icon.png" width="75" height="75"/>
-        <image name="Search_Icon.png" width="75" height="75"/>
-        <image name="Settings_Icon.png" width="75" height="75"/>
         <image name="background.png" width="640" height="1136"/>
         <image name="facebook-logo.png" width="193" height="44"/>
         <image name="loginBackgroundIPhonePortrait@2x.jpg" width="640" height="920"/>
@@ -1981,6 +1982,14 @@
         <image name="starRating_off.png" width="30" height="30"/>
         <image name="starRating_on.png" width="30" height="30"/>
         <image name="title.png" width="403" height="203"/>
+        <image name="tom_diabolo.png" width="400" height="400"/>
+        <image name="tom_juggling.png" width="400" height="400"/>
+        <image name="tom_library.png" width="400" height="400"/>
+        <image name="tom_logout.png" width="400" height="400"/>
+        <image name="tom_poi.png" width="400" height="400"/>
+        <image name="tom_profile.png" width="400" height="400"/>
+        <image name="tom_search.png" width="400" height="400"/>
+        <image name="tom_staff.png" width="400" height="400"/>
     </resources>
     <classes>
         <class className="AnimationViewController" superclassName="UIViewController">
@@ -2055,6 +2064,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FBRegistrationViewController.h"/>
             <relationships>
                 <relationship kind="action" name="confirmButton:"/>
+                <relationship kind="outlet" name="fbProfile" candidateClass="FBProfilePictureView"/>
                 <relationship kind="outlet" name="inConfirmPassword" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="inEmail" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="inFirstName" candidateClass="UITextField"/>
@@ -2088,6 +2098,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
             <relationships>
                 <relationship kind="action" name="followButton:"/>
+                <relationship kind="outlet" name="fbProfilePic" candidateClass="FBProfilePictureView"/>
                 <relationship kind="outlet" name="firstName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="followLabel" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="levelLabel" candidateClass="UILabel"/>
@@ -2157,7 +2168,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uXP-2y-WmE"/>
+        <segue reference="Tp5-It-VxA"/>
         <segue reference="zhI-0P-ErS"/>
     </inferredMetricsTieBreakers>
 </document>
