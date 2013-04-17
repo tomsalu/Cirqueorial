@@ -22,9 +22,9 @@
 int locationIndex = 1;
 
 CGPoint location1 = {170,250};
-CGPoint location2 = {-100, 150};
+CGPoint location2 = {-300, 150};
 CGPoint location3 = {100,100};
-CGPoint location4 = {500, 250};
+CGPoint location4 = {700, 250};
 
 
 
@@ -67,6 +67,7 @@ CGPoint location4 = {500, 250};
             self.profileButton.center = location3;
             self.libraryButton.center = location4;
             self.settingsButton.center = location1;
+            [[self.settingsButton superview] bringSubviewToFront:self.settingsButton];
         }];
         [UIView commitAnimations];
     }
@@ -78,6 +79,7 @@ CGPoint location4 = {500, 250};
             self.profileButton.center = location4;
             self.libraryButton.center = location1;
             self.settingsButton.center = location2;
+            [[self.libraryButton superview] bringSubviewToFront:self.libraryButton];
         }];
         [UIView commitAnimations];
     }
@@ -88,6 +90,7 @@ CGPoint location4 = {500, 250};
             self.profileButton.center = location1;
             self.libraryButton.center = location2;
             self.settingsButton.center = location3;
+            [[self.profileButton superview] bringSubviewToFront:self.profileButton];
         }];
         [UIView commitAnimations];
     }
@@ -99,6 +102,7 @@ CGPoint location4 = {500, 250};
             self.profileButton.center = location2;
             self.libraryButton.center = location3;
             self.settingsButton.center = location4;
+            [[self.searchButton superview] bringSubviewToFront:self.searchButton];
         }];
         [UIView commitAnimations];
     }
@@ -130,6 +134,7 @@ CGPoint location4 = {500, 250};
             self.profileButton.center = location1;
             self.libraryButton.center = location2;
             self.settingsButton.center = location3;
+            [[self.profileButton superview] bringSubviewToFront:self.profileButton];
         }];
         [UIView commitAnimations];
     }
@@ -142,6 +147,7 @@ CGPoint location4 = {500, 250};
             self.profileButton.center = location4;
             self.libraryButton.center = location1;
             self.settingsButton.center = location2;
+            [[self.libraryButton superview] bringSubviewToFront:self.libraryButton];
         }];
         [UIView commitAnimations];
     }
@@ -153,6 +159,7 @@ CGPoint location4 = {500, 250};
             self.profileButton.center = location3;
             self.libraryButton.center = location4;
             self.settingsButton.center = location1;
+            [[self.settingsButton superview] bringSubviewToFront:self.settingsButton];
         }];
         [UIView commitAnimations];
     }
@@ -164,6 +171,7 @@ CGPoint location4 = {500, 250};
             self.profileButton.center = location2;
             self.libraryButton.center = location3;
             self.settingsButton.center = location4;
+            [[self.searchButton superview] bringSubviewToFront:self.searchButton];
         }];
         [UIView commitAnimations];
     }

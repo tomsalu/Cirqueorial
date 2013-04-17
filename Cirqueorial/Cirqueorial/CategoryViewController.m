@@ -20,9 +20,9 @@
 int catLocationIndex = 1;
 
 CGPoint catLocation1 = {170,250};
-CGPoint catLocation2 = {-100, 150};
+CGPoint catLocation2 = {-300, 150};
 CGPoint catLocation3 = {100,100};
-CGPoint catLocation4 = {500, 250};
+CGPoint catLocation4 = {700, 250};
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -110,6 +110,7 @@ CGPoint catLocation4 = {500, 250};
             self.catPoi.center = catLocation3;
             self.catJuggling.center = catLocation4;
             self.catDiabolo.center = catLocation1;
+            [[self.catDiabolo superview] bringSubviewToFront:self.catDiabolo];
         }];
         [UIView commitAnimations];
     }
@@ -121,6 +122,7 @@ CGPoint catLocation4 = {500, 250};
             self.catPoi.center = catLocation4;
             self.catJuggling.center = catLocation1;
             self.catDiabolo.center = catLocation2;
+            [[self.catJuggling superview] bringSubviewToFront:self.catJuggling];
         }];
         [UIView commitAnimations];
     }
@@ -131,6 +133,7 @@ CGPoint catLocation4 = {500, 250};
             self.catPoi.center = catLocation1;
             self.catJuggling.center = catLocation2;
             self.catDiabolo.center = catLocation3;
+            [[self.catPoi superview] bringSubviewToFront:self.catPoi];
         }];
         [UIView commitAnimations];
     }
@@ -142,6 +145,7 @@ CGPoint catLocation4 = {500, 250};
             self.catPoi.center = catLocation2;
             self.catJuggling.center = catLocation3;
             self.catDiabolo.center = catLocation4;
+            [[self.catStaff superview] bringSubviewToFront:self.catStaff];
         }];
         [UIView commitAnimations];
     }
@@ -175,6 +179,7 @@ CGPoint catLocation4 = {500, 250};
             self.catPoi.center = catLocation1;
             self.catJuggling.center = catLocation2;
             self.catDiabolo.center = catLocation3;
+            [[self.catPoi superview] bringSubviewToFront:self.catPoi];
         }];
         [UIView commitAnimations];
     }
@@ -187,6 +192,7 @@ CGPoint catLocation4 = {500, 250};
             self.catPoi.center = catLocation4;
             self.catJuggling.center = catLocation1;
             self.catDiabolo.center = catLocation2;
+            [[self.catJuggling superview] bringSubviewToFront:self.catJuggling];
         }];
         [UIView commitAnimations];
     }
@@ -198,6 +204,7 @@ CGPoint catLocation4 = {500, 250};
             self.catPoi.center = catLocation3;
             self.catJuggling.center = catLocation4;
             self.catDiabolo.center = catLocation1;
+            [[self.catDiabolo superview] bringSubviewToFront:self.catDiabolo];
         }];
         [UIView commitAnimations];
     }
@@ -209,6 +216,7 @@ CGPoint catLocation4 = {500, 250};
             self.catPoi.center = catLocation2;
             self.catJuggling.center = catLocation3;
             self.catDiabolo.center = catLocation4;
+            [[self.catStaff superview] bringSubviewToFront:self.catStaff];
         }];
         [UIView commitAnimations];
     }
