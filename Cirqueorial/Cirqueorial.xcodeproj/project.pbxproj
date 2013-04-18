@@ -42,8 +42,6 @@
 		E965304916B2F4E5009D4307 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304616B2F4E5009D4307 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E965304A16B2F4E5009D4307 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965304716B2F4E5009D4307 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E968150516DF88A700C789FC /* ParseLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E968150416DF88A700C789FC /* ParseLibraryViewController.m */; };
-		E969437D16BEB4AE0012664F /* Video_Test_DB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E969437C16BEB4AE0012664F /* Video_Test_DB.sqlite */; };
-		E969438116BEBAEA0012664F /* test.db in Resources */ = {isa = PBXBuildFile; fileRef = E969438016BEBAEA0012664F /* test.db */; };
 		E969439016BECBCF0012664F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E969438716BECBCF0012664F /* FMDatabase.m */; };
 		E969439116BECBCF0012664F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E969438916BECBCF0012664F /* FMDatabaseAdditions.m */; };
 		E969439216BECBCF0012664F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E969438B16BECBCF0012664F /* FMDatabasePool.m */; };
@@ -80,6 +78,10 @@
 		E9B388CA171EE181001DB7AC /* tom_juggling.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B388C6171EE181001DB7AC /* tom_juggling.png */; };
 		E9B388CB171EE181001DB7AC /* tom_poi.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B388C7171EE181001DB7AC /* tom_poi.png */; };
 		E9B388CC171EE181001DB7AC /* tom_staff.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B388C8171EE181001DB7AC /* tom_staff.png */; };
+		E9B388CE171F1350001DB7AC /* tab_library.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B388CD171F1350001DB7AC /* tab_library.png */; };
+		E9B388D0171F1379001DB7AC /* tab_library_small.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B388CF171F1379001DB7AC /* tab_library_small.png */; };
+		E9B388D2171F13AC001DB7AC /* tab_lib_med.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B388D1171F13AC001DB7AC /* tab_lib_med.png */; };
+		E9B388D8171F14F5001DB7AC /* tab_user_med.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B388D7171F14F5001DB7AC /* tab_user_med.png */; };
 		E9D2527B16D13657008A9232 /* FBRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */; };
 		E9D32A5C16B82A870076932E /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D32A5B16B82A870076932E /* CategoryViewController.m */; };
 		E9D32A6016B8310B0076932E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9D32A5E16B8310B0076932E /* FacebookSDKResources.bundle */; };
@@ -139,8 +141,6 @@
 		E965304716B2F4E5009D4307 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E968150316DF88A700C789FC /* ParseLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLibraryViewController.h; sourceTree = "<group>"; };
 		E968150416DF88A700C789FC /* ParseLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLibraryViewController.m; sourceTree = "<group>"; };
-		E969437C16BEB4AE0012664F /* Video_Test_DB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Video_Test_DB.sqlite; path = Database/Video_Test_DB.sqlite; sourceTree = "<group>"; };
-		E969438016BEBAEA0012664F /* test.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.db; path = Database/test.db; sourceTree = "<group>"; };
 		E969438616BECBCF0012664F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = Cirqueorial/FMDatabase.h; sourceTree = "<group>"; };
 		E969438716BECBCF0012664F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = Cirqueorial/FMDatabase.m; sourceTree = "<group>"; };
 		E969438816BECBCF0012664F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = Cirqueorial/FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -187,6 +187,10 @@
 		E9B388C6171EE181001DB7AC /* tom_juggling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tom_juggling.png; sourceTree = "<group>"; };
 		E9B388C7171EE181001DB7AC /* tom_poi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tom_poi.png; sourceTree = "<group>"; };
 		E9B388C8171EE181001DB7AC /* tom_staff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tom_staff.png; sourceTree = "<group>"; };
+		E9B388CD171F1350001DB7AC /* tab_library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_library.png; sourceTree = "<group>"; };
+		E9B388CF171F1379001DB7AC /* tab_library_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_library_small.png; sourceTree = "<group>"; };
+		E9B388D1171F13AC001DB7AC /* tab_lib_med.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_lib_med.png; sourceTree = "<group>"; };
+		E9B388D7171F14F5001DB7AC /* tab_user_med.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_user_med.png; sourceTree = "<group>"; };
 		E9D2527916D13657008A9232 /* FBRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBRegistrationViewController.h; path = Cirqueorial/FBRegistrationViewController.h; sourceTree = "<group>"; };
 		E9D2527A16D13657008A9232 /* FBRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBRegistrationViewController.m; path = Cirqueorial/FBRegistrationViewController.m; sourceTree = "<group>"; };
 		E9D32A5A16B82A870076932E /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
@@ -244,15 +248,6 @@
 			);
 			name = "Search Funcionality";
 			path = ..;
-			sourceTree = "<group>";
-		};
-		E93B870F16B5B46000EE9084 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E969437C16BEB4AE0012664F /* Video_Test_DB.sqlite */,
-				E969438016BEBAEA0012664F /* test.db */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		E93F426E16DC030600831A1E /* User Functionality */ = {
@@ -334,6 +329,10 @@
 		E949E6D916B59518006FFBC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9B388D7171F14F5001DB7AC /* tab_user_med.png */,
+				E9B388D1171F13AC001DB7AC /* tab_lib_med.png */,
+				E9B388CF171F1379001DB7AC /* tab_library_small.png */,
+				E9B388CD171F1350001DB7AC /* tab_library.png */,
 				E9B388C5171EE181001DB7AC /* tom_diabolo.png */,
 				E9B388C6171EE181001DB7AC /* tom_juggling.png */,
 				E9B388C7171EE181001DB7AC /* tom_poi.png */,
@@ -370,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				E98E977016C01E4D0063606F /* BSKeyboardControls */,
-				E93B870F16B5B46000EE9084 /* Model */,
 				E949E6AE16B594E8006FFBC7 /* Cirqueorial */,
 				E969439516BECBE00012664F /* FMDB */,
 				E965301416B2F092009D4307 /* Frameworks */,
@@ -523,8 +521,6 @@
 				E949E6D616B594E8006FFBC7 /* title.jpg in Resources */,
 				E9D32A6016B8310B0076932E /* FacebookSDKResources.bundle in Resources */,
 				E9D32A6116B8310B0076932E /* FBUserSettingsViewResources.bundle in Resources */,
-				E969437D16BEB4AE0012664F /* Video_Test_DB.sqlite in Resources */,
-				E969438116BEBAEA0012664F /* test.db in Resources */,
 				E98E977B16C01E4D0063606F /* BSKeyboardControls.strings in Resources */,
 				E98E977C16C01E4D0063606F /* BSKeyboardControls.podspec in Resources */,
 				E98E977D16C01E4D0063606F /* License.txt in Resources */,
@@ -542,6 +538,10 @@
 				E9B388CA171EE181001DB7AC /* tom_juggling.png in Resources */,
 				E9B388CB171EE181001DB7AC /* tom_poi.png in Resources */,
 				E9B388CC171EE181001DB7AC /* tom_staff.png in Resources */,
+				E9B388CE171F1350001DB7AC /* tab_library.png in Resources */,
+				E9B388D0171F1379001DB7AC /* tab_library_small.png in Resources */,
+				E9B388D2171F13AC001DB7AC /* tab_lib_med.png in Resources */,
+				E9B388D8171F14F5001DB7AC /* tab_user_med.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

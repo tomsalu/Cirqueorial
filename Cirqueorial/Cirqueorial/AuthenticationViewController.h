@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "BSKeyboardControls.h"
 
-@interface AuthenticationViewController : UIViewController <UITextFieldDelegate>
+@interface AuthenticationViewController : UIViewController <UITextFieldDelegate, BSKeyboardControlsDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *fPassword;
 @property (strong, nonatomic) IBOutlet UITextField *fUsername;
+
+@property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 
 - (IBAction)attemptLogin:(id)sender;
 

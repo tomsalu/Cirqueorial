@@ -86,7 +86,7 @@ PFQuery *followQuery;
     self.levelLabel.text =[NSString stringWithFormat:@"%i", level];
     
     /////////////// Profile Pic ////////////////////
-    NSLog(@"Profile ID: %@", [currentUser objectForKey:@"fbProfileID"]);
+
     fbProfilePic.profileID = [currentUser objectForKey:@"fbProfileID"];
     
     

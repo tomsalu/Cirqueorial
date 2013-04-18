@@ -10,7 +10,7 @@
 
 @interface AnimationViewController : UIViewController
 - (IBAction)logoutButton:(id)sender;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
+@property (strong, nonatomic) IBOutlet UIButton *logoutButton;
 
 @property (strong, nonatomic) IBOutlet UIButton *libraryButton;
 @property (strong, nonatomic) IBOutlet UIButton *settingsButton;

@@ -30,14 +30,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSArray *fields = @[ self.inFirstName, self.inSurname,
-    self.inEmail, self.inPassword,
+    NSArray *fields = @[ self.inFirstName, self.inSurname, self.inUsername, self.inEmail, self.inPassword,
     self.inConfirmPassword];
     
     [self setKeyboardControls:[[BSKeyboardControls alloc] initWithFields:fields]];
     [self.keyboardControls setDelegate:self];
     
 }
+
+/// BSKeyboardControls Methods////////////////////////
 
 - (void)keyboardControlsDonePressed:(BSKeyboardControls *)keyboardControls
 {
@@ -50,53 +51,19 @@
     //[self.tableView scrollRectToVisible:view.frame animated:YES];
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
     [self.keyboardControls setActiveField:textField];
-    
-    if (textField == self.inPassword) {
-        
-        [UIView beginAnimations:@"Anim1" context:nil];
-        [UIView animateWithDuration:2.5 animations:^{
-        
-        self.movingObj.frame = CGRectMake(self.movingObj.frame.origin.x, self.movingObj.frame.origin.y-85, self.movingObj.frame.size.height, self.movingObj.frame.size.width);
-            
-        }];
-        [UIView commitAnimations];
-    }
-    else if (textField == self.inConfirmPassword) {
-        [UIView beginAnimations:@"Anim1" context:nil];
-        [UIView animateWithDuration:2.5 animations:^{
-        
-        self.movingObj.frame = CGRectMake(self.movingObj.frame.origin.x, self.movingObj.frame.origin.y-145, self.movingObj.frame.size.height, self.movingObj.frame.size.width);
-        
-        }];
-        [UIView commitAnimations];
-    }
-    
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-    
-    if (textField == self.inPassword) {
-        [UIView beginAnimations:@"Anim1" context:nil];
-        [UIView animateWithDuration:2.5 animations:^{
 
-        self.movingObj.frame = CGRectMake(self.movingObj.frame.origin.x, self.movingObj.frame.origin.y+85, self.movingObj.frame.size.height, self.movingObj.frame.size.width);
-            
-        }];
-        [UIView commitAnimations];
-    }
-    else if (textField == self.inConfirmPassword) {
-        [UIView beginAnimations:@"Anim1" context:nil];
-        [UIView animateWithDuration:2.5 animations:^{
+}
+///////////////////////////////////////////////////////
 
-        self.movingObj.frame = CGRectMake(self.movingObj.frame.origin.x, self.movingObj.frame.origin.y+145, self.movingObj.frame.size.height, self.movingObj.frame.size.width);
-            
-        }];
-        [UIView commitAnimations];
-    }
-    
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
@@ -110,12 +77,6 @@
         
     }
     return YES;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)confirmButton:(id)sender {

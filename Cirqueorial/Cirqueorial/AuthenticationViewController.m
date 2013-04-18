@@ -34,6 +34,16 @@ bool authSuccess;
     self.fUsername.borderStyle = UITextBorderStyleRoundedRect;
     self.fPassword.borderStyle = UITextBorderStyleRoundedRect;
     
+    //BSKeyboardControls//
+    
+    NSArray *fields = @[ self.fUsername, self.fPassword];
+    
+    [self setKeyboardControls:[[BSKeyboardControls alloc] initWithFields:fields]];
+    [self.keyboardControls setDelegate:self];
+    
+    //////////////////////
+    
+    
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -44,6 +54,27 @@ bool authSuccess;
     }
     return YES;
 }
+
+// BSKeyBoard Controls Methods//
+- (void)keyboardControlsDonePressed:(BSKeyboardControls *)keyboardControls
+{
+    [keyboardControls.activeField resignFirstResponder];
+}
+
+- (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
+{
+    UIView *view = keyboardControls.activeField.superview.superview;
+    //[self.tableView scrollRectToVisible:view.frame animated:YES];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    [self.keyboardControls setActiveField:textField];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    
+}
+////////////////////////////////
 
 
 - (void)didReceiveMemoryWarning

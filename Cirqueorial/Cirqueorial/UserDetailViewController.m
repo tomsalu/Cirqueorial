@@ -18,10 +18,12 @@
 
 @synthesize userDetailArray;
 @synthesize userObject = _userObject;
+@synthesize fbProfilePic;
 
 bool isFollowing;
 PFUser *currentUser;
 PFQuery *followQuery;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -77,6 +79,10 @@ PFQuery *followQuery;
     int totalXP = [[_userObject objectForKey:@"xp"] intValue];
     int level = (totalXP / 400)+1;
     self.levelLabel.text =[NSString stringWithFormat:@"%i", level];
+    
+    /////////////// Profile Pic ////////////////////
+    
+    fbProfilePic.profileID = [_userObject objectForKey:@"fbProfileID"];
     
     
     

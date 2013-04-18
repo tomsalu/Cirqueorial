@@ -47,41 +47,23 @@ PFQuery *canDoQ;
     NSString *name = [self.libObject objectForKey:@"Video_Name"];
     
     self.navigationItem.title = name;
-    
-    [self.scroller addSubview:self.logo];
-    
 
-    [self.scroller addSubview:self.videoPlayer];
-    [self.scroller addSubview:self.self.expandVideo];
-    
-
-    [self.scroller addSubview:self.textViewer];
-    [self.scroller addSubview:self.expandText];
-    
-    
-    //RATING SECTION
-    
-    [self.scroller addSubview:star1];
-    [self.scroller addSubview:star2];
-    [self.scroller addSubview:star3];
-    [self.scroller addSubview:star4];
-    [self.scroller addSubview:star5];
-    [self.scroller addSubview:submitRatingButton];
-    
-    
-    self.scroller.userInteractionEnabled = YES;
-    [self.scroller setContentSize:CGSizeMake(320, 900)];
     
     
 	//Do any additional setup after loading the view.
     
     NSString *videoURL = [NSString stringWithFormat:@"http://www.youtube.com/watch?v=%@", [self.libObject objectForKey:@"Video_URL"]];
-    
+
     [self.videoPlayer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:videoURL]]];
     
-    NSString *textURL = [NSString stringWithFormat:@"http://www.diabolotricks.com/Grinds.htm#adamgrind"];
+
+    
+    NSString *textURL = [self.libObject objectForKey:@"Text_URL"];
     
     [self.textViewer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:textURL]]];
+
+    
+
     
     NSLog(@"test");
     
@@ -109,6 +91,22 @@ PFQuery *canDoQ;
         
     }
     
+    // Change Logo
+    
+    NSString *cat = [self.libObject objectForKey:@"Video_Category"];
+    
+    if ([cat isEqualToString:@"juggling"]) {
+        self.logo.image = [UIImage imageNamed:@"tom_juggling.png"];
+    }
+    else if ([cat isEqualToString:@"diabolo"]) {
+        self.logo.image = [UIImage imageNamed:@"tom_diabolo.png"];
+    }
+    else if ([cat isEqualToString:@"poi"]) {
+        self.logo.image = [UIImage imageNamed:@"tom_poi.png"];
+    }
+    else if ([cat isEqualToString:@"staff"]) {
+        self.logo.image = [UIImage imageNamed:@"tom_staff.png"];
+    }
     
     
 }
@@ -155,19 +153,19 @@ PFQuery *canDoQ;
 
     if (videoPlayer.hidden || videoPlayer.frame.size.height == 30) {
         
-        videoPlayer.frame = CGRectMake(videoPlayer.frame.origin.x, videoPlayer.frame.origin.y, 320, 0);
+        videoPlayer.frame = CGRectMake(videoPlayer.frame.origin.x, videoPlayer.frame.origin.y, videoPlayer.frame.size.width, 0);
         
         [UIView beginAnimations:@"Anim1" context:nil];
         [UIView animateWithDuration:2.5 animations:^{
         
         videoPlayer.hidden = NO;
-        videoPlayer.frame = CGRectMake(videoPlayer.frame.origin.x-10, videoPlayer.frame.origin.y+37, 320, 320);
+        videoPlayer.frame = CGRectMake(videoPlayer.frame.origin.x-0, videoPlayer.frame.origin.y+37, videoPlayer.frame.size.width, 320);
 
         [self.expandVideo setTitle:@"Contract Video" forState:UIControlStateNormal];
             
             
         // Move the 'text tutorial' button
-        expandText.frame = CGRectMake(expandText.frame.origin.x, expandText.frame.origin.y+320, 320, 40);
+        expandText.frame = CGRectMake(expandText.frame.origin.x, expandText.frame.origin.y+320, expandVideo.frame.size.width, 40);
         textViewer.frame = CGRectMake(textViewer.frame.origin.x, textViewer.frame.origin.y+320, textViewer.frame.size.width, textViewer.frame.size.height);
         
         }];
@@ -183,15 +181,19 @@ PFQuery *canDoQ;
         [UIView beginAnimations:@"Anim2" context:nil];
         [UIView animateWithDuration:2.5 animations:^{
             
-        videoPlayer.frame = CGRectMake(videoPlayer.frame.origin.x+10, videoPlayer.frame.origin.y-37, 300, 30);
+        videoPlayer.frame = CGRectMake(videoPlayer.frame.origin.x+0, videoPlayer.frame.origin.y-37, videoPlayer.frame.size.width, 30);
         [self.expandVideo setTitle:@"Expand Video" forState:UIControlStateNormal];
             
         // Move the 'text tutorial' button
-        expandText.frame = CGRectMake(expandText.frame.origin.x, expandText.frame.origin.y-320, 320, 40);
+        expandText.frame = CGRectMake(expandText.frame.origin.x, expandText.frame.origin.y-320, expandVideo.frame.size.width, 40);
         textViewer.frame = CGRectMake(textViewer.frame.origin.x, textViewer.frame.origin.y-320, textViewer.frame.size.width, textViewer.frame.size.height);
             
         }];
         [UIView commitAnimations];
+        
+//        [[self.catStaff superview] bringSubviewToFront:self.catStaff];
+        [[expandVideo superview] bringSubviewToFront:expandVideo];
+
         
     }
     
@@ -203,15 +205,15 @@ PFQuery *canDoQ;
 - (IBAction)expandText:(id)sender {
     if (textViewer.hidden || textViewer.frame.size.height == 30) {
         
-        textViewer.frame = CGRectMake(textViewer.frame.origin.x, textViewer.frame.origin.y, 320, 0);
+        textViewer.frame = CGRectMake(textViewer.frame.origin.x, textViewer.frame.origin.y, textViewer.frame.size.width, 0);
         
         [UIView beginAnimations:@"Anim3" context:nil];
         [UIView animateWithDuration:2.5 animations:^{
             
-            textViewer.hidden = NO;
-            textViewer.frame = CGRectMake(textViewer.frame.origin.x-10, textViewer.frame.origin.y+37, 320, 320);
+        textViewer.hidden = NO;
+        textViewer.frame = CGRectMake(textViewer.frame.origin.x-0, textViewer.frame.origin.y+37, textViewer.frame.size.width, 320);
             
-            [self.expandText setTitle:@"Contract Text" forState:UIControlStateNormal];
+        [self.expandText setTitle:@"Contract Text" forState:UIControlStateNormal];
             
             
         }];
@@ -227,12 +229,13 @@ PFQuery *canDoQ;
         [UIView beginAnimations:@"Anim4" context:nil];
         [UIView animateWithDuration:2.5 animations:^{
             
-            textViewer.frame = CGRectMake(textViewer.frame.origin.x+10, textViewer.frame.origin.y-37, 300, 30);
-            [self.expandText setTitle:@"Expand Text" forState:UIControlStateNormal];
+        textViewer.frame = CGRectMake(textViewer.frame.origin.x+0, textViewer.frame.origin.y-37, textViewer.frame.size.width, 30);
+        [self.expandText setTitle:@"Expand Text" forState:UIControlStateNormal];
             
             
         }];
         [UIView commitAnimations];
+        [[expandText superview] bringSubviewToFront:expandText];
         
         
     }

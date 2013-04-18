@@ -105,7 +105,7 @@
     
     // Configure the cell
     
-    cell.textLabel.text = [object objectForKey:@"First_Name"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"First_Name"], [object objectForKey:@"Surname"]];
     
     //cell.imageView.file = [object objectForKey:self.imageKey];
     

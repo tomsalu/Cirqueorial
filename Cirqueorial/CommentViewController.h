@@ -14,8 +14,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *commentField;
 @property (strong, nonatomic) NSString *ID;
 
-
-
 - (IBAction)submitButton:(id)sender;
 
 @end

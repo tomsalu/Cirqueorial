@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "BSKeyboardControls.h"
 
-@interface FBRegistrationViewController : UIViewController
+@interface FBRegistrationViewController : UIViewController <UITextFieldDelegate, BSKeyboardControlsDelegate, UITextViewDelegate>
+
+
 @property (strong, nonatomic) IBOutlet UITextField *inFirstName;
 @property (strong, nonatomic) IBOutlet UITextField *inSurname;
 @property (strong, nonatomic) IBOutlet UITextField *inUsername;
@@ -26,6 +29,8 @@
 - (IBAction)confirmButton:(id)sender;
 
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *fbProfile;
+
+@property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 
 
 @end

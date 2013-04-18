@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Parse/Parse.h>
+#import "AppDelegate.h"
 
 @interface UserDetailViewController : ViewController
 @property (strong, nonatomic) IBOutlet UILabel *firstName;
@@ -21,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *noTricks;
 @property (strong, nonatomic) IBOutlet UILabel *levelLabel;
 
+@property (strong, nonatomic) IBOutlet FBProfilePictureView *fbProfilePic;
 
 - (IBAction)followButton:(id)sender;
 

@@ -52,7 +52,6 @@
 - (IBAction)expandVideo:(id)sender;
 - (IBAction)expandText:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scroller;
 
 @property (strong, nonatomic) PFObject *libObject;
 

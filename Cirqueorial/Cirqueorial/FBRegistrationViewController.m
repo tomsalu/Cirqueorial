@@ -27,6 +27,63 @@
     return self;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    NSArray *fields = @[ self.inFirstName, self.inSurname,
+                         self.inUsername, self.inEmail, self.inPassword,
+                         self.inConfirmPassword];
+    
+    [self setKeyboardControls:[[BSKeyboardControls alloc] initWithFields:fields]];
+    [self.keyboardControls setDelegate:self];
+
+    
+    
+    //Facebook Functions//
+        //[activity startAnimating];
+    if (FBSession.activeSession.isOpen) {
+        NSLog(@"IF");
+        [FBRequestConnection
+         startForMeWithCompletionHandler:^(FBRequestConnection *connection,
+                                           id<FBGraphUser> user,
+                                           NSError *error){
+             
+             self.inFirstName.text = user.first_name;
+             self.inSurname.text = user.last_name;
+             self.inUsername.text = user.username;
+             self.inEmail.text = [user objectForKey:@"email"];
+             fbProfile.profileID = user.id;
+         }];
+    }
+    else{
+        NSLog(@"ELSE");
+    }
+    //////
+}
+
+// BSKeyBoard Controls Methods//
+- (void)keyboardControlsDonePressed:(BSKeyboardControls *)keyboardControls
+{
+    [keyboardControls.activeField resignFirstResponder];
+}
+
+- (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
+{
+    UIView *view = keyboardControls.activeField.superview.superview;
+    //[self.tableView scrollRectToVisible:view.frame animated:YES];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    [self.keyboardControls setActiveField:textField];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    
+}
+////////////////////////////////
+
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.inFirstName||self.inSurname||self.inUsername||self.inEmail||self.inPassword||self.inConfirmPassword) {
         [self.inFirstName resignFirstResponder];
@@ -38,45 +95,7 @@
         
     }
     return YES;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-        
-        //[activity startAnimating];
-        
-        NSLog(@"session state change");
-    
-    
-        if (FBSession.activeSession.isOpen) {
-            NSLog(@"IF");
-
-            
-            [FBRequestConnection
-             startForMeWithCompletionHandler:^(FBRequestConnection *connection,
-                                               id<FBGraphUser> user,
-                                               NSError *error){
-                 
-                 self.inFirstName.text = user.first_name;
-                 self.inSurname.text = user.last_name;
-                 self.inUsername.text = user.username;
-                 self.inEmail.text = [user objectForKey:@"email"];
-                 fbProfile.profileID = user.id;
-                 
-                 
-                     
-             }];
-        }
-    
-        else{
-                NSLog(@"ELSE");
-
-        }
-}
-    
+}  
 
 
 - (void)didReceiveMemoryWarning
