@@ -21,6 +21,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    if ([self.categoryChosen isEqualToString:@"juggling"]) {
+        self.navigationItem.title = @"Juggling";
+    }
+    else if ([self.categoryChosen isEqualToString:@"poi"]) {
+        self.navigationItem.title = @"Poi";
+    }
+    else if ([self.categoryChosen isEqualToString:@"staff"]) {
+        self.navigationItem.title = @"Staff";
+    }
+    else if ([self.categoryChosen isEqualToString:@"diabolo"]) {
+        self.navigationItem.title = @"Diabolo";
+    }
+    
+
 }
 
 - (void)didReceiveMemoryWarning

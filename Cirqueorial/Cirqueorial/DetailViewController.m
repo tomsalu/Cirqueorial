@@ -47,6 +47,9 @@ PFQuery *canDoQ;
     NSString *name = [self.libObject objectForKey:@"Video_Name"];
     
     self.navigationItem.title = name;
+    
+    //Change XP Label
+    self.xpLabel.text = [NSString stringWithFormat:@"XP: %@", [self.libObject objectForKey:@"xpValue"]];
 
     
     

@@ -284,7 +284,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Following" image="starRating_off.png" id="IgK-jq-f9U"/>
-                    <navigationItem key="navigationItem" id="q6q-Ch-jTv"/>
+                    <navigationItem key="navigationItem" title="Following" id="q6q-Ch-jTv"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="className" value="_User"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="objectsPerPage">
@@ -444,6 +444,13 @@
                                 <rect key="frame" x="105" y="7" width="111" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XP: *xp*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rzb-2p-ii6">
+                                <rect key="frame" x="25" y="65" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="Y4g-89-9Au">
                                 <rect key="frame" x="15" y="120" width="30" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -574,6 +581,7 @@
                         <outlet property="submitRatingButton" destination="f55-s6-R3W" id="fJG-v1-3IA"/>
                         <outlet property="textViewer" destination="OUc-ya-7ka" id="T6M-9O-TBl"/>
                         <outlet property="videoPlayer" destination="oZ9-E9-zpV" id="FJw-IH-SmW"/>
+                        <outlet property="xpLabel" destination="Rzb-2p-ii6" id="p5r-tM-cOx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQ4-cA-wNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1583,7 +1591,7 @@
             </objects>
             <point key="canvasLocation" x="3516" y="-547"/>
         </scene>
-        <!--Profile View Controller - Item-->
+        <!--Profile View Controller - Profile-->
         <scene sceneID="1Tu-9g-pcw">
             <objects>
                 <viewController id="uhX-gw-f7S" customClass="ProfileViewController" sceneMemberID="viewController">
@@ -1669,22 +1677,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="starRating_on.png" id="mkI-Rm-EQ1"/>
-                    <navigationItem key="navigationItem" id="znB-bo-be5">
-                        <barButtonItem key="rightBarButtonItem" title="Follow" id="5wb-vs-Nld">
-                            <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="followButton:" destination="uhX-gw-f7S" id="f7h-Tx-9Pv"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="Profile" image="starRating_on.png" id="mkI-Rm-EQ1"/>
+                    <navigationItem key="navigationItem" title="Profile" id="znB-bo-be5"/>
                     <connections>
                         <outlet property="fbProfilePic" destination="Q0O-TG-d6m" id="bq7-vY-nhB"/>
                         <outlet property="firstName" destination="s5q-jF-fsI" id="ETd-6m-xHw"/>
-                        <outlet property="followLabel" destination="5wb-vs-Nld" id="ehs-PL-oQ0"/>
                         <outlet property="levelLabel" destination="5T6-Od-cPW" id="QAQ-bt-6Iu"/>
                         <outlet property="noTricks" destination="d3i-FJ-suC" id="CGU-7X-K3J"/>
                         <outlet property="surname" destination="rcM-V1-T0y" id="aea-jx-8dU"/>
+                        <outlet property="username" destination="RnL-dr-DQu" id="Y6w-YY-VxQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfy-kf-umY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1793,6 +1794,7 @@
                         <outlet property="levelLabel" destination="cq3-5T-hXU" id="vEz-s4-B0Y"/>
                         <outlet property="noTricks" destination="D6p-Jp-Knl" id="J5C-Vs-iIG"/>
                         <outlet property="surname" destination="qL4-6r-aU4" id="f73-uE-Lgr"/>
+                        <outlet property="username" destination="EJa-Rg-Cbb" id="gw5-nj-9e7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC4-1K-XqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1977,6 +1979,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XP: *xp*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K9D-Md-oTg">
+                                <rect key="frame" x="20" y="57" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -2000,6 +2009,7 @@
                         <outlet property="submitRatingButton" destination="eDw-aF-zAd" id="eZq-j4-AtA"/>
                         <outlet property="textViewer" destination="D4s-kl-dJh" id="Hrp-wv-g4n"/>
                         <outlet property="videoPlayer" destination="PzG-pJ-BcK" id="LCk-kv-roB"/>
+                        <outlet property="xpLabel" destination="K9D-Md-oTg" id="XRF-ro-So5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fk-QS-SmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2091,6 +2101,7 @@
                 <relationship kind="outlet" name="submitRatingButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="textViewer" candidateClass="UIWebView"/>
                 <relationship kind="outlet" name="videoPlayer" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="xpLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="FBProfilePictureView" superclassName="UIView">

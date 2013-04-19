@@ -42,6 +42,11 @@
 //SHARE
 - (IBAction)shareButton:(id)sender;
 
+//XP
+
+@property (strong, nonatomic) IBOutlet UILabel *xpLabel;
+
+
 
 //- (void) changeButtonImage:(id) sender;
 

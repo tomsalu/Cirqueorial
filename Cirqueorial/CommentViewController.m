@@ -122,10 +122,14 @@
     [comment setObject:commentField.text forKey:@"Comment_Text"];
     [comment setObject:self.ID forKey:@"Comment_TrickID"];
     [comment setObject:current.username forKey:@"Comment_Poster"];
-    [comment saveInBackground];
+    [comment save];
     
-    [self loadNextPage];
+    [self loadObjects];
+    self.commentField.text = nil;
+    
     
 }
+
+
 
 @end
