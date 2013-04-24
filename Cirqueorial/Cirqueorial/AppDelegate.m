@@ -11,6 +11,8 @@
 #import <Parse/Parse.h>
 
 
+
+
 @implementation AppDelegate
 
 @synthesize homeDir;
@@ -76,9 +78,7 @@ NSString *const FBSessionStateChangedNotification =
     [FBSession.activeSession close];
 }
 
-/*
- *Callback for session changed
- */
+//These are the methods which the Facebook tutorials reccomended entering into the app.
 
 - (void)sessionStateChanged:(FBSession *) session
                       state:(FBSessionState) state
@@ -126,10 +126,6 @@ NSString *const FBSessionStateChangedNotification =
         [self sessionStateChanged:session state:state error:error];
     }];
 }
-
-//If we have a valid session at the time of openURL call, we handle
-//Facebook transitions by passing the url argument to handleOpenURL.
-
 
 
 - (void) closeSession{

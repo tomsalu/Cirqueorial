@@ -104,6 +104,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+//This should take the info from the forms and send it to the Parse database.
+
 - (IBAction)confirmButton:(id)sender {
     PFUser *user = [PFUser user];
     

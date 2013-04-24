@@ -83,6 +83,8 @@ bool authSuccess;
     // Dispose of any resources that can be recreated.
 }
 
+//Will query the credentials against the Parse database.
+
 - (IBAction)attemptLogin:(id)sender {
     
     [PFUser logInWithUsernameInBackground:self.fUsername.text password:self.fPassword.text

@@ -44,6 +44,8 @@ PFQuery *followQuery;
 
     _userObject = [PFUser currentUser];
     
+    //Displays the appropriate information by retrieving the data from the database
+    
     self.firstName.text = [_userObject objectForKey:@"First_Name"];
     self.surname.text = [_userObject objectForKey:@"Surname"];
     self.username.text = [_userObject objectForKey:@"username"];

@@ -47,7 +47,7 @@
 
 - (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
 {
-    UIView *view = keyboardControls.activeField.superview.superview;
+    //    UIView *view = keyboardControls.activeField.superview.superview;
     //[self.tableView scrollRectToVisible:view.frame animated:YES];
 }
 
@@ -80,7 +80,6 @@
 }
 
 - (IBAction)confirmButton:(id)sender {
-    
     
     PFUser *user = [PFUser user];
     
