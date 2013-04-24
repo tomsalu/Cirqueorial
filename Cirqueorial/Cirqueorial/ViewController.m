@@ -59,13 +59,9 @@
 
     }
     else{
-        NSLog(@"Bugger");
+        NSLog(@"Session Change Failure");
     }
     
-    
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    [testObject setObject:@"bar" forKey:@"foo"];
-    [testObject save];
     
     
     [super viewDidLoad];
